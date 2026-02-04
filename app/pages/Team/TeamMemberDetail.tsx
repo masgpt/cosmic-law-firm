@@ -9,7 +9,7 @@ import Link from '@/components/ui/Link';
 import { TeamMember } from './team.constants';
 import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
-import { useViewport } from '../hooks/useViewport';
+import { useViewport } from '@/hooks/useViewport';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },

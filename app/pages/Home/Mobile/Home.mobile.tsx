@@ -6,6 +6,8 @@ import { SITE } from '@/lib/site';
 import { practiceAreas } from '@/lib/practice-areas';
 import { useTranslation } from 'react-i18next';
 import ButtonLink from '@/components/ui/ButtonLink';
+import SectionWithStars from '@src/components/layout/SectionWithStars';
+import Icon from '@src/components/Icon';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 18 },
@@ -23,12 +25,16 @@ const HomeMobile: React.FC = () => {
   return (
     <>
       <SEO
-        title={`${SITE.name} | ${SITE.nameSub}`}
-        description="Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes."
+        title={t('seo.home.title', { defaultValue: `${SITE.name} | ${SITE.nameSub}` })}
+        description={t('seo.home.description')}
       />
 
-      <section className="relative bg-slate-950 text-white -mt-[68px] pt-0 sm:-mt-[96px] sm:pt-0" aria-label="Hero introduction">
-        <div className="absolute inset-0">
+      <SectionWithStars
+        className="relative bg-slate-950 text-white -mt-[68px] pt-0 sm:-mt-[96px] sm:pt-0 min-h-viewport flex flex-col justify-center"
+        aria-label="Hero introduction"
+        settings={{ density: 0.5, scrollRange: 720 }}
+      >
+        <div className="absolute inset-0 z-10">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url('${HERO_BACKGROUND}')` }}
@@ -40,7 +46,7 @@ const HomeMobile: React.FC = () => {
           <div className="absolute right-4 bottom-[-40px] h-[220px] w-[220px] rounded-full bg-white/5 blur-[140px]" aria-hidden="true" />
         </div>
 
-        <div className="relative z-10 px-6 pb-12 pt-16 max-w-[1280px] mx-auto sm:px-8 sm:pt-20 md:pt-24">
+        <div className="relative z-20 px-6 pb-12 pt-16 max-w-[1280px] mx-auto sm:px-8 sm:pt-20 md:pt-24">
           <div className="inline-flex flex-wrap items-center gap-2 uppercase tracking-[0.35em] text-[10px] text-white/90 mb-4">
             <span className="inline-flex flex-wrap justify-center px-3 py-1 rounded-full bg-black/60 text-white font-black tracking-[0.35em] whitespace-normal max-w-[85vw]">
               {t('home.hero.badge')}
@@ -85,10 +91,10 @@ const HomeMobile: React.FC = () => {
             </ButtonLink>
           </motion.div>
         </div>
-      </section>
+      </SectionWithStars>
 
-      <section className="py-12 bg-background-light dark:bg-background-dark" aria-labelledby="services-heading">
-        <div className="max-w-[1280px] mx-auto px-6">
+      <SectionWithStars className="py-12 bg-background-light dark:bg-background-dark" aria-labelledby="services-heading" settings={{ density: 0.4 }}>
+        <div className="relative z-10 max-w-[1280px] mx-auto px-6">
           <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" className="max-w-2xl">
             <span className="text-[0.65rem] font-black tracking-[0.45em] uppercase text-slate-500 dark:text-slate-400">
               {t('home.hero.badge')}
@@ -113,16 +119,22 @@ const HomeMobile: React.FC = () => {
               >
                 <div className="flex items-center gap-3 px-4 py-3">
                   <div className="size-12 rounded-xl bg-secondary/60 shadow-lg shadow-black/5 flex items-center justify-center text-primary">
-                    <span className="material-symbols-outlined text-2xl font-light" aria-hidden="true">
-                      {area.icon}
-                    </span>
+                    <Icon name={area.icon} className="size-6" />
                   </div>
                   <div className="min-w-0">
                     <h3 className="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tight">
-                      {isKo ? area.titleKo : area.title}
+                      {i18n.language?.startsWith('ko') 
+                        ? area.shortTitleKo 
+                        : i18n.language?.startsWith('zh') 
+                          ? area.shortTitleZh 
+                          : area.shortTitle}
                     </h3>
                     <p className="text-slate-600 dark:text-slate-400 text-[0.75rem] leading-relaxed font-medium mt-1">
-                      {isKo ? area.focusKo : area.focus}
+                      {i18n.language?.startsWith('ko') 
+                        ? area.focusKo 
+                        : i18n.language?.startsWith('zh') 
+                          ? area.focusZh 
+                          : area.focus}
                     </p>
                   </div>
                 </div>
@@ -133,19 +145,21 @@ const HomeMobile: React.FC = () => {
           <div className="mt-6">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] hover:underline"
+              className="inline-flex items-center gap-2 text-primary dark:text-primary-light font-black uppercase tracking-widest text-[10px] hover:underline"
             >
-              View all practice areas
-              <span className="material-symbols-outlined text-xs" aria-hidden="true">
-                east
-              </span>
+              {t('nav.viewAllPracticeAreas')}
+              <Icon name="east" className="size-3" />
             </Link>
           </div>
         </div>
-      </section>
+      </SectionWithStars>
 
-      <section className="py-12 bg-background-light dark:bg-background-dark" aria-label="Call to action">
-        <div className="max-w-[1280px] mx-auto px-6">
+      <SectionWithStars
+        className="py-12 bg-background-light dark:bg-background-dark"
+        aria-label="Call to action"
+        settings={{ density: 0.45, scrollRange: 420 }}
+      >
+        <div className="relative z-20 max-w-[1280px] mx-auto px-6">
           <div className="rounded-2xl bg-secondary/35 dark:bg-white/5 border border-secondary/40 dark:border-white/10 p-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <div>
               <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white uppercase">
@@ -164,7 +178,7 @@ const HomeMobile: React.FC = () => {
             </ButtonLink>
           </div>
         </div>
-      </section>
+      </SectionWithStars>
     </>
   );
 };

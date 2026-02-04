@@ -16,6 +16,9 @@
     "paths": {
       "@/*": [
         "./app/*"
+      ],
+      "@src/*": [
+        "./src/*"
       ]
     },
     "allowImportingTsExtensions": true,
@@ -37,6 +40,8 @@
   "include": [
     "app/**/*.ts",
     "app/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     ".react-router/types/**/*.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"

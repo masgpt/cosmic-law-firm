@@ -6,11 +6,14 @@ import { useTranslation } from 'react-i18next';
 import Link from '@/components/ui/Link';
 import ButtonLink from '@/components/ui/ButtonLink';
 import LanguageToggle from '@/components/LanguageToggle';
+import SectionWithStars from '@src/components/layout/SectionWithStars';
 import { useNavbarLogic } from '../Shared/navbar.hooks';
 import { useNavbarConstants } from '../Shared/navbar.constants';
 import { SITE } from '@/lib/site';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import { useFocusTrap } from '@/lib/accessibility/useFocusManagement';
+import Icon from '@src/components/Icon';
 
 const NavbarMobile: React.FC = () => {
   const { t } = useTranslation();
@@ -21,6 +24,8 @@ const NavbarMobile: React.FC = () => {
   const toggleMenu = () => setIsMobileMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMobileMenuOpen(false);
   const router = useRouter();
+
+  const menuRef = useFocusTrap(isMobileMenuOpen);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -53,88 +58,94 @@ const NavbarMobile: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-primary/95 backdrop-blur-md transition-colors duration-300 lg:hidden text-white">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
-        <div className="flex h-16 items-center justify-between gap-4">
-          <Link to={`/${lng}/`} className="flex items-center gap-2 group shrink-0 focus:ring-offset-4">
-            <div className="w-10 h-10 rounded-2xl border border-white/15 bg-white/10 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
-              <Image
-                src="/Cosmic_Logos-02.png"
-                alt={`${SITE.name} logo`}
-                width={40}
-                height={40}
-                sizes="40px"
-                className="h-full w-full object-contain"
-                priority
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-black tracking-tight text-white leading-none uppercase">
-                <span className="text-secondary">{SITE.name.split(' ')[0]}</span>{' '}
-                <span>{SITE.name.split(' ').slice(1).join(' ')}</span>
-              </span>
-              <span className="text-[8px] text-white/90 font-bold uppercase tracking-wider mt-0.5 leading-none">
-                {SITE.nameSub}
-              </span>
-            </div>
-          </Link>
+    <SectionWithStars
+      className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-primary/95 backdrop-blur-md transition-colors duration-300 lg:hidden text-white pt-safe"
+      aria-label="Mobile navigation section"
+      overflow="visible"
+      settings={{ density: 0.5, scrollRange: 480 }}
+    >
+      <div className="relative z-20">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
+          <div className="flex h-16 items-center justify-between gap-4">
+            <Link to={`/${lng}/`} className="flex items-center gap-2 group shrink-0 focus:ring-offset-4">
+              <div className="w-10 h-10 rounded-2xl border border-white/15 bg-white/10 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+                <Image
+                  src="/Cosmic_Logos-02.png"
+                  alt={`${SITE.name} logo`}
+                  width={40}
+                  height={40}
+                  sizes="40px"
+                  className="h-full w-full object-contain"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-sm font-black tracking-tight text-white leading-none uppercase">
+                  <span className="text-secondary">{SITE.name.split(' ')[0]}</span>{' '}
+                  <span>{SITE.name.split(' ').slice(1).join(' ')}</span>
+                </span>
+                <span className="text-[8px] text-white/90 font-bold uppercase tracking-wider mt-0.5 leading-none">
+                  {SITE.nameSub}
+                </span>
+              </div>
+            </Link>
 
-          <div className="flex items-center gap-2">
-            <LanguageToggle />
+            <div className="flex items-center gap-2">
+              <LanguageToggle />
             <button
               className="p-2 text-white/90 hover:text-white focus:ring-2 focus:ring-secondary/40 rounded-lg"
               onClick={toggleMenu}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
-              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-label={isMobileMenuOpen ? t('nav.menuClose') : t('nav.menuOpen')}
             >
-              <span className="material-symbols-outlined text-[28px]" aria-hidden="true">
-                {isMobileMenuOpen ? 'close' : 'menu'}
-              </span>
+              <Icon name={isMobileMenuOpen ? 'close' : 'menu'} className="size-7" />
             </button>
           </div>
         </div>
+      </div>
       </div>
 
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             id="mobile-menu"
+            ref={menuRef}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
             className="border-t border-white/10 bg-primary overflow-hidden"
           >
-            <div className="p-6 overflow-y-auto max-h-[calc(100vh-64px)]">
+            <div className="p-6 overflow-y-auto max-h-[calc(100dvh-64px)] pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
               <nav className="flex flex-col space-y-6" aria-label="Mobile navigation">
-                <button
-                  type="button"
-                  onClick={() => handleNavigation(`/${lng}/`)}
+                <Link
+                  to={`/${lng}/`}
+                  onClick={closeMenu}
                   className={getMobileNavButtonClass(`/${lng}/`, 'lg')}
                 >
                   {t('nav.home')}
-                </button>
+                </Link>
 
                 <div className="flex flex-col space-y-3">
                   <p className="text-xs font-black text-secondary uppercase tracking-[0.2em]">{t('nav.practiceAreas')}</p>
                   <div className="flex flex-col space-y-3 pl-4 border-l-2 border-white/15">
-                    <button
-                      type="button"
-                      onClick={() => handleNavigation(`/${lng}/services`)}
+                    <Link
+                      to={`/${lng}/services`}
+                      onClick={closeMenu}
                       className={getMobileNavButtonClass(`/${lng}/services`, 'sm')}
                     >
-                      View all services
-                    </button>
+                      {t('nav.viewAllServices')}
+                    </Link>
                     {practiceAreaLinks.map((link) => (
-                      <button
+                      <Link
                         key={link.path}
-                        type="button"
-                        onClick={() => handleNavigation(link.path)}
+                        to={link.path}
+                        onClick={closeMenu}
                         className={getMobileNavButtonClass(link.path, 'sm')}
                       >
                         {link.name}
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -143,44 +154,34 @@ const NavbarMobile: React.FC = () => {
                   <p className="text-xs font-black text-secondary uppercase tracking-[0.2em]">{t('nav.about')}</p>
                   <div className="flex flex-col space-y-3 pl-4 border-l-2 border-white/15">
                     {aboutLinks.map((link) => (
-                      <button
+                      <Link
                         key={link.path}
-                        type="button"
-                        onClick={() => handleNavigation(link.path)}
+                        to={link.path}
+                        onClick={closeMenu}
                         className={getMobileNavButtonClass(link.path, 'sm')}
                       >
                         {link.name}
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => handleNavigation(`/${lng}/insights`)}
-                  className={getMobileNavButtonClass(`/${lng}/insights`, 'lg')}
-                >
-                  {t('nav.insights')}
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleNavigation(`/${lng}/reviews`)}
+                <Link
+                  to={`/${lng}/reviews`}
+                  onClick={closeMenu}
                   className={getMobileNavButtonClass(`/${lng}/reviews`, 'lg')}
                 >
                   {t('nav.testimonials')}
-                </button>
+                </Link>
 
-                  <div className="pt-6 border-t border-white/10 flex flex-col gap-4">
-                    <div className="flex flex-col gap-3">
+                <div className="pt-6 border-t border-white/10 flex flex-col gap-4">
+                  <div className="flex flex-col gap-3">
                       <Link
                         href={`mailto:${SITE.email}`}
                         onClick={toggleMenu}
                         className="flex items-center gap-3 p-3 rounded-xl bg-white/10 text-white font-bold text-sm"
                       >
-                        <span className="material-symbols-outlined text-secondary" aria-hidden="true">
-                          mail
-                        </span>
+                        <Icon name="mail" className="text-secondary size-5" />
                         <span className="truncate">{SITE.email}</span>
                       </Link>
                       <Link
@@ -188,23 +189,19 @@ const NavbarMobile: React.FC = () => {
                         onClick={toggleMenu}
                         className="flex items-center gap-3 p-3 rounded-xl bg-white/10 text-white font-bold text-sm"
                       >
-                        <span className="material-symbols-outlined text-secondary" aria-hidden="true">
-                          call
-                        </span>
+                        <Icon name="call" className="text-secondary size-5" />
                         <span>{SITE.phoneDisplay}</span>
                       </Link>
                     </div>
 
-                    <ButtonLink
-                      href={`/${lng}/contact`}
-                      tone="light"
-                      size="lg"
-                      className="w-full rounded-2xl h-14 text-base capitalize tracking-tight shadow-xl shadow-black/10 active:scale-[0.98] transition-transform focus:ring-offset-2 focus:ring-offset-primary"
-                      onClick={closeMenu}
+                  <ButtonLink
+                    href={`/${lng}/contact`}
+                    tone="light"
+                    size="lg"
+                    className="w-full rounded-2xl h-14 text-base capitalize tracking-tight shadow-xl shadow-black/10 active:scale-[0.98] transition-transform focus:ring-offset-2 focus:ring-offset-primary"
+                    onClick={closeMenu}
                     >
-                      <span className="mr-2 material-symbols-outlined text-[20px]" aria-hidden="true">
-                        mail
-                      </span>
+                      <Icon name="mail" className="mr-2 size-5" />
                       {t('nav.contact')}
                     </ButtonLink>
                   </div>
@@ -213,7 +210,7 @@ const NavbarMobile: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </SectionWithStars>
   );
 };
 

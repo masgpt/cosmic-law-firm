@@ -22,13 +22,13 @@ const Terms: React.FC = () => {
           <div className="mt-3 text-slate-600 dark:text-slate-300 space-y-1 text-sm">
             <p>
               Phone:{' '}
-              <a href={`tel:${SITE.phoneTel}`} className="text-primary hover:underline">
+              <a href={`tel:${SITE.phoneTel}`} className="text-primary dark:text-primary-light hover:underline">
                 {SITE.phoneDisplay}
               </a>
             </p>
             <p>
               Email:{' '}
-              <a href={`mailto:${SITE.email}`} className="text-primary hover:underline">
+              <a href={`mailto:${SITE.email}`} className="text-primary dark:text-primary-light hover:underline">
                 {SITE.email}
               </a>
             </p>

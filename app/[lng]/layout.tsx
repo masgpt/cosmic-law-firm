@@ -1,13 +1,22 @@
-import type { Metadata } from "next";
-import "./index.css";
+import type { Metadata, Viewport } from "next";
+import "../index.css";
 import React from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import SkipToContent from './components/SkipToContent';
-import ClientLayout from './client-layout';
-import PageTransition from './components/PageTransition';
-import I18nProvider from './components/I18nProvider';
-import { SITE } from './lib/site';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import SkipToContent from '../components/SkipToContent';
+import ClientLayout from '../client-layout';
+import PageTransition from '../components/PageTransition';
+import I18nProvider from '../components/I18nProvider';
+import { SITE } from '../lib/site';
+import RegionLayout from '@src/components/Layout';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   title: `${SITE.name} | ${SITE.nameSub}`,
@@ -27,12 +36,12 @@ export const metadata: Metadata = {
     images: ["/Cosmic_Logos-02.png"],
   },
   icons: {
-    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>',
+    icon: '/Cosmic_Logos-02.png',
   },
 };
 
 export async function generateStaticParams() {
-  return [{ lng: 'en' }, { lng: 'ko' }];
+  return [{ lng: 'en' }, { lng: 'ko' }, { lng: 'zh-Hans' }];
 }
 
 export default async function RootLayout({
@@ -55,7 +64,9 @@ export default async function RootLayout({
     "description":
       lng === 'ko'
         ? "크리에이터와 미디어 기업을 위한 엔터테인먼트 로펌—계약, 지식재산권, 탤런트 딜, 배급, 분쟁."
-        : "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes.",
+        : lng === 'zh-Hans'
+          ? "为创作者、制片方与媒体公司提供娱乐法律服务——合同、知识产权、艺人交易、发行与争议解决。"
+          : "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes.",
     "telephone": SITE.phoneTel ? `+1-${SITE.phoneTel}` : undefined,
     "email": SITE.email,
   };
@@ -63,16 +74,6 @@ export default async function RootLayout({
   return (
     <html lang={lng} className="scroll-pt-[104px]" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@400;500;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        />
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
             const saved = localStorage.getItem('theme') || 'system';
@@ -89,25 +90,27 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased selection:bg-primary/20">
-        <I18nProvider lng={lng}>
-          <div className="relative flex flex-col min-h-screen overflow-x-hidden">
-            <ClientLayout>
-              <SkipToContent />
-              <Navbar />
-              <main 
-                id="main-content" 
-                tabIndex={-1} 
-                className="flex-grow w-full flex flex-col outline-none pt-[68px] sm:pt-[96px] lg:pt-[96px]"
-              >
-                <PageTransition>
-                  {children}
-                </PageTransition>
-              </main>
-              <Footer />
-            </ClientLayout>
-          </div>
-        </I18nProvider>
+      <body className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased">
+        <RegionLayout>
+          <I18nProvider lng={lng}>
+            <div className="relative flex flex-col min-h-screen overflow-x-hidden">
+              <ClientLayout>
+                <SkipToContent />
+                <Navbar />
+                <main 
+                  id="main-content" 
+                  tabIndex={-1} 
+                  className="flex-grow w-full flex flex-col outline-none pt-[calc(68px+env(safe-area-inset-top))] sm:pt-[calc(96px+env(safe-area-inset-top))] lg:pt-[96px]"
+                >
+                  <PageTransition>
+                    {children}
+                  </PageTransition>
+                </main>
+                <Footer />
+              </ClientLayout>
+            </div>
+          </I18nProvider>
+        </RegionLayout>
       </body>
     </html>
   );

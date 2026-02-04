@@ -5,6 +5,7 @@ import NextLink from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'next/navigation';
 import { getButtonClasses, ButtonTone, ButtonSize } from './Button';
+import { SUPPORTED_LANGUAGES } from '@src/i18n';
 
 interface ButtonLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
@@ -34,7 +35,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   if (!isExternal && targetPath.startsWith('/')) {
     const segments = targetPath.split('/');
     const firstSegment = segments[1];
-    if (!['en', 'ko'].includes(firstSegment)) {
+    if (!SUPPORTED_LANGUAGES.includes(firstSegment as any)) {
       const cleanPath = targetPath === '/' ? '' : targetPath;
       targetPath = `/${currentLng}${cleanPath}`;
     }

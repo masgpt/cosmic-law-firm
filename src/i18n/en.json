@@ -48,18 +48,18 @@
       "description": "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes."
     }
   },
-    "home": {
-      "hero": {
-      "badge": "Law from attorneys for modern creators",
-        "title": "Entertainment, Media & Personal Injury Law for modern creators",
-        "description": "We protect rights, move deals, and keep IP, media, and recovery on track so studios, creators, and injured individuals can build confidently.",
-        "ctaPrimary": "Book a consult",
-        "ctaSecondary": "Contact the team"
-      },
-      "services": {
-        "title": "Services",
-        "description": "Counsel for film, music, media, brand partners, and personal injury clients built on clarity and trust."
-      },
+  "home": {
+    "hero": {
+      "badge": "Modern legal representation",
+      "title": "Law for Creative Work",
+      "description": "From entertainment and media to personal injury recovery, we protect rights and outcomes when it matters most.",
+      "ctaPrimary": "Book a consult",
+      "ctaSecondary": "Contact the team"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Counsel for film, music, media, brand partners, and personal injury clients built on clarity and trust."
+    },
     "cta": {
       "title": "Need to talk?",
       "description": "Share what you’re building and we’ll respond with next steps and a clear scope.",
@@ -75,7 +75,12 @@
     "ourApproach": "Philosophy",
     "insights": "Insights",
     "testimonials": "Testimonials",
-    "contact": "Contact"
+    "contact": "Contact",
+    "viewAllServices": "View all services",
+    "viewAllPracticeAreas": "View all practice areas",
+    "viewServices": "View services",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "footer": {
     "description": "Entertainment & media law for creators and companies—transactional counsel and litigation when it counts.",
@@ -92,13 +97,20 @@
     "accessibility": "Accessibility",
     "emailLabel": "Email"
   },
-    "common": {
-      "location": "Los Angeles, CA",
-      "doctorTitle": "Entertainment Law Firm",
-      "close": "Close",
-      "companyName": "Cosmic Law Firm",
-      "companyNameSub": "Entertainment, Media & Personal Injury Law"
-    },
+  "common": {
+    "location": "Los Angeles, CA",
+    "doctorTitle": "Entertainment Law Firm",
+    "close": "Close",
+    "practiceAreaLabel": "Practice Area",
+    "companyName": "Cosmic Law Firm",
+    "companyNameSub": "Entertainment, Media & Personal Injury Law",
+    "overview": "Overview",
+    "whatWeHandle": "What we handle",
+    "typicalMatters": "Typical matters within {{title}}.",
+    "nextStep": "Next step",
+    "nextStepDescription": "Tell us what you’re building and where you are in the process. We’ll respond with a clear plan and next actions.",
+    "contactCompany": "Contact {{name}}"
+  },
   "about": {
     "hero": {
       "badge": "About the firm",
@@ -153,7 +165,7 @@
   },
   "contact": {
     "title": "Visit Our Office",
-    "description": "Conveniently located in the heart of Los Angeles, we offer expert care with a focus on Palmer Upper Cervical techniques. Free parking validation available.",
+    "description": "Conveniently located in the heart of Los Angeles, we offer expert counsel with a focus on entertainment, media, and personal injury law. By appointment only.",
     "labels": {
       "address": "Address",
       "call": "Call Us",
@@ -168,145 +180,6 @@
       "saturday": "Saturday:",
       "sunday": "Sunday:",
       "closed": "Closed"
-    }
-  },
-  "techniques": {
-    "about": {
-      "title": "About Chiropractic",
-      "p1": "At Yonsei Chiropractic, we believe the human body has an amazing, innate ability to recover itself from illness or injury.",
-      "p2": "The chiropractic method is the best approach to health because it allows the body to work without the use of any drugs, whether prescribed or non-prescribed. Our practice is built on the philosophy that true healing comes from removing interference in the nervous system.",
-      "manual": {
-        "title": "A Pure Manual Technique",
-        "p1": "We strictly follow the principle that the application of medicine, surgery, physical therapy, acupressure massage, or acupuncture is never utilized for spinal correction.",
-        "p2": "Only the use of the doctor’s hands is employed to adjust the spine in order to target the stem of all illnesses caused by subluxation."
-      },
-      "p3": "When there is pressure on the nerves from dislocated vertebrae, the flows of nerve signals are not smooth, and the body's innate ability to heal is inhibited. This phenomenon is what we address through specific adjustments.",
-      "p4": "By treating subluxation, the body will recover on its own and restore its optimal health once again. Our staff can promise you a comfortable environment and experience conducive to your healing journey.",
-      "comprehensive": {
-        "title": "Comprehensive Care",
-        "p1": "On each visit, Dr. Hyeon Joo Park, D.C., M.S. seeks to regain and maintain the proper alignment of the spine, aiding each patient through the process of recovery and healing. Once the body and its organs are able to regain their mental impulse supply, then they are able to rebuild and perform their proper functions."
-      },
-      "cta": "Visit Us"
-    },
-    "upperCervical": {
-      "title": "About Upper Cervical Care",
-      "subtitle": "Palmer Upper Cervical Specific Chiropractic (H.I.O.)",
-      "p1": "Yonsei Chiropractic is the first Korean American chiropractic in the United States to specialize in the Palmer Upper Cervical Specific Technique, also known as the \"hole-in-one\" method (H.I.O).",
-      "p2": "The practice of the H.I.O. is a high degree chiropractic technique that uses only the hands to adjust the upper cervical bones. This specific region, known as the cervical vertebrae numbers 1 and 2, is adjusted to absolve the root of all illnesses by relieving the pressure on the nerves.",
-      "p3": "The application of medicine, surgery, physical therapy, acupressure massage, or acupuncture is never utilized. Only the use of the doctor’s hands is employed to adjust the upper cervical in order to target the stem of all illnesses caused by subluxation. By treating subluxation, the body will recover on its own and restore its optimal health once again.",
-      "legacy": {
-        "title": "The Legacy of Dr. B.J. Palmer",
-        "p1": "Dr. B.J. Palmer (1881-1961) invented this procedure in 1930 after discovering that many patients with incurable diseases recovered after receiving the miraculous procedure. This has been proven to be effective in his many writings and research findings.",
-        "p2": "Because of its technical difficulty and scarcity, very few doctors in the United States are able to perform the H.I.O technique today. As the first Korean chiropractor to utilize the technique, Dr. Hyeon Joo Park, D.C., M.S. practices H.I.O. on patients who suffer from severe pain and chronic diseases."
-      },
-      "diagnostics": {
-        "title": "Advanced Diagnostics",
-        "p1": "The treatment is not based solely on observing the symptoms of the illness. It begins with a deep clinical examination:",
-        "xrays": "Precision X-Rays: Detailed views of the cervical bone structure and the specific nature of the dislocation.",
-        "instruments": "Nervo-scope & Analagraph: Specialized instruments used to understand the exact state of the nerves and locate interference."
-      },
-      "quote": "\"The human body has the amazing ability to recover itself from illness or injury. However, if the flows of nerve signals are not smooth then that innate ability is inhibited. This phenomenon happens when there is pressure on the nerves from dislocated cervical bones. Therefore, with the adjustment of the cervical bones the body will find its ability to recover itself.\"",
-      "p4": "Patients have seen a remarkable difference in their health, with many visiting from the East Coast or Korea just to receive this treatment. Dr. Hyeon Joo Park, D.C., M.S. personally diagnoses and treats each and every patient, taking pride in finding, targeting, and connecting the root of illness.",
-      "cta": "Book Your Appointment"
-    },
-    "subluxation": {
-      "title": "Subluxation",
-      "p1": "Subluxation is when the spinal bones become slightly dislocated, developing on the nerves, resulting in a disruption of the natural flow of signals between the body and the brain.",
-      "p2": "One of the World Health Organization’s (WHO) main principle is that \"(h)ealth is a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity.\" This is very true in most cases. Just because a person does not feel pain or have any diagnoses of disease, it does not mean they are 100% in good condition.",
-      "silent": {
-        "title": "The Silent Progress of Illness",
-        "p1": "Our body is made up of neurons, in which 67% of them are efferent nerves. These nerves do not send immediate pain signals until significant amount of damage is present.",
-        "p2": "Therefore, even without pain there can be an organ disorder in progress."
-      },
-      "p3": "Without knowing it, your body may have high blood pressure, arthritis may be in progress, or cancer cells may be multiplying. If the flow of signals is blocked and nerves have pressure put on them, the result is failure in function, leading to illnesses. It is a misconception that illnesses happen immediately. However, it takes a while before most serious illnesses steadily display themselves.",
-      "p4": "The body’s nerves are put under pressure over a long period of time and in the end start to show symptoms of pain. We are always worried and focused on the individual organs in our body and trying to take away the pain immediately if there is a disturbance.",
-      "cause": {
-        "title": "Targeting the Cause",
-        "p1": "However, it is necessary to first target the cause. The real source lies within the alignment of the spine and the nerve signals that are being sent out."
-      },
-      "cta": "Get an Evaluation"
-    },
-    "innateIntelligence": {
-      "badge": "The Miracle of Life",
-      "title": "Innate Intelligence",
-      "p1": "Since the moment of your conception, a miracle began for you. This miracle called life has an \"innate (inborn) intelligence\" that caused two cells to multiply and differentiate into the trillions of cells that became you.",
-      "p2": "The innate intelligence knew exactly what you needed, and exactly when you needed it. All of this development happens naturally as long there is no interference. Otherwise, that flow of the intelligence cannot go through properly.",
-      "vital": {
-        "title": "A Vital System",
-        "p1": "As the number of cells grew, your innate intelligence needed a system to send and receive messages in order to control and coordinate all functions and parts of the body.",
-        "p2": "This vital system was the first to develop and began within 18 days of conception."
-      },
-      "p3": "It is so valuable and delicate that its primary parts are the only organs encased in bone. This system is your nervous system and the primary parts are the brain protected by the skull and the spinal cord protected by the spine.",
-      "consequence": {
-        "title": "The Consequence of Interference",
-        "p1": "What would happen if this intelligence, which flows through the nerves and is filled with vital life messages, could not reach the proper destination at the right time?",
-        "organs": {
-          "heart": "Heart",
-          "lungs": "Lungs",
-          "liver": "Liver",
-          "kidneys": "Kidneys",
-          "stomach": "Stomach"
-        },
-        "p2": "What if this interference blocked messages being sent to your vital organs? Do you think this would cause these organs and yourself not to live at your highest potential? Of course, it would."
-      },
-      "quote": "\"All diseases result from a disruption of the flow of intelligence.\"",
-      "cause": "Chiropractically speaking, \"The one cause of all disease is our inability to adapt.\"",
-      "p4": "Our goal at Yonsei Chiropractic is to remove the interference in your nervous system, allowing your innate intelligence to flow perfectly once again and restoring your body's natural ability to adapt and heal.",
-      "cta": "Unlock Your Highest Potential"
-    },
-    "tmj": {
-      "title": "TMJ / TMD Treatment",
-      "p1": "Specialized chiropractic care for Temporomandibular Joint Disorders and related jaw tension.",
-      "connection": {
-        "title": "The Upper Cervical Connection",
-        "p1": "Because the upper cervical spine (the top two vertebrae in the neck) sits so closely to the jaw joints, misalignment in the neck can often manifest as TMJ/TMD symptoms.",
-        "p2": "Head and neck misalignment can cause interference in the nervous system, leading to muscle tension in the jaw, clicking, popping, and pain."
-      },
-      "symptoms": {
-        "title": "Symptoms We Treat",
-        "pain": "Jaw pain and tenderness",
-        "chewing": "Difficulty chewing or opening wide",
-        "clicking": "Clicking or popping sounds in the jaw",
-        "ear": "Facial aching or ear pain"
-      },
-      "expertise": {
-        "title": "Dr. Hyeon Joo Park, D.C., M.S.'s Expertise",
-        "p1": "Dr. Hyeon Joo Park, D.C., M.S. is dedicated to using her professional expertise to help patients with TMJ/TMD. By restoring head/neck alignment and utilizing specialty extremity adjustments, we address the root cause of the jaw dysfunction.",
-        "p2": "Our approach is drug-free and seeks to re-activate the body's natural self-healing process."
-      },
-      "cta": "Relieve Your Jaw Pain Today"
-    },
-    "carAccident": {
-      "badge": "Immediate Attention Required",
-      "title": "Car Accidents & Whiplash",
-      "pain": {
-        "title": "Pain? No Pain?",
-        "p1": "The aftereffect symptoms of a car accident normally show 1~2 days, or even a few months after the accident. In fact, the absence of pain doesn’t necessarily mean there is no damage. Many of the symptoms caused by a car accident or trauma lay dormant until later.",
-        "p2": "If nerves are put under pressure after the accident, it will not only result in pain, but it will lead to more severe illness. Car accidents can cause damage in many parts of the body such as 7 possible locations in the upper cervical vertebrae and 32 joints and muscles throughout the body."
-      },
-      "symptoms": {
-        "title": "Common Symptoms After an Accident:",
-        "items": {
-          "dizziness": "Dizziness",
-          "nausea": "Nausea",
-          "vomiting": "Vomiting",
-          "rigidity": "Muscular Rigidity",
-          "tinnitus": "Tinnitus (Ear Ringing)",
-          "pain": "Chronic Pain"
-        }
-      },
-      "whiplash": {
-        "title": "The Nature of Whiplash",
-        "p1": "During a car accident, one’s head experiences an abrupt backward or forward jerking motion. This damages the upper cervical vertebrae. Such injury is hard to detect even with a CT scan or MRI.",
-        "p2": "Because of this characteristic, an aftereffect of a car accident can become chronic. If the upper cervical suffers due to excessive pressure, it will prevent normal movement of the body and will lead to further health problems."
-      },
-      "damage": {
-        "title": "Nerve Damage vs. Contusion",
-        "p1": "Sometimes people confuse nerve damage with simple contusion and try treating symptoms with physical therapy, acupuncture, and massages.",
-        "p2": "Those treatments cannot recover nerves under pressure and instead only temporarily eliminate pain. Not treating the nerves properly will worsen the condition and result in chronic pain."
-      },
-      "quote": "The aftereffects of a car accident require immediate attention and continuous care.",
-      "cta": "Book Your Post-Accident Exam"
     }
   },
   "servicesPage": {
@@ -435,6 +308,88 @@
         "imageAlt": "Portrait of John Heath"
       }
     },
+    "details": {
+      "jean": {
+        "tagline": "Founder · Multilingual trial lawyer",
+        "biography": [
+          "Jean Kwon, Esq. is an experienced trial lawyer with the rare skill of being trilingual in English, Spanish, and Korean. She has won many jury and court trials and has successfully prosecuted and defended over 3,000 complicated cases involving commercial and residential real estate, business, probate, family, labor, criminal, and civil litigation. Kwon has Juris Doctor Degree from San Fernando Valley College of Law in California, United States; Bachelor of Arts degree from Hankuk University of Foreign Language in Seoul, Korea; and High School degree from Colegio Hipolito Irigoyen, Buenos Aires, Argentina.",
+          "Prior to starting her own firm, Kwon worked for several law firms, drafting pleadings and discovery, and appearing in court for the Law Offices of Laurence B. Donoghue, Law Offices of Jiyoung Kym, Law Offices of Jane Chung, and Briskin, Latzanich & Pene LLP.",
+          "Kwon is a Member of State Bar of California since June 2008, Member of San Fernando Valley Bar Association; Member of Criminal Courts Bar Association in Los Angeles; Member of California Employment Lawyers Association; Member of Consumer Attorneys Association of Los Angeles, Board Member and Advisory Counsel for the 29th and 30th Korean American Federation of Los Angeles (\"KAFLA\"); Advisory Counsel for the 30th Election Committee of Korean American Federation of Los Angeles (\"KAFLA\"); and Legal Counsel for Korean American United Foundation (\"KAUF\").",
+          "Jean Kwon is someone you should meet if your interests lie in storytelling and \"filmed\" entertainment. Jean Kwon's top-notch boutique law practice in Los Angeles, Cosmic Law Firm, concentrates on the development and production of content for multi-platform use.",
+          "Ms. Kwon contemplates telling of her own fascinating and very personal past, from birth in South Korea, through her family's immigration to Argentina and then on to Los Angeles. But her own memoirs may have to wait as she seizes the opportunity to Executive Produce the original screenplay \"Tigers from the Sun\" written by C.J. Baker. Ms. Kwon has been a renowned legal practitioner for many years, but now aims to expand her repertoire as a lauded producer for bringing the amazing \"Tigers\" story to light."
+        ],
+        "memberships": [
+          "Member of State Bar of California since June 2008",
+          "Member of San Fernando Valley Bar Association",
+          "Member of Criminal Courts Bar Association in Los Angeles",
+          "Member of California Employment Lawyers Association",
+          "Member of Consumer Attorneys Association of Los Angeles",
+          "Board Member and Advisory Counsel for the 29th and 30th Korean American Federation of Los Angeles (KAFLA)",
+          "Advisory Counsel for the 30th Election Committee of KAFLA",
+          "Legal Counsel for Korean American United Foundation (KAUF)"
+        ],
+        "practiceAreas": [
+          "Commercial and residential real estate litigation",
+          "Business, probate, family, labor, criminal, and civil litigation",
+          "Entertainment production, film financing, and executive producing partnerships"
+        ],
+        "creative": "Jean continues to seize opportunities to bring the \"Tigers From the Sun\" story to life and to expand Cosmic Law Firm's footprint in filmed entertainment."
+      },
+      "katherine": {
+        "tagline": "Associate · Entertainment Law",
+        "biography": [
+          "Katherine Jung is joining the firm; her experience and practice details are being finalized and will be shared shortly."
+        ],
+        "memberships": [],
+        "practiceAreas": [
+          "Details about Katherine's practice focus will be shared soon."
+        ],
+        "creative": ""
+      },
+      "john": {
+        "tagline": "Senior Counsel · Criminal & Civil Litigation",
+        "biography": [
+          "John D. Robertson was admitted to the California Bar as a practicing attorney in 1976. Mr. Robertson served as a federal prosecutor (Assistant United States Attorney) for a number of years, as well as a civil litigator in a major law firm before entering private practice and forming his own firm in 1982. Mr. Robertson has over 30 years of experience in criminal defense as well as civil litigation in state and federal courts.",
+          "Mr. Robertson received his Juris Doctorate from the nationally ranked Boalt Hall School of Law at the University of California, Berkeley, and was Assistant Editor and an author of the California Law Review at Boalt. Prior to attending law school, Mr. Robertson completed his undergraduate studies at the University of California, Los Angeles, where he graduated with Departmental Highest Honors.",
+          "Mr. Robertson served as a Deputy City Attorney for Los Angeles, as well as an Assistant United States Attorney for the Central District of California in the Criminal Division of the United States Department of Justice.",
+          "After leaving government service, Mr. Robertson joined the civil litigation and insurance defense law firm of Lewis, D'Amato, Brisbois and Bisgaard in Los Angeles, California as a civil litigator where he specialized in defending lawyers in civil malpractice suits. Subsequent to his employment at the Lewis, D'Amato, Brisbois, and Bisgaard firm, Mr. Robertson started his own private practice in 1982, and has remained in private practice since.",
+          "Mr. Robertson continues a civil litigation practice, including representation in breach of contract cases, fraud cases, civil malpractice suits, and professional liability matters, among others. Mr. Robertson also practices in, among other areas, the area of white-collar criminal defense, both in state and federal courts, where his cases have included multi-million dollar frauds, organized crime and racketeering cases, criminal immigration cases, customs smuggling cases, criminal copyright cases and criminal trademark infringement cases, computer software counterfeiting cases, wire and mail fraud cases, money laundering cases, criminal tax cases, health care fraud cases, and real estate/fraud mortgage cases, among others.",
+          "Mr. Robertson has been active in several state bar associations, has served as Of Counsel and advisor to a number of attorney colleagues and law offices and was formerly a member of the Executive Committee of the Criminal Law Section of the State Bar of California, where he was Chairperson of the Federal Courts Subcommittee. Mr. Robertson also teaches courses on the law and analysis of contracts and contract issues for a program established by Federal District Court Judge to prepare lawyer candidates to pass the California Bar Exam."
+        ],
+        "memberships": [
+          "Active in several state bar associations and served as Of Counsel and advisor to numerous colleagues and law offices.",
+          "Former member of the Executive Committee of the Criminal Law Section of the State Bar of California.",
+          "Chairperson of the Federal Courts Subcommittee for that committee.",
+          "Instructor for contract and contract analysis courses created by a Federal District Court Judge to prepare bar candidates."
+        ],
+        "practiceAreas": [
+          "Federal and state criminal defense",
+          "Breach of contract, fraud, civil malpractice, and professional liability representation",
+          "White-collar defense covering frauds, racketeering, immigration, customs, intellectual property infringement, counterfeiting, wire and mail fraud, money laundering, tax, health care fraud, and real estate/mortgage fraud"
+        ],
+        "creative": ""
+      },
+      "heath": {
+        "tagline": "Counsel · Entertainment & Intellectual Property",
+        "biography": [
+          "John Heath is an attorney at Cosmic Law Firm with a specialty in entertainment and intellectual property.",
+          "After working in the record industry and attaining success in the music industry himself as a recording artist, Mr. Heath went on to attain a Masters Degree in Mass Communication at San Jose State and Juris Doctor at Whittier Law School, with a certificate in intellectual property. In addition to civil litigation, John D. Heath has a background in entertainment litigation, trademark and copyright pre-litigation, intellectual property, and entertainment transactional law.",
+          "Heath understands the entertainment business and content creation in a meaningful way. This is not surprising, as Heath was raised in the vortex of Hollywood. His father was a successful and prolific television writer and his mother is a premier entertainment attorney who represented virtually every major studio during her nearly forty year career. Additionally, his step-father is a well-respected Israeli-American director.",
+          "But Heath adds music and much more to the family tree, having obtained a recording deal with a prominent independent label almost straight out of college. Heath is currently in the process of developing other movies and television series, but none with more passion than his commitment to \"Tigers From the Sun.\"",
+          "Heath instantly was drawn to the fascinating story of \"Tigers From the Sun\" and its real life protagonist, Claire Lee Chennault, whose determination and unwillingness to accept the paradigms of the day made him a hero for the ages. Heath is thrilled with the idea of bringing the yet untold tale of Chennault to life as a feature film and eager to work with his colleague, the very talented Jean Kwon of Cosmic Law Firm, as a co-executive producer."
+        ],
+        "memberships": [],
+        "practiceAreas": [
+          "Entertainment and intellectual property litigation",
+          "Trademark and copyright pre-litigation and dispute prevention",
+          "Entertainment transactional counseling for development and production partners"
+        ],
+        "creative": "John Heath continues to co-executive produce \"Tigers From the Sun\" while leading IP and entertainment litigation for Cosmic Law Firm."
+      }
+    },
+    "links": {
+      "backToTeam": "Back to team"
+    },
     "cta": {
       "title": "Need counsel with production and trial chops?",
       "description": "Share a short summary, deck, or dispute outline; we will connect you with the right attorney and next steps.",
@@ -489,7 +444,7 @@
     "approval": {
       "title": "Formal Approval of this Accessibility Statement",
       "body": "This Accessibility Statement is approved by: Cosmic Law Firm",
-      "date": "Date: January 16, 2026"
+      "date": "Date: February 3, 2026"
     }
     ,
     "contact": {

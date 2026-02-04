@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '@src/components/Icon';
 
 export type ButtonTone = 'dark' | 'light';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -62,9 +63,7 @@ const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {isLoading && (
-        <span className="mr-2 animate-spin material-symbols-outlined text-[18px]" aria-hidden="true">
-          sync
-        </span>
+        <Icon name="sync" className="mr-2 animate-spin size-[18px]" />
       )}
       {!isLoading && leftIcon && <span className="mr-2 flex" aria-hidden="true">{leftIcon}</span>}
       {children}

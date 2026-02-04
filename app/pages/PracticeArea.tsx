@@ -6,6 +6,8 @@ import Link from '@/components/ui/Link';
 import SEO from '@/components/SEO';
 import { getPracticeAreaBySlug } from '@/lib/practice-areas';
 import { SITE } from '@/lib/site';
+import Icon from '@src/components/Icon';
+import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 type PracticeAreaPageProps = {
   lng?: string;
@@ -25,45 +27,53 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
 
   if (!area) {
     return (
-      <div className="max-w-[960px] mx-auto px-6 sm:px-8 py-16">
+      <SectionWithStars className="max-w-[960px] mx-auto px-6 sm:px-8 py-16" settings={{ density: 0.44 }}>
         <SEO title="Practice Area" description="Practice area not found." />
-        <h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">
-          Practice area not found
-        </h1>
-        <p className="mt-3 text-slate-600 dark:text-slate-400">
-          The page you’re looking for doesn’t exist.
-        </p>
-        <div className="mt-8">
-          <Link
-            to={lng ? `/${lng}/services` : '/services'}
-            className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-primary hover:bg-primary/80 text-white font-bold transition-colors focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
-          >
-            Back to Practice Areas
-          </Link>
+        <div className="relative z-10">
+          <h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white uppercase">
+            {t('notFound.title')}
+          </h1>
+          <p className="mt-3 text-slate-600 dark:text-slate-400">
+            {t('notFound.description')}
+          </p>
+          <div className="mt-8">
+            <Link
+              to={lng ? `/${lng}/services` : '/services'}
+              className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-primary hover:bg-primary/80 text-white font-bold transition-colors focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
+            >
+              {t('notFound.cta')}
+            </Link>
+          </div>
         </div>
-      </div>
+      </SectionWithStars>
     );
   }
 
+  const currentLang = i18n.language || lng || 'en';
+  const isKo = currentLang.startsWith('ko');
+  const isZh = currentLang.startsWith('zh');
+
+  const title = isKo ? area.titleKo : isZh ? area.titleZh : area.title;
+  const focus = isKo ? area.focusKo : isZh ? area.focusZh : area.focus;
+  const overview = isKo ? area.overviewKo : isZh ? area.overviewZh : area.overview;
+
   return (
     <>
-      <SEO title={area.title} description={area.summary} />
+      <SEO title={title} description={area.summary} />
 
       {/* Hero */}
-      <section className="w-full bg-background-light dark:bg-background-dark border-b border-secondary/40 dark:border-white/10">
-        <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-10 py-12">
+      <SectionWithStars className="w-full bg-background-light dark:bg-background-dark border-b border-secondary/40 dark:border-white/10" settings={{ density: 0.47 }}>
+        <div className="relative z-10 max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-10 py-12">
           <div className="flex flex-col gap-4 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary text-xs font-black uppercase tracking-widest w-fit">
-              <span className="material-symbols-outlined text-[16px]" aria-hidden="true">
-                {area.icon}
-              </span>
-              Practice Area
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-xs font-black uppercase tracking-widest w-fit">
+              <Icon name={area.icon} className="size-4" />
+              {t('common.practiceAreaLabel')}
             </div>
-            <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
-              {area.title}
+            <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-slate-900 dark:text-white uppercase">
+              {title}
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
-              {area.focus}
+              {focus}
             </p>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               {area.summary}
@@ -73,29 +83,29 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
                 to={lng ? `/${lng}/contact` : '/contact'}
                 className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-primary hover:bg-primary/80 text-white font-bold transition-colors shadow-md focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
               >
-                Request a consultation
+                {t('contactPage.form.title')}
               </Link>
               <Link
                 to={lng ? `/${lng}/services` : '/services'}
                 className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
               >
-                View all practice areas
+                {t('nav.viewAllPracticeAreas')}
               </Link>
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithStars>
 
       {/* Services list */}
-      <section className="w-full">
-        <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-10 py-12">
-          {area.overview?.length ? (
+      <SectionWithStars className="w-full" settings={{ density: 0.5 }}>
+        <div className="relative z-10 max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-10 py-12">
+          {overview?.length ? (
             <div className="max-w-3xl">
               <h2 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
-                Overview
+                {t('common.overview')}
               </h2>
               <div className="mt-3 space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
-                {area.overview.map((paragraph) => (
+                {overview.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
@@ -104,10 +114,10 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
 
           <div className="flex flex-col gap-2 max-w-3xl mt-12">
             <h2 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
-              What we handle
+              {t('common.whatWeHandle')}
             </h2>
             <p className="text-slate-600 dark:text-slate-400">
-              Typical matters within {area.title.toLowerCase()}.
+              {t('common.typicalMatters', { title: title.toLowerCase() })}
             </p>
           </div>
 
@@ -117,9 +127,7 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
                 key={service}
                 className="flex gap-3 p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
               >
-                <span className="material-symbols-outlined text-slate-900 dark:text-primary shrink-0" aria-hidden="true">
-                  check_circle
-                </span>
+                <Icon name="check_circle" className="text-slate-900 dark:text-primary-light size-5 shrink-0" />
                 <p className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
                   {service}
                 </p>
@@ -129,28 +137,28 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
 
           <div className="mt-12 rounded-2xl border border-secondary/40 dark:border-white/10 bg-secondary/25 dark:bg-white/5 p-6 sm:p-8">
             <h3 className="text-lg font-black tracking-tight text-slate-900 dark:text-white">
-              Next step
+              {t('common.nextStep')}
             </h3>
             <p className="mt-2 text-slate-600 dark:text-slate-400 leading-relaxed">
-              Tell us what you’re building and where you are in the process. We’ll respond with a clear plan and next actions.
+              {t('common.nextStepDescription')}
             </p>
             <div className="mt-5 flex flex-col sm:flex-row gap-3">
               <Link
                 to={lng ? `/${lng}/contact` : '/contact'}
                 className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-primary hover:bg-primary/80 text-white font-bold transition-colors shadow-md focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
               >
-                Contact {SITE.name.split(' ')[0]}
+                {t('common.contactCompany', { name: SITE.name.split(' ')[0] })}
               </Link>
               <a
-                href={`mailto:${SITE.email}?subject=${encodeURIComponent(`${area.title} inquiry`)}`}
+                href={`mailto:${SITE.email}?subject=${encodeURIComponent(`${title} inquiry`)}`}
                 className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
               >
-                Email us
+                {t('contact.labels.email')}
               </a>
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithStars>
     </>
   );
 };

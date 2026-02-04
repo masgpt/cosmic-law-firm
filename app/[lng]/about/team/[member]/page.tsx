@@ -12,7 +12,7 @@ export const generateStaticParams = () => {
   }));
 };
 
-const TeamMemberPage = async ({ params }: { params: Params }) => {
+const TeamMemberPage = async ({ params }: { params: Promise<Params> }) => {
   const resolvedParams = await params;
   const member = teamMembers.find((teamMember) => teamMember.slug === resolvedParams.member);
 

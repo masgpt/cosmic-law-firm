@@ -4,6 +4,8 @@ import ButtonLink from '@/components/ui/ButtonLink';
 import Link from '@/components/ui/Link';
 import SEO from '@/components/SEO';
 import { useTranslation } from 'react-i18next';
+import Icon from '@src/components/Icon';
+import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
@@ -18,13 +20,11 @@ const AboutDesktop: React.FC = () => {
     <>
       <SEO title={t('about.hero.title')} description={t('about.hero.description')} />
 
-      <section className="w-full px-10 py-20 max-w-[1280px] mx-auto overflow-hidden" aria-labelledby="about-hero-title">
-        <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
+      <SectionWithStars className="w-full px-10 py-20 max-w-[1280px] mx-auto overflow-hidden" aria-labelledby="about-hero-title" settings={{ density: 0.5 }}>
+        <div className="relative z-10 flex flex-col gap-16 lg:flex-row lg:items-center">
           <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" className="flex flex-col gap-6 lg:w-1/2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary text-xs font-black uppercase tracking-widest w-fit">
-              <span className="material-symbols-outlined text-[16px]" aria-hidden="true">
-                verified
-              </span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-xs font-black uppercase tracking-widest w-fit">
+              <Icon name="verified" className="size-4" />
               {t('about.hero.badge')}
             </div>
             <h1 id="about-hero-title" className="text-slate-900 dark:text-white text-6xl font-black leading-tight tracking-tight">
@@ -71,10 +71,10 @@ const AboutDesktop: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </SectionWithStars>
 
-      <section className="w-full bg-background-light dark:bg-background-dark py-20 border-y border-secondary/40 dark:border-white/10">
-        <div className="max-w-4xl mx-auto px-10">
+      <SectionWithStars className="w-full bg-background-light dark:bg-background-dark py-20 border-y border-secondary/40 dark:border-white/10" settings={{ density: 0.42 }}>
+        <div className="relative z-10 max-w-4xl mx-auto px-10">
           <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" className="space-y-12">
             <div className="space-y-4">
               <h2 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white">
@@ -104,11 +104,11 @@ const AboutDesktop: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </SectionWithStars>
 
-      <section className="w-full bg-primary text-white py-16 px-10 overflow-hidden">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
-          <h2 className="text-4xl font-black">{t('about.cta.title')}</h2>
+      <SectionWithStars className="w-full bg-primary text-white py-16 px-10 overflow-hidden" settings={{ density: 0.47 }}>
+        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
+          <h2 className="text-4xl font-black uppercase tracking-tight">{t('about.cta.title')}</h2>
           <p className="text-white/90 text-lg max-w-2xl">
             {t('about.cta.description')}
           </p>
@@ -120,7 +120,7 @@ const AboutDesktop: React.FC = () => {
                 {t('about.cta.button')}
               </ButtonLink>
         </div>
-      </section>
+      </SectionWithStars>
     </>
   );
 };

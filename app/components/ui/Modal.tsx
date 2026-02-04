@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { useFocusTrap, useFocusRestoration } from '../../lib/accessibility/useFocusManagement';
+import Icon from '@src/components/Icon';
 
 interface ModalProps {
   isOpen: boolean;
@@ -70,7 +71,7 @@ const Modal: React.FC<ModalProps> = ({
               className="p-2 -mt-1 -mr-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0"
               aria-label={t('accessibility.closeModal')}
             >
-              <span className="material-symbols-outlined" aria-hidden="true">close</span>
+              <Icon name="close" className="size-5" />
             </button>
           </div>
           
@@ -80,7 +81,7 @@ const Modal: React.FC<ModalProps> = ({
             </p>
           )}
 
-          <div className="p-6">
+          <div className="p-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
             {children}
           </div>
         </div>

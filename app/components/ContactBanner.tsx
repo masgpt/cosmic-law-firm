@@ -4,6 +4,7 @@ import React from 'react';
 import Link from './ui/Link';
 import LanguageToggle from './LanguageToggle';
 import { SITE } from '../lib/site';
+import Icon from '@src/components/Icon';
 
 interface ContactBannerProps {
   lng?: string;
@@ -16,23 +17,23 @@ const ContactBanner: React.FC<ContactBannerProps> = ({ lng }) => {
         <div className="hidden sm:flex flex-wrap justify-start items-center gap-x-6 gap-y-1.5">
           <Link 
             href={`tel:${SITE.phoneTel}`} 
-            className="flex items-center gap-2 hover:text-primary transition-colors focus:ring-1 focus:ring-primary/20 rounded shrink-0 group"
+            className="flex items-center gap-2 hover:text-primary-light transition-colors focus:ring-1 focus:ring-primary/20 rounded shrink-0 group"
           >
-            <span className="material-symbols-outlined text-[15px] text-primary group-hover:scale-110 transition-transform" aria-hidden="true">call</span>
+            <Icon name="call" className="text-secondary size-[15px] group-hover:scale-110 transition-transform" />
             <span>{SITE.phoneDisplay}</span>
           </Link>
           <div className="hidden sm:block h-3 w-px bg-white/10" aria-hidden="true" />
           <div className="flex items-center gap-2 text-white/80">
-            <span className="material-symbols-outlined text-[15px] text-primary shrink-0" aria-hidden="true">location_on</span>
+            <Icon name="location_on" className="text-secondary size-[15px] shrink-0" />
             <span className="truncate max-w-[240px] sm:max-w-none">{SITE.addressShort}</span>
           </div>
         </div>
         <div className="flex items-center gap-4 sm:gap-6 shrink-0">
           <Link 
             href={`mailto:${SITE.email}`}
-            className="hidden sm:flex items-center gap-2 hover:text-primary transition-colors focus:ring-1 focus:ring-primary/20 rounded group"
+            className="hidden sm:flex items-center gap-2 hover:text-primary-light transition-colors focus:ring-1 focus:ring-primary/20 rounded group"
           >
-            <span className="material-symbols-outlined text-[15px] text-primary group-hover:scale-110 transition-transform" aria-hidden="true">mail</span>
+            <Icon name="mail" className="text-secondary size-[15px] group-hover:scale-110 transition-transform" />
             <span>{SITE.email}</span>
           </Link>
           <div className="hidden sm:block h-3 w-px bg-white/10" aria-hidden="true" />

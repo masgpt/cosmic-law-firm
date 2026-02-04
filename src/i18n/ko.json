@@ -56,7 +56,26 @@
     "ourApproach": "철학",
     "insights": "인사이드",
     "testimonials": "추천",
-    "contact": "문의"
+    "contact": "문의",
+    "viewAllServices": "전체 서비스 보기",
+    "viewAllPracticeAreas": "전체 업무 분야 보기",
+    "viewServices": "서비스 보기",
+    "menuOpen": "메뉴 열기",
+    "menuClose": "메뉴 닫기"
+  },
+  "common": {
+    "location": "로스앤젤레스, CA",
+    "doctorTitle": "엔터테인먼트 로펌",
+    "close": "닫기",
+    "practiceAreaLabel": "업무 분야",
+    "companyName": "Cosmic Law Firm",
+    "companyNameSub": "엔터테인먼트·미디어·개인상해법",
+    "overview": "개요",
+    "whatWeHandle": "주요 업무",
+    "typicalMatters": "{{title}} 분야에서 주로 다루는 업무입니다.",
+    "nextStep": "다음 단계",
+    "nextStepDescription": "진행 중인 프로젝트를 알려주시면 명확한 계획과 다음 단계를 안내해 드립니다.",
+    "contactCompany": "{{name}}에 문의하기"
   },
   "seo": {
     "home": {

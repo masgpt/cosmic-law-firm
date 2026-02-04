@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../../components/SEO';
 import { SITE } from '../../../lib/site';
+import { FEATURES } from '@src/config/features';
 
 const AccessibilityDesktop: React.FC = () => {
   const { t } = useTranslation();
@@ -19,9 +20,9 @@ const AccessibilityDesktop: React.FC = () => {
     {
       label: t('accessibilityPage.contact.addressLabel'),
       value: SITE.addressShort,
-      href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-        SITE.addressQuery
-      )}`,
+      href: FEATURES.googleMaps
+        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.addressQuery)}`
+        : undefined,
     },
   ];
 
@@ -86,20 +87,34 @@ const AccessibilityDesktop: React.FC = () => {
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">{t('accessibilityPage.contact.responseTime')}</p>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
-              {contactDetails.map((detail) => (
-                <a
-                  key={detail.label}
-                  href={detail.href}
-                  className="rounded-2xl border border-slate-200 dark:border-slate-800 px-4 py-3 flex flex-col gap-1 hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary dark:hover:border-primary transition-colors"
-                >
-                  <span className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                    {detail.label}
-                  </span>
-                  <span className="text-base font-semibold text-slate-900 dark:text-white break-words">
-                    {detail.value}
-                  </span>
-                </a>
-              ))}
+              {contactDetails.map((detail) =>
+                detail.href ? (
+                  <a
+                    key={detail.label}
+                    href={detail.href}
+                    className="rounded-2xl border border-slate-200 dark:border-slate-800 px-4 py-3 flex flex-col gap-1 hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary dark:hover:border-primary transition-colors"
+                  >
+                    <span className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                      {detail.label}
+                    </span>
+                    <span className="text-base font-semibold text-slate-900 dark:text-white break-words">
+                      {detail.value}
+                    </span>
+                  </a>
+                ) : (
+                  <div
+                    key={detail.label}
+                    className="rounded-2xl border border-slate-200 dark:border-slate-800 px-4 py-3 flex flex-col gap-1"
+                  >
+                    <span className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                      {detail.label}
+                    </span>
+                    <span className="text-base font-semibold text-slate-900 dark:text-white break-words">
+                      {detail.value}
+                    </span>
+                  </div>
+                ),
+              )}
             </div>
           </section>
         </div>

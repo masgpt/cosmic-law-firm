@@ -8,7 +8,11 @@ import TeamMobile from './Team/Mobile/Team.mobile';
 const Team: React.FC<{ initialIsMobile?: boolean }> = ({ initialIsMobile }) => {
   const { isMobile } = useViewport(initialIsMobile);
 
-  return isMobile ? <TeamMobile /> : <TeamDesktop />;
+  return (
+    <>
+      {isMobile ? <TeamMobile /> : <TeamDesktop />}
+    </>
+  );
 };
 
 export default Team;

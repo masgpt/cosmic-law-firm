@@ -1,0 +1,458 @@
+{
+  "insights": {
+    "hero": {
+      "badge": "洞见",
+      "title": "让交易更清晰，更早保护权利。",
+      "description": "关于合同、知识产权、NIL 与 AI 动态的简短要点，帮助你把时间用在真正关键的事项上。"
+    },
+    "topics": {
+      "contract-red-flags": {
+        "title": "合同红旗条款",
+        "summary": "在签字前识别隐藏的权利转让、付款与审计陷阱。"
+      },
+      "chain-of-title": {
+        "title": "权利链（Chain of Title）",
+        "summary": "把文件链路整理清晰，让融资、发行与授权按期完成。"
+      },
+      "ai-in-entertainment": {
+        "title": "娱乐行业的 AI",
+        "summary": "AI 正在影响权利边界、安全与制作预算的关键环节。"
+      },
+      "ai-contracts": {
+        "title": "AI 合同条款",
+        "summary": "训练数据、责任分配与披露义务的关键条款。"
+      },
+      "ai-law": {
+        "title": "AI 监管",
+        "summary": "联邦、州与国际规则正在加速成形。"
+      },
+      "nil-basics": {
+        "title": "NIL 基础",
+        "summary": "最新和解与上限如何改变运动员商业合作。"
+      },
+      "publicity-basics": {
+        "title": "姓名/肖像与公开权",
+        "summary": "在交易与诉讼中管理姓名、形象与肖像权（NIL）。"
+      }
+    },
+    "cta": {
+      "title": "想更深入？",
+      "description": "告诉我们你正在面对的问题，我们会指出关键法律风险与优先事项。",
+      "button": "联系团队",
+      "linkText": "阅读洞见"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "娱乐法律 | Cosmic Law Firm",
+      "description": "为创作者、制片方与媒体公司提供娱乐法律服务——合同、知识产权、艺人交易、发行与争议解决。"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "现代法律服务",
+      "title": "为创意工作护航",
+      "description": "从娱乐与媒体到人身伤害索赔，我们在关键时刻保护权利与结果。",
+      "ctaPrimary": "预约咨询",
+      "ctaSecondary": "联系团队"
+    },
+    "services": {
+      "title": "服务领域",
+      "description": "为电影、音乐、媒体、品牌合作以及人身伤害客户提供以清晰与信任为基础的法律服务。"
+    },
+    "cta": {
+      "title": "需要沟通吗？",
+      "description": "简单介绍你的项目，我们会回复下一步安排与清晰的工作范围。",
+      "button": "联系团队"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "practiceAreas": "服务领域",
+    "servicesLabel": "服务",
+    "about": "关于",
+    "team": "团队",
+    "ourApproach": "理念",
+    "insights": "洞见",
+    "testimonials": "客户评价",
+    "contact": "联系我们",
+    "viewAllServices": "查看全部服务",
+    "viewAllPracticeAreas": "查看全部服务领域",
+    "viewServices": "查看服务",
+    "menuOpen": "打开菜单",
+    "menuClose": "关闭菜单"
+  },
+  "footer": {
+    "description": "为创作者与公司提供娱乐与媒体法律服务——关键时刻的交易与诉讼支持。",
+    "quickLinks": "快速链接",
+    "about": "关于",
+    "message": "我们的理念",
+    "techniques": "服务领域",
+    "contactInfo": "联系方式",
+    "email": "电子邮箱",
+    "address": "洛杉矶，加州（需预约）",
+    "rights": "版权所有。",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "accessibility": "无障碍声明",
+    "emailLabel": "电子邮箱"
+  },
+  "common": {
+    "location": "洛杉矶，加州",
+    "doctorTitle": "娱乐法律事务所",
+    "close": "关闭",
+    "practiceAreaLabel": "专业领域",
+    "companyName": "Cosmic Law Firm",
+    "companyNameSub": "娱乐、媒体与人身伤害法律",
+    "overview": "概览",
+    "whatWeHandle": "业务范围",
+    "typicalMatters": "{{title}} 领域涵盖的典型事务。",
+    "nextStep": "下一步",
+    "nextStepDescription": "告诉我们你正在推进的项目及其进度，我们会回复清晰的计划与后续行动建议。",
+    "contactCompany": "联系 {{name}}"
+  },
+  "about": {
+    "hero": {
+      "badge": "关于本所",
+      "title": "覆盖全链条的娱乐法律服务",
+      "description": "以诉讼实战经验支撑交易起草与谈判——让合同更贴近商业目标，也更经得起争议考验。",
+      "cta": "联系本所",
+      "imageLabel": "律师肖像（占位图）"
+    },
+    "sections": {
+      "experience": {
+        "title": "我们的经验",
+        "body": "我们在交易与诉讼领域均具有丰富经验，涵盖复杂合同与公司文件的起草、谈判与审阅，版权与商标注册及争议处理，以及多起数百万美元级别的陪审团审判。我们相信，广谱经验是成功的关键。例如，我们在合同违约案件中曾代表双方成功诉讼，因此清楚起草或审阅合同时的关键卡点与常见陷阱；反之亦然。这种经验对客户具有直接价值，也是仅做交易的律所通常难以提供的。客户也能更安心：即便是交易事项，我们同样具备在未来发生争议时（包括非诉与诉讼）强力维护权益的能力。"
+      },
+      "clientCentered": {
+        "title": "以客户为中心",
+        "body": "我们以对客户的深度承诺为荣。成功不仅来自经验、训练与教育，也来自与客户就案件保持持续、有效、协作的沟通。因此，我们从首次咨询到案件结束都强调及时、频繁的沟通，并充分考虑客户的独特目标与最终诉求。"
+      },
+      "services": {
+        "title": "我们的服务",
+        "body": "Cosmic Law Firm 专注于覆盖娱乐法律服务全流程，包含交易与诉讼在内的各类事项，涉及行业的法律、商业、技术与财务维度。从知识产权、许可、公开权、公司法、劳动与雇佣、移民、侵权、合同与国际法等领域，我们提供多样化实践与服务，帮助娱乐行业客户实现商业与创作目标。本所立足世界娱乐之都洛杉矶，并正在扩展，为韩国与中国客户提供娱乐法律服务。"
+      }
+    },
+    "cta": {
+      "title": "一起把项目保护好",
+      "description": "发送项目简要说明或协议文本，我们会回复时间线与下一步建议。",
+      "button": "联系本所"
+    }
+  },
+  "message": {
+    "badge": "我们的理念",
+    "title": "清晰、勇气与伙伴关系",
+    "intro": "我们把每一份交易都视为创意协作的一部分：你专注讲好故事，我们负责把法律护栏搭牢。",
+    "pillars": {
+      "clarity": {
+        "title": "把目标说清楚",
+        "description": "在起草前对齐目标、时间线与谈判筹码，避免关键细节被默认或遗漏。"
+      },
+      "draft": {
+        "title": "有意图地起草",
+        "description": "用文件体现创作与商业优先级，同时保持交易推进速度。"
+      },
+      "protect": {
+        "title": "提前防护",
+        "description": "尽早落实权利、审批与合规，让你专注于打动观众的作品本身。"
+      }
+    },
+    "cta": {
+      "title": "准备对齐方案了吗？",
+      "description": "分享你正在做的事，我们会回复清晰的工作范围与下一步安排。",
+      "button": "联系团队"
+    }
+  },
+  "contact": {
+    "title": "到访办公室",
+    "description": "办公室位于洛杉矶市中心，专注娱乐、媒体与人身伤害法律服务。仅接受预约。",
+    "labels": {
+      "address": "地址",
+      "call": "致电我们",
+      "email": "邮件联系",
+      "hours": "营业时间",
+      "directions": "获取路线",
+      "phone": "电话"
+    },
+    "hours": {
+      "weekdays": "周一、周二、周三、周五：",
+      "thursday": "周四：",
+      "saturday": "周六：",
+      "sunday": "周日：",
+      "closed": "休息"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "专业领域",
+      "title": "我们的服务",
+      "subtitle": "专注娱乐法律——交易与诉讼——覆盖行业的法律、商业、技术与财务现实。",
+      "cta": "查看服务领域"
+    },
+    "philosophy": {
+      "title": "让交易持续推进的策略",
+      "p1": "我们将精密的交易技巧与对娱乐产业链的深刻理解结合。"
+    },
+    "specialties": {
+      "title": "专长 / 服务领域",
+      "description": "Cosmic Law Firm 专注于覆盖娱乐、媒体与人身伤害法律服务全流程，包含交易与诉讼事项，涉及娱乐行业的法律、商业、技术与财务维度，也包括人身伤害索赔的维权与恢复。从知识产权、许可、公开权、公司法、劳动与雇佣、移民、侵权、合同与国际法，到过失、人身伤害场所责任与保险争议，我们提供多样化实践与服务，帮助客户实现商业与个人目标。本所立足世界娱乐之都洛杉矶，并正在扩展，为韩国与中国客户提供娱乐与人身伤害法律服务。"
+    },
+    "process": {
+      "title": "我们的工作方式",
+      "step1": {
+        "title": "倾听",
+        "desc": "了解你的目标、时间线与谈判筹码。"
+      },
+      "step2": {
+        "title": "起草与谈判",
+        "desc": "用清晰表达、权利保护与商业常识来构建文件。"
+      },
+      "step3": {
+        "title": "落地与保护",
+        "desc": "完成审批与交付，并在 IP、合规与争议方面保持领先。"
+      }
+    },
+    "cta": {
+      "title": "准备沟通了吗？",
+      "description": "分享你正在做的事，我们会回复下一步安排与清晰的工作范围。",
+      "button": "联系团队"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "联系我们",
+      "description": "告诉我们你正在处理的事项——交易、争议或注册。我们会回复下一步安排与清晰的工作范围。"
+    },
+    "details": {
+      "title": "地点与联系",
+      "phone": {
+        "label": "咨询可电话或短信联系"
+      },
+      "email": {
+        "label": "随时发送邮件",
+        "responseTime": "一般在两个到五个工作日内邮件回复。"
+      }
+    },
+    "hours": {
+      "title": "营业时间"
+    },
+    "form": {
+      "title": "预约咨询",
+      "description": "填写基本信息，我们会联系你安排咨询时间。",
+      "labels": {
+        "name": "姓名",
+        "phone": "电话号码",
+        "message": "需要我们如何协助？"
+      },
+      "placeholders": {
+        "name": "张三",
+        "phone": "（示例）138 0000 0000",
+        "message": "请描述你正在推进的项目或面临的争议（请勿包含保密细节）。"
+      },
+      "submit": "发送请求",
+      "success": {
+        "title": "已发送！",
+        "message": "感谢联系。我们会在两个到五个工作日内回复并协调下一步。",
+        "button": "再发送一条"
+      }
+    }
+  },
+  "team": {
+    "hero": {
+      "badge": "团队介绍",
+      "title": "为创作者提供经得起庭审检验的法律支持",
+      "description": "Cosmic Law Firm 将多语种诉讼经验与制作实践结合，让讲故事的人专注创作，我们守护法律路径。",
+      "cta": "联系团队"
+    },
+    "members": {
+      "jean": {
+        "location": "洛杉矶，加州",
+        "title": "创始人 · 管理合伙人",
+        "specialty": "庭审 · 娱乐制作 · 多语种法律服务",
+        "description": "Jean Kwon 是一名精通三语的出庭律师，处理过 3,000 余件复杂案件，领域涵盖商业地产、企业、遗嘱认证、家事、劳动、刑事与民事诉讼，并共同监制了《Tigers From the Sun》等电影项目。",
+        "education": [
+          "南加州大学古尔德法学院（USC Gould），娱乐法",
+          "Verne College of Law，法学博士（J.D.）",
+          "韩国外国语大学，西班牙语学士"
+        ],
+        "imageAlt": "Cosmic Law Firm 创始人 Jean Kwon 的肖像"
+      },
+      "katherine": {
+        "location": "洛杉矶，加州",
+        "title": "律师 · 娱乐法",
+        "specialty": "个人简介即将更新",
+        "description": "Katherine Jung 正在加入团队；其经历与执业方向正在整理，将尽快更新。",
+        "education": ["教育信息即将更新。"],
+        "imageAlt": "Katherine Jung 的肖像"
+      },
+      "john": {
+        "location": "洛杉矶，加州",
+        "title": "资深顾问 · 刑事与民事诉讼",
+        "specialty": "联邦/州刑辩 · 专业责任 · 白领犯罪",
+        "description": "曾任联邦检察官（美国助理检察官）与民事诉讼律师，从业三十余年，处理州与联邦法院的复杂欺诈、移民、海关、医疗过失与黑帮/勒索等案件。",
+        "education": [
+          "加州大学伯克利分校，法学博士（J.D.）",
+          "加州大学洛杉矶分校（UCLA），学士"
+        ],
+        "imageAlt": "John D. Robertson 的肖像"
+      },
+      "heath": {
+        "location": "洛杉矶，加州",
+        "title": "顾问 · 娱乐与知识产权",
+        "specialty": "娱乐诉讼 · 商标与版权争议防控 · 开发阶段法律顾问",
+        "description": "在好莱坞成长、具备音乐行业背景的娱乐与知识产权律师，现负责诉讼与 IP 策略，同时共同制作《Tigers From the Sun》等新项目。",
+        "education": [
+          "Whittier 法学院，法学博士（J.D.）",
+          "圣何塞州立大学，大众传播硕士（M.D.）"
+        ],
+        "imageAlt": "John Heath 的肖像"
+      }
+    },
+    "details": {
+      "jean": {
+        "tagline": "创始人 · 多语种出庭律师",
+        "biography": [
+          "Jean Kwon 律师是一位经验丰富的出庭律师，精通英语、西班牙语与韩语三种语言。她在陪审团审判与法庭审理中取得多次胜诉，已成功代理超过 3,000 件复杂案件，涵盖商业与住宅地产、企业纠纷、遗嘱认证、家事、劳动、刑事与民事诉讼等。Kwon 拥有美国加州 San Fernando Valley College of Law 的法学博士学位（Juris Doctor）、韩国首尔 Hankuk University of Foreign Language 的文学学士学位，以及阿根廷布宜诺斯艾利斯 Colegio Hipolito Irigoyen 的高中学历。",
+          "在创立事务所之前，Kwon 曾在多家律所工作，负责起草诉状与证据开示，并代表客户出庭，包括 Laurence B. Donoghue 律师事务所、Jiyoung Kym 律师事务所、Jane Chung 律师事务所，以及 Briskin, Latzanich & Pene LLP。",
+          "Kwon 自 2008 年 6 月起为加州律师协会成员，同时也是 San Fernando Valley Bar Association 成员、洛杉矶 Criminal Courts Bar Association 成员、California Employment Lawyers Association 成员、Consumer Attorneys Association of Los Angeles 成员，并担任第 29 与第 30 届洛杉矶韩国人联合会（KAFLA）理事及法律顾问、KAFLA 第 30 届选举委员会法律顾问，以及 Korean American United Foundation（KAUF）法律顾问。",
+          "如果你关注讲故事与影视娱乐产业，你应当认识 Jean Kwon。她在洛杉矶的精品律所 Cosmic Law Firm 专注于多平台内容的开发与制作法律服务。",
+          "Kwon 也曾考虑讲述自己从韩国出生、随家人移民阿根廷、再到洛杉矶的经历。但目前，她正把握机会担任原创剧本《Tigers from the Sun》（作者 C.J. Baker）的执行制片。Kwon 多年来是备受认可的法律从业者，如今希望将事业版图拓展到影视制作领域，把《Tigers》故事带到观众面前。"
+        ],
+        "memberships": [
+          "自 2008 年 6 月起为加州律师协会成员",
+          "San Fernando Valley Bar Association 成员",
+          "洛杉矶 Criminal Courts Bar Association 成员",
+          "California Employment Lawyers Association 成员",
+          "Consumer Attorneys Association of Los Angeles 成员",
+          "第 29 与第 30 届洛杉矶韩国人联合会（KAFLA）理事及法律顾问",
+          "KAFLA 第 30 届选举委员会法律顾问",
+          "Korean American United Foundation（KAUF）法律顾问"
+        ],
+        "practiceAreas": [
+          "商业与住宅地产诉讼",
+          "企业、遗嘱认证、家事、劳动、刑事与民事诉讼",
+          "娱乐制作、电影融资与执行制片合作"
+        ],
+        "creative": "Jean 持续把握机会推动《Tigers From the Sun》项目落地，并拓展 Cosmic Law Firm 在影视娱乐领域的影响力。"
+      },
+      "katherine": {
+        "tagline": "律师 · 娱乐法",
+        "biography": [
+          "Katherine Jung 正在加入本所；其经历与执业方向正在整理，将尽快更新。"
+        ],
+        "memberships": [],
+        "practiceAreas": [
+          "关于 Katherine 的执业重点将很快公布。"
+        ],
+        "creative": ""
+      },
+      "john": {
+        "tagline": "资深顾问 · 刑事与民事诉讼",
+        "biography": [
+          "John D. Robertson 于 1976 年取得加州律师执业资格。Robertson 先生曾任联邦检察官（美国助理检察官）多年，并在大型律所担任民事诉讼律师，后于 1982 年进入私人执业并创立自己的律所。Robertson 先生在州与联邦法院的刑事辩护与民事诉讼领域拥有三十余年经验。",
+          "Robertson 先生毕业于加州大学伯克利分校 Boalt Hall 法学院并取得法学博士学位，曾担任《California Law Review》助理编辑并发表论文。在就读法学院之前，他在加州大学洛杉矶分校完成本科学业并以系内最高荣誉毕业。",
+          "Robertson 先生曾任洛杉矶市副市检察官，以及美国司法部刑事司中加州中区（Central District of California）的美国助理检察官。",
+          "离开政府部门后，Robertson 先生加入洛杉矶的民事诉讼与保险辩护律所 Lewis, D'Amato, Brisbois and Bisgaard，专注为律师在民事医疗/职业过失诉讼中提供辩护。其后，他于 1982 年创立自己的私人律所并持续执业至今。",
+          "Robertson 先生持续从事民事诉讼业务，包括合同违约、欺诈、民事过失诉讼与专业责任等案件。同时，他也在州与联邦法院从事白领犯罪辩护，案件涉及数百万美元级欺诈、有组织犯罪与勒索、刑事移民、海关走私、刑事版权与商标侵权、计算机软件盗版、电话与邮件欺诈、洗钱、税务犯罪、医疗欺诈，以及房地产/按揭欺诈等。",
+          "Robertson 先生长期活跃于多个州律师协会，曾担任多位律师同业与律所的顾问律师（Of Counsel）与咨询顾问，并曾任加州律师协会刑法分会执行委员会成员及联邦法院分委会主席。他还为一项由联邦地区法院法官设立的项目授课，教授合同法与合同分析，帮助考生准备加州律师资格考试。"
+        ],
+        "memberships": [
+          "活跃于多个州律师协会，并长期担任多位同业与律所的顾问律师与咨询顾问",
+          "曾任加州律师协会刑法分会执行委员会成员",
+          "曾任该委员会联邦法院分委会主席",
+          "为联邦地区法院法官设立的项目授课，教授合同与合同分析课程，帮助考生备考"
+        ],
+        "practiceAreas": [
+          "联邦与州刑事辩护",
+          "合同违约、欺诈、民事过失与专业责任代理",
+          "白领犯罪辩护：欺诈、勒索、移民、海关、知识产权侵权、假冒、电话与邮件欺诈、洗钱、税务、医疗欺诈与房地产/按揭欺诈等"
+        ],
+        "creative": ""
+      },
+      "heath": {
+        "tagline": "顾问 · 娱乐与知识产权",
+        "biography": [
+          "John Heath 是 Cosmic Law Firm 的律师，专注娱乐与知识产权领域。",
+          "Heath 曾在唱片行业工作并以录音艺人身份取得一定成就，之后在圣何塞州立大学获得大众传播硕士学位，并在 Whittier 法学院取得法学博士学位（并获得知识产权证书）。除民事诉讼外，Heath 还具备娱乐诉讼、商标与版权争议预防、知识产权与娱乐交易法方面的经验。",
+          "Heath 对娱乐行业与内容创作有着深刻理解。这并不意外：他在好莱坞核心环境中成长。其父亲是一位高产且成功的电视编剧，母亲是资深娱乐律师，在近四十年的执业生涯中曾代表几乎所有主要制片厂；此外，他的继父是一位备受尊敬的以色列裔美国导演。",
+          "Heath 也将音乐基因带入职业背景：大学毕业后不久，他即与一家知名独立厂牌签下录音合约。目前他正在开发其他电影与电视剧项目，但最投入的仍是《Tigers From the Sun》。",
+          "Heath 被《Tigers From the Sun》及其现实原型 Claire Lee Chennault 的故事深深吸引。Chennault 的决心与不愿屈从当时社会范式的精神，使他成为时代英雄。Heath 非常期待将这一尚未被充分讲述的故事拍成电影，并与同事、才华出众的 Cosmic Law Firm 律师 Jean Kwon 共同担任联合执行制片人。"
+        ],
+        "memberships": [],
+        "practiceAreas": [
+          "娱乐与知识产权诉讼",
+          "商标与版权争议预防及争端前期处理",
+          "为开发与制作合作方提供娱乐交易法律顾问服务"
+        ],
+        "creative": "John Heath 在共同担任《Tigers From the Sun》联合执行制片的同时，负责 Cosmic Law Firm 的知识产权与娱乐诉讼工作。"
+      }
+    },
+    "links": {
+      "backToTeam": "返回团队"
+    },
+    "cta": {
+      "title": "需要兼具制作与庭审经验的法律顾问？",
+      "description": "发送项目简要说明、路演资料或争议概要，我们会匹配合适的律师并提供下一步建议。",
+      "button": "联系团队"
+    }
+  },
+  "notFound": {
+    "title": "未找到页面",
+    "description": "抱歉，我们无法找到该页面。它可能已移动或不再存在。",
+    "cta": "返回首页"
+  },
+  "accessibility": {
+    "navigatedTo": "已跳转至 {{title}}",
+    "required": "（必填）",
+    "opensInNewWindow": "（在新窗口打开）",
+    "closeModal": "关闭弹窗",
+    "dismissNotification": "关闭提示",
+    "skipToContent": "跳到主要内容"
+  },
+  "accessibilityPage": {
+    "title": "无障碍声明",
+    "intro": "Cosmic Law Firm 致力于为残障人士提供无障碍的数字体验。我们持续改进所有人的使用体验，并遵循相关无障碍标准。",
+    "conformance": {
+      "title": "符合性状态",
+      "body": "《Web 内容无障碍指南》（WCAG）为设计与开发人员定义了提升残障人士可访问性的要求，并划分为 A、AA、AAA 三个符合等级。Cosmic Law Firm 目标符合 WCAG 2.1 AA 级标准。部分内容可能尚未完全符合该无障碍标准。"
+    },
+    "feedback": {
+      "title": "反馈",
+      "body": "我们欢迎你就 Cosmic Law Firm 网站的无障碍体验提出反馈。如你遇到无障碍障碍，请通过以下方式与我们联系：",
+      "phone": "电话：(213) 480-0348",
+      "email": "邮箱：ask.cosmiclaw@gmail.com",
+      "address": "来访地址：1021 S. Union Ave., Los Angeles, CA 90015"
+    },
+    "technical": {
+      "title": "技术规范",
+      "body": "Cosmic Law Firm 的无障碍体验依赖以下技术，以便与特定浏览器及你电脑上安装的辅助技术或插件配合使用：",
+      "items": {
+        "html": "HTML",
+        "aria": "WAI-ARIA",
+        "css": "CSS",
+        "js": "JavaScript"
+      }
+    },
+    "assessment": {
+      "title": "评估方式",
+      "body": "Cosmic Law Firm 通过以下方式评估了网站无障碍情况：",
+      "items": {
+        "self": "自我评估",
+        "automated": "使用行业标准工具进行自动化测试"
+      }
+    },
+    "approval": {
+      "title": "无障碍声明的正式批准",
+      "body": "本无障碍声明批准方：Cosmic Law Firm",
+      "date": "日期：2026 年 2 月 3 日"
+    },
+    "contact": {
+      "heading": "联系 Cosmic Law Firm",
+      "description": "如需网站帮助或有无障碍相关问题，可通过以下任一渠道与我们联系。",
+      "phoneLabel": "电话",
+      "emailLabel": "邮箱",
+      "addressLabel": "地址",
+      "responseTime": "我们会在两个到五个工作日内回复无障碍相关请求。"
+    }
+  }
+}

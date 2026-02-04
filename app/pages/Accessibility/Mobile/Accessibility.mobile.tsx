@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../../components/SEO';
 import { SITE } from '../../../lib/site';
+import { FEATURES } from '@src/config/features';
 
 const AccessibilityMobile: React.FC = () => {
   const { t } = useTranslation();
@@ -19,14 +20,14 @@ const AccessibilityMobile: React.FC = () => {
     {
       label: t('accessibilityPage.contact.addressLabel'),
       value: SITE.addressShort,
-      href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-        SITE.addressQuery
-      )}`,
+      href: FEATURES.googleMaps
+        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.addressQuery)}`
+        : undefined,
     },
   ];
 
   return (
-    <div className="bg-white dark:bg-[#0f172a] py-12 px-6 min-h-screen">
+    <div className="bg-white dark:bg-[#0f172a] py-12 px-6 min-h-viewport">
       <SEO 
         title={t('footer.accessibility')}
         description={t('accessibilityPage.intro')}
@@ -86,18 +87,30 @@ const AccessibilityMobile: React.FC = () => {
               <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">{t('accessibilityPage.contact.responseTime')}</p>
             </div>
             <div className="space-y-2">
-              {contactDetails.map((detail) => (
-                <a
-                  key={detail.label}
-                  href={detail.href}
-                  className="flex flex-col rounded-2xl border border-slate-100 dark:border-slate-800 px-3 py-3 text-xs font-semibold leading-tight tracking-wide text-slate-900 dark:text-white hover:border-primary transition-colors"
-                >
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
-                    {detail.label}
-                  </span>
-                  <span className="mt-1 text-sm font-bold">{detail.value}</span>
-                </a>
-              ))}
+              {contactDetails.map((detail) =>
+                detail.href ? (
+                  <a
+                    key={detail.label}
+                    href={detail.href}
+                    className="flex flex-col rounded-2xl border border-slate-100 dark:border-slate-800 px-3 py-3 text-xs font-semibold leading-tight tracking-wide text-slate-900 dark:text-white hover:border-primary transition-colors"
+                  >
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
+                      {detail.label}
+                    </span>
+                    <span className="mt-1 text-sm font-bold">{detail.value}</span>
+                  </a>
+                ) : (
+                  <div
+                    key={detail.label}
+                    className="flex flex-col rounded-2xl border border-slate-100 dark:border-slate-800 px-3 py-3 text-xs font-semibold leading-tight tracking-wide text-slate-900 dark:text-white"
+                  >
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
+                      {detail.label}
+                    </span>
+                    <span className="mt-1 text-sm font-bold">{detail.value}</span>
+                  </div>
+                ),
+              )}
             </div>
           </section>
         </div>

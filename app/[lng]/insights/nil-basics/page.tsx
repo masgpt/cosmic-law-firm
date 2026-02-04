@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
 import { SITE } from '@/lib/site';
+import Icon from '@src/components/Icon';
 
 const titles: Record<string, string> = {
   en: 'NIL Basics | Insides',
@@ -62,9 +63,9 @@ export default async function Page({ params }: { params: Promise<{ lng: string }
   const isKo = lng === 'ko';
 
   return (
-    <div className="py-12 bg-slate-50 dark:bg-slate-900 min-h-screen">
+    <div className="py-12 bg-slate-50 dark:bg-slate-900 min-h-viewport">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 space-y-8">
-        <div className="text-sm uppercase tracking-[0.3em] text-primary">{isKo ? '인사이드 · NIL' : 'Insides · NIL'}</div>
+        <div className="text-sm uppercase tracking-[0.3em] text-primary dark:text-primary-light">{isKo ? '인사이드 · NIL' : 'Insides · NIL'}</div>
         <div>
           <h1 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white">{isKo ? 'NIL 기초' : 'NIL Basics'}</h1>
           <p className="mt-3 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -73,9 +74,9 @@ export default async function Page({ params }: { params: Promise<{ lng: string }
               : 'The House settlement, NCAA policy tweaks, and the new clearinghouse are rewriting how deals are filed, disclosed, and taxed.'}
           </p>
           <div className="mt-4">
-            <Link to="/insights" className="text-sm font-bold uppercase tracking-[0.3em] text-primary inline-flex items-center gap-2">
+            <Link to="/insights" className="text-sm font-bold uppercase tracking-[0.3em] text-primary dark:text-primary-light inline-flex items-center gap-2">
               {isKo ? '인사이드로 돌아가기' : 'Back to Insides'}
-              <span className="material-symbols-outlined text-base">west</span>
+              <Icon name="west" className="size-4" />
             </Link>
           </div>
         </div>
@@ -109,7 +110,7 @@ export default async function Page({ params }: { params: Promise<{ lng: string }
 
         <section className="space-y-3">
           <h4 className="text-sm font-black uppercase tracking-[0.3em] text-slate-400">{isKo ? '자료 출처' : 'References'}</h4>
-          <div className="space-y-2 text-sm text-primary">
+          <div className="space-y-2 text-sm text-primary dark:text-primary-light">
             {references.map((ref) => (
               <Link key={ref.url} to={ref.url} external className="block underline">
                 {ref.label}

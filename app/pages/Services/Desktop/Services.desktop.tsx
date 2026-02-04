@@ -5,6 +5,8 @@ import Link from '@/components/ui/Link';
 import { motion } from 'framer-motion';
 import { practiceAreas } from '@/lib/practice-areas';
 import { SITE } from '@/lib/site';
+import Icon from '@src/components/Icon';
+import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
@@ -25,29 +27,32 @@ const ServicesDesktop: React.FC = () => {
   const { t, i18n } = useTranslation();
   const lng = i18n.language || 'en';
   const isKo = i18n.language?.startsWith('ko');
+  const isZh = i18n.language?.startsWith('zh');
   const processSteps = ['step1', 'step2', 'step3'] as const;
 
   return (
     <>
-      <section className="w-full bg-background-light dark:bg-background-dark flex justify-center overflow-hidden">
-        <div className="w-full max-w-[1280px] px-8 py-5">
+      <SectionWithStars
+        className="hero-header-gap w-full bg-background-light dark:bg-background-dark flex justify-center"
+        overflow="visible"
+        settings={{ density: 0.44 }}
+      >
+        <div className="relative z-10 w-full max-w-[1280px] px-8 py-4">
           <motion.div
             initial={{ opacity: 0, scale: 1.03 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9 }}
-            className="flex min-h-[360px] flex-col gap-6 rounded-xl items-center justify-center p-10 shadow-sm relative overflow-hidden bg-cover bg-center bg-no-repeat"
+            className="flex min-h-[320px] flex-col gap-6 rounded-xl items-center justify-center p-8 shadow-sm relative overflow-hidden bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.8) 100%), url('/cropped-cropped-cropped-cropped-healing-hands-wellness-center-chiropractic-1024x395.jpg')",
+                "linear-gradient(rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.8) 100%), url('/NanoBanana/Lawyer-contract-notes.png')",
             }}
             role="img"
-            aria-label="Hands supporting a person's back (placeholder image)"
+            aria-label="Attorney reviewing contract notes on a desk"
           >
             <div className="flex flex-col gap-3 text-center max-w-[860px] z-10">
               <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/90 text-[11px] font-black uppercase tracking-[0.3em] w-fit mx-auto">
-                <span className="material-symbols-outlined text-[16px]" aria-hidden="true">
-                  gavel
-                </span>
+                <Icon name="gavel" className="size-4" />
                 {t('servicesPage.hero.badge')}
               </div>
               <h1 className="text-white text-5xl font-black leading-tight tracking-tight drop-shadow-md uppercase">
@@ -69,10 +74,10 @@ const ServicesDesktop: React.FC = () => {
             </MotionButtonLink>
           </motion.div>
         </div>
-      </section>
+      </SectionWithStars>
 
-      <section id="practice-areas" className="w-full flex justify-center py-16 overflow-hidden">
-        <div className="w-full max-w-[1280px] px-8">
+      <SectionWithStars id="practice-areas" className="w-full flex justify-center py-16 overflow-hidden" settings={{ density: 0.5 }}>
+        <div className="relative z-10 w-full max-w-[1280px] px-8">
           <motion.div
             variants={fadeInUp}
             initial="initial"
@@ -106,33 +111,29 @@ const ServicesDesktop: React.FC = () => {
                   className="flex flex-col gap-5 rounded-[28px] border border-slate-100 bg-white/90 dark:border-slate-800 dark:bg-slate-900/70 p-8 hover:shadow-2xl hover:border-primary/20 transition-all duration-500 group cursor-pointer"
                 >
                   <div className="size-14 rounded-2xl bg-white/5 shadow-xl shadow-primary/5 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300 dark:bg-white/10 dark:text-white">
-                    <span className="material-symbols-outlined text-3xl font-light" aria-hidden="true">
-                      {area.icon}
-                    </span>
+                    <Icon name={area.icon} className="size-8" />
                   </div>
                   <div className="flex flex-col gap-2 flex-1">
                     <h3 className="text-[#0d141b] dark:text-white text-xl font-black leading-tight tracking-tight">
-                      {isKo ? area.titleKo : area.title}
+                      {isKo ? area.titleKo : isZh ? area.titleZh : area.title}
                     </h3>
                     <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-medium">
-                      {isKo ? area.focusKo : area.focus}
+                      {isKo ? area.focusKo : isZh ? area.focusZh : area.focus}
                     </p>
                   </div>
                   <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.25em] text-primary transition-colors duration-200 group-hover:text-secondary dark:text-secondary">
-                    <span>View services</span>
-                    <span className="material-symbols-outlined text-sm" aria-hidden="true">
-                      arrow_forward
-                    </span>
+                    <span>{t('nav.viewServices')}</span>
+                    <Icon name="arrow_forward" className="size-3.5" />
                   </div>
                 </motion.div>
               </Link>
             ))}
           </motion.div>
         </div>
-      </section>
+      </SectionWithStars>
 
-      <section className="w-full flex justify-center py-16 bg-slate-50 dark:bg-background-dark">
-        <div className="w-full max-w-[1280px] px-8 flex flex-col">
+      <SectionWithStars className="w-full flex justify-center py-16 bg-slate-50 dark:bg-background-dark" settings={{ density: 0.41 }}>
+        <div className="relative z-10 w-full max-w-[1280px] px-8 flex flex-col">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
@@ -169,10 +170,10 @@ const ServicesDesktop: React.FC = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </SectionWithStars>
 
-      <section className="w-full flex justify-center py-16 bg-white dark:bg-[#1a2632] border-t border-slate-100 dark:border-slate-800">
-        <div className="w-full max-w-[1280px] px-8">
+      <SectionWithStars className="w-full flex justify-center py-16 bg-white dark:bg-[#1a2632] border-t border-slate-100 dark:border-slate-800" settings={{ density: 0.47 }}>
+        <div className="relative z-10 w-full max-w-[1280px] px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -190,9 +191,7 @@ const ServicesDesktop: React.FC = () => {
               </div>
             <div className="flex flex-col gap-4 items-end w-auto">
               <div className="flex items-center gap-2 text-lg font-semibold text-[#0d141b] dark:text-white">
-                <span className="material-symbols-outlined text-primary text-2xl" aria-hidden="true">
-                  call
-                </span>
+                <Icon name="call" className="text-primary dark:text-primary-light size-6" />
                 {SITE.phoneDisplay}
               </div>
               <Link
@@ -204,7 +203,7 @@ const ServicesDesktop: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </SectionWithStars>
     </>
   );
 };

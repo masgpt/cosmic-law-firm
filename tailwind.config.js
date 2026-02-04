@@ -10,6 +10,7 @@ export default {
     extend: {
       colors: {
         primary: "hsl(var(--color-primary) / <alpha-value>)",
+        "primary-light": "hsl(var(--color-primary-light) / <alpha-value>)",
         secondary: "hsl(var(--color-secondary) / <alpha-value>)",
         accent: "hsl(var(--color-accent) / <alpha-value>)",
         "background-light": "hsl(var(--color-bg-light) / <alpha-value>)",
@@ -18,8 +19,9 @@ export default {
         "text-secondary": "#475569",
       },
       fontFamily: {
-        display: ["Lexend", "sans-serif"],
-        body: ["Noto Sans", "sans-serif"],
+        display: ["var(--font-sans)"],
+        body: ["var(--font-body)"],
+        mono: ["var(--font-mono)"],
       },
       borderRadius: {
         DEFAULT: "0.25rem",

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from '@/components/ui/Link';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../../components/SEO';
+import Icon from '@src/components/Icon';
 
 const NotFoundDesktop: React.FC = () => {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ const NotFoundDesktop: React.FC = () => {
         description={t('notFound.description')}
       />
       <div className="bg-slate-100 dark:bg-slate-800 p-10 rounded-full mb-8">
-        <span className="material-symbols-outlined text-8xl text-slate-400">wrong_location</span>
+        <Icon name="wrong_location" className="size-20 text-slate-400" />
       </div>
       <h1 className="text-5xl font-black text-slate-900 dark:text-white mb-4">{t('notFound.title')}</h1>
       <p className="text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-lg">

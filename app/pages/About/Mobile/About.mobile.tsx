@@ -4,6 +4,8 @@ import ButtonLink from '@/components/ui/ButtonLink';
 import Link from '@/components/ui/Link';
 import SEO from '@/components/SEO';
 import { useTranslation } from 'react-i18next';
+import Icon from '@src/components/Icon';
+import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 18 },
@@ -17,12 +19,10 @@ const AboutMobile: React.FC = () => {
   return (
     <>
       <SEO title={t('about.hero.title')} description={t('about.hero.description')} />
-      <section className="px-6 py-12 max-w-[960px] mx-auto">
-        <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" viewport={{ once: true }}>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary text-[10px] font-black uppercase tracking-widest w-fit">
-            <span className="material-symbols-outlined text-[14px]" aria-hidden="true">
-              verified
-            </span>
+      <SectionWithStars className="px-6 py-12 max-w-[960px] mx-auto overflow-hidden" settings={{ density: 0.47 }}>
+        <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-[10px] font-black uppercase tracking-widest w-fit">
+            <Icon name="verified" className="size-3.5" />
             {t('about.hero.badge')}
           </div>
           <h1 className="mt-4 text-4xl font-black tracking-tight text-slate-900 dark:text-white">
@@ -53,7 +53,7 @@ const AboutMobile: React.FC = () => {
           initial="initial"
           whileInView="whileInView"
           viewport={{ once: true }}
-          className="mt-10 rounded-2xl overflow-hidden shadow-xl border border-slate-100 dark:border-slate-800"
+          className="relative z-10 mt-10 rounded-2xl overflow-hidden shadow-xl border border-slate-100 dark:border-slate-800"
         >
           <div
             className="h-72 bg-center bg-cover bg-no-repeat bg-slate-200 dark:bg-slate-800"
@@ -67,7 +67,7 @@ const AboutMobile: React.FC = () => {
           </div>
         </motion.div>
 
-        <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="mt-12 space-y-10">
+        <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="relative z-10 mt-12 space-y-10">
           <div className="space-y-3">
             <h2 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
               {t('about.sections.experience.title')}
@@ -100,9 +100,9 @@ const AboutMobile: React.FC = () => {
           initial="initial"
           whileInView="whileInView"
           viewport={{ once: true }}
-          className="mt-12 rounded-3xl bg-primary text-white p-8 text-center space-y-4"
+          className="relative z-10 mt-12 rounded-3xl bg-primary text-white p-8 text-center space-y-4"
         >
-          <h2 className="text-2xl font-black">{t('about.cta.title')}</h2>
+          <h2 className="text-2xl font-black uppercase tracking-tight">{t('about.cta.title')}</h2>
           <p className="text-sm text-white/90">{t('about.cta.description')}</p>
           <ButtonLink
             href="/contact"
@@ -112,7 +112,7 @@ const AboutMobile: React.FC = () => {
             {t('about.cta.button')}
           </ButtonLink>
         </motion.div>
-      </section>
+      </SectionWithStars>
     </>
   );
 };

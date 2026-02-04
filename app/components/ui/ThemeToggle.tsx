@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Icon from '@src/components/Icon';
 
 interface ThemeToggleProps {
   className?: string;
@@ -22,6 +23,9 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = "" }) => {
       root.classList.remove('light', 'dark');
       root.classList.add(targetTheme);
     };
+    const persistTheme = () => {
+      localStorage.setItem('theme', theme);
+    };
 
     if (theme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -32,12 +36,13 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = "" }) => {
         applyTheme(e.matches ? 'dark' : 'light');
       };
       mediaQuery.addEventListener('change', handleChange);
+      persistTheme();
       return () => mediaQuery.removeEventListener('change', handleChange);
     } else {
       applyTheme(theme);
     }
 
-    localStorage.setItem('theme', theme);
+    persistTheme();
   }, [theme]);
 
   const toggleTheme = () => {
@@ -50,24 +55,19 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = "" }) => {
 
   return (
     <button
+      type="button"
       onClick={toggleTheme}
-      className={`p-3 rounded-full bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-800 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary ${className}`}
+      className={`p-3 rounded-full bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-primary ${className}`}
       aria-label={`Toggle theme (currently ${theme})`}
     >
       {theme === 'system' && (
-        <span className="material-symbols-outlined text-slate-600 dark:text-slate-300 text-[20px] block">
-          desktop_windows
-        </span>
+        <Icon name="desktop_windows" className="text-slate-600 dark:text-slate-300 size-5 block" />
       )}
       {theme === 'dark' && (
-        <span className="material-symbols-outlined text-slate-100 text-[20px] block">
-          dark_mode
-        </span>
+        <Icon name="dark_mode" className="text-slate-100 size-5 block" />
       )}
       {theme === 'light' && (
-        <span className="material-symbols-outlined text-slate-900 text-[20px] block">
-          light_mode
-        </span>
+        <Icon name="light_mode" className="text-slate-900 size-5 block" />
       )}
     </button>
   );

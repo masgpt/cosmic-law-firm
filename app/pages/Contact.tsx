@@ -8,7 +8,11 @@ import ContactMobile from './Contact/Mobile/Contact.mobile';
 const Contact: React.FC<{ initialIsMobile?: boolean }> = ({ initialIsMobile }) => {
   const { isMobile } = useViewport(initialIsMobile);
 
-  return isMobile ? <ContactMobile /> : <ContactDesktop />;
+  return (
+    <>
+      {isMobile ? <ContactMobile /> : <ContactDesktop />}
+    </>
+  );
 };
 
 export default Contact;

@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import ButtonLink from '@/components/ui/ButtonLink';
 import Link from '@/components/ui/Link';
+import SectionWithStars from '@src/components/layout/SectionWithStars';
 import SEO from '@/components/SEO';
 import { SITE } from '@/lib/site';
 import { practiceAreas } from '@/lib/practice-areas';
 import { useTranslation } from 'react-i18next';
+import Icon from '@src/components/Icon';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
@@ -26,12 +28,16 @@ const HomeDesktop: React.FC = () => {
   return (
     <>
       <SEO
-        title={`${SITE.name} | ${SITE.nameSub}`}
-        description="Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes."
+        title={t('seo.home.title', { defaultValue: `${SITE.name} | ${SITE.nameSub}` })}
+        description={t('seo.home.description')}
       />
 
-      <section className="relative overflow-hidden bg-slate-950 text-white -mt-[56px] pt-[64px] sm:-mt-[80px] sm:pt-[96px]" aria-label="Hero introduction">
-        <div className="absolute inset-0">
+      <SectionWithStars
+        className="hero-header-gap relative overflow-hidden bg-slate-950 text-white"
+        aria-label="Hero introduction"
+        settings={{ density: 0.52, scrollRange: 920 }}
+      >
+        <div className="absolute inset-0 z-10">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url('${HERO_BACKGROUND}')` }}
@@ -43,7 +49,7 @@ const HomeDesktop: React.FC = () => {
           <div className="absolute right-0 bottom-0 h-[360px] w-[360px] translate-y-10 translate-x-1/4 rounded-full bg-white/5 blur-[160px]" aria-hidden="true" />
         </div>
 
-        <div className="relative max-w-[1280px] mx-auto px-10 py-20">
+        <div className="relative z-20 max-w-[1280px] mx-auto px-10 py-12">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px] items-center">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
@@ -52,9 +58,7 @@ const HomeDesktop: React.FC = () => {
               className="space-y-6 max-w-2xl"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/90 text-[11px] font-black uppercase tracking-[0.3em] w-fit">
-                <span className="material-symbols-outlined text-[16px]" aria-hidden="true">
-                  gavel
-                </span>
+                <Icon name="gavel" className="size-4" />
                 {t('home.hero.badge')}
               </div>
               <h1 className="text-5xl lg:text-6xl font-black tracking-tighter leading-[0.95] uppercase">
@@ -90,12 +94,12 @@ const HomeDesktop: React.FC = () => {
             </motion.figure>
           </div>
         </div>
-      </section>
+      </SectionWithStars>
 
-      <section className="py-16 bg-background-light dark:bg-background-dark" aria-labelledby="services-heading">
+      <SectionWithStars className="py-16 bg-background-light dark:bg-background-dark" aria-labelledby="services-heading" settings={{ density: 0.4 }}>
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] items-start">
-            <div>
+            <div className="relative z-10">
               <span className="text-xs font-black tracking-[0.4em] uppercase text-slate-500 dark:text-slate-400">
                 {t('home.hero.badge')}
               </span>
@@ -110,9 +114,7 @@ const HomeDesktop: React.FC = () => {
                 {practiceAreas.slice(0, 6).map((area) => (
                   <article key={area.slug} className="flex gap-4">
                     <div className="size-12 rounded-xl bg-secondary/60 shadow-lg shadow-black/5 flex items-center justify-center text-primary">
-                      <span className="material-symbols-outlined text-2xl font-light" aria-hidden="true">
-                        {area.icon}
-                      </span>
+                      <Icon name={area.icon} className="size-6" />
                     </div>
                     <div>
                       <h3 className="text-lg font-black tracking-tight text-slate-900 dark:text-white">
@@ -129,17 +131,15 @@ const HomeDesktop: React.FC = () => {
               <div className="mt-6">
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-xs hover:underline"
+                  className="inline-flex items-center gap-2 text-primary dark:text-primary-light font-black uppercase tracking-widest text-xs hover:underline"
                 >
-                  View all practice areas
-                  <span className="material-symbols-outlined text-sm" aria-hidden="true">
-                    arrow_forward
-                  </span>
+                  {t('nav.viewAllPracticeAreas')}
+                  <Icon name="arrow_forward" className="size-4" />
                 </Link>
               </div>
             </div>
 
-            <div className="hidden w-full max-w-[360px] rounded-[32px] border border-secondary/40 bg-secondary/30 dark:border-white/10 dark:bg-white/5 shadow-lg overflow-hidden lg:block">
+            <div className="relative z-10 hidden w-full max-w-[360px] rounded-[32px] border border-secondary/40 bg-secondary/30 dark:border-white/10 dark:bg-white/5 shadow-lg overflow-hidden lg:block">
               <div className="relative h-full w-full">
                 <Image
                   src={SERVICES_IMAGE}
@@ -152,13 +152,16 @@ const HomeDesktop: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionWithStars>
 
-      <section className="py-16 bg-background-light dark:bg-background-dark border-t border-secondary/40 dark:border-white/10">
-        <div className="max-w-[1280px] mx-auto px-10">
+      <SectionWithStars
+        className="py-16 bg-background-light dark:bg-background-dark border-t border-secondary/40 dark:border-white/10"
+        settings={{ density: 0.45, scrollRange: 480 }}
+      >
+        <div className="relative z-20 max-w-[1280px] mx-auto px-10">
           <div className="rounded-2xl bg-secondary/35 dark:bg-white/5 border border-secondary/40 dark:border-white/10 p-12 flex items-center justify-between gap-10">
             <div className="max-w-2xl">
-              <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">{t('home.cta.title')}</h2>
+              <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white uppercase">{t('home.cta.title')}</h2>
               <p className="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">
                 {t('home.cta.description')}
               </p>
@@ -171,7 +174,7 @@ const HomeDesktop: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </SectionWithStars>
     </>
   );
 };

@@ -6,8 +6,7 @@ import ServicesDesktop from './Services/Desktop/Services.desktop';
 import ServicesMobile from './Services/Mobile/Services.mobile';
 import { useTranslation } from 'react-i18next';
 
-const Services: React.FC<{ lng?: string; initialIsMobile?: boolean }> = ({ lng, initialIsMobile }) => {
-  const { isMobile } = useViewport(initialIsMobile);
+const Services: React.FC<{ lng?: string; initialIsMobile?: boolean }> = ({ lng }) => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -16,7 +15,16 @@ const Services: React.FC<{ lng?: string; initialIsMobile?: boolean }> = ({ lng, 
     }
   }, [lng, i18n]);
 
-  return isMobile ? <ServicesMobile /> : <ServicesDesktop />;
+  return (
+    <>
+      <div className="block lg:hidden">
+        <ServicesMobile />
+      </div>
+      <div className="hidden lg:block">
+        <ServicesDesktop />
+      </div>
+    </>
+  );
 };
 
 export default Services;

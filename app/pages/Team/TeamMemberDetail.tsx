@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import ButtonLink from '@/components/ui/ButtonLink';
 import Link from '@/components/ui/Link';
 import { TeamMember } from './team.constants';
+import Icon from '@src/components/Icon';
 
 type TeamMemberDetailProps = {
   member: TeamMember;
@@ -14,6 +15,8 @@ type TeamMemberDetailProps = {
 const TeamMemberDetail: React.FC<TeamMemberDetailProps> = ({ member }) => {
   const { t } = useTranslation();
   const detailKey = member.detailKey;
+  
+  // Use the correct keys from team.details (which we just moved)
   const biography = (t(`${detailKey}.biography`, {
     returnObjects: true,
     defaultValue: [],
@@ -34,103 +37,157 @@ const TeamMemberDetail: React.FC<TeamMemberDetailProps> = ({ member }) => {
   const tagline = t(`${detailKey}.tagline`, { defaultValue: '' });
 
   return (
-    <section className="w-full bg-background-light dark:bg-background-dark">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start">
-          <div className="flex-1 space-y-4">
-            {tagline && (
-              <p className="text-xs uppercase tracking-[0.4em] text-slate-400 dark:text-slate-300">
-                {tagline}
-              </p>
-            )}
-            <h1 className="text-4xl font-black text-slate-900 dark:text-white">{member.name}</h1>
-            <p className="text-sm font-black uppercase tracking-[0.3em] text-slate-900 dark:text-primary">
-              {t(member.titleKey)}
+    <section className="w-full bg-background-light dark:bg-background-dark min-h-viewport">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
+        
+        {/* Header - Always on top */}
+        <div className="mb-10 space-y-4 lg:mb-16">
+          {tagline && (
+            <p className="text-xs uppercase tracking-[0.4em] text-slate-500 dark:text-slate-400 font-semibold">
+              {tagline}
             </p>
-            <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
-              {t(member.descriptionKey)}
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <ButtonLink
-                href="/contact"
-                tone="dark"
-                size="sm"
-                className="uppercase tracking-[0.35em] text-[10px]"
-              >
-                {t('team.hero.cta')}
-              </ButtonLink>
-              <Link
-                href="/about/team"
-                className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-600 hover:text-primary dark:text-slate-200"
-              >
-                {t('team.links.backToTeam')}
-              </Link>
-            </div>
-          </div>
-          <div className="relative h-[360px] w-full shrink-0 overflow-hidden rounded-[28px] border border-slate-200 dark:border-slate-800 lg:max-w-[360px]">
-            <Image
-              src={member.imageSrc}
-              alt={t(member.imageAltKey)}
-              fill
-              sizes="(min-width: 1024px) 360px, (min-width: 768px) 320px, 100vw"
-              className="object-cover"
-            />
-          </div>
+          )}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight">
+            {member.name}
+          </h1>
+          <p className="text-sm sm:text-base font-black uppercase tracking-[0.3em] text-primary dark:text-primary-light">
+            {t(member.titleKey)}
+          </p>
         </div>
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.9fr)]">
-          <div className="space-y-6">
-            {biography.map((paragraph, index) => (
-              <p
-                key={`${member.id}-bio-${index}`}
-                className="text-sm leading-relaxed text-slate-600 dark:text-slate-300"
-              >
-                {paragraph}
-              </p>
-            ))}
-            {memberships.length > 0 && (
-              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6">
-                <p className="text-[0.6rem] uppercase tracking-[0.4em] text-slate-400 dark:text-slate-500">
-                  Memberships &amp; affiliations
+
+        {/* Layout Container */}
+        <div className="relative">
+          <div className="flex flex-col lg:flex-row gap-12 lg:items-start">
+            {/* Main Content Area */}
+            <div className="flex-1">
+              {/* Mobile Profile Image - Floated for wrap-around effect */}
+              <div className="lg:hidden float-right ml-6 mb-4 w-[45%] max-w-[200px] aspect-[3/4] relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 z-10">
+                <Image
+                  src={member.imageSrc}
+                  alt={t(member.imageAltKey)}
+                  fill
+                  sizes="200px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+              <div className="space-y-8">
+                {/* Short Description */}
+                <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-200 font-medium">
+                  {t(member.descriptionKey)}
                 </p>
-                <ul className="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300">
-                  {memberships.map((item, idx) => (
-                    <li key={`${member.id}-membership-${idx}`}>{item}</li>
+
+                {/* Biography Paragraphs */}
+                <div className="space-y-6">
+                  {biography.map((paragraph, index) => (
+                    <p
+                      key={`${member.id}-bio-${index}`}
+                      className="text-base leading-relaxed text-slate-600 dark:text-slate-300"
+                    >
+                      {paragraph}
+                    </p>
                   ))}
-                </ul>
+                </div>
+
+                {/* CTAs */}
+                <div className="flex flex-wrap items-center gap-6 pt-8 clear-both lg:clear-none">
+                  <ButtonLink
+                    href="/contact"
+                    tone="dark"
+                    size="md"
+                    className="uppercase tracking-[0.2em] text-xs px-8"
+                  >
+                    {t('team.hero.cta')}
+                  </ButtonLink>
+                  <Link
+                    href="/about/team"
+                    className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
+                  >
+                    <Icon name="arrow_back" className="size-4 transition-transform group-hover:-translate-x-1" />
+                    {t('team.links.backToTeam')}
+                  </Link>
+                </div>
               </div>
-            )}
-            {creative && (
-              <div>
-                <p className="text-[0.6rem] uppercase tracking-[0.4em] text-slate-400 dark:text-slate-500">
-                  Creative focus
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{creative}</p>
-              </div>
-            )}
-          </div>
-          <div className="space-y-6">
-            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6">
-              <p className="text-[0.6rem] uppercase tracking-[0.4em] text-slate-400 dark:text-slate-500">
-                Education
-              </p>
-              <ul className="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300">
-                {education.map((item, idx) => (
-                  <li key={`${member.id}-detail-edu-${idx}`}>{item}</li>
-                ))}
-              </ul>
             </div>
-            {practiceAreas.length > 0 && (
-              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6">
-                <p className="text-[0.6rem] uppercase tracking-[0.4em] text-slate-400 dark:text-slate-500">
-                  Practice focus
-                </p>
-                <ul className="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-300">
-                  {practiceAreas.map((area, idx) => (
-                    <li key={`${member.id}-practice-${idx}`}>{area}</li>
-                  ))}
-                </ul>
+
+            {/* Sidebar / Desktop Image & Details */}
+            <div className="w-full lg:w-80 shrink-0 space-y-8">
+              {/* Desktop Image */}
+              <div className="hidden lg:block relative aspect-[3/4] w-full overflow-hidden rounded-[32px] shadow-2xl border border-slate-200 dark:border-slate-800">
+                <Image
+                  src={member.imageSrc}
+                  alt={t(member.imageAltKey)}
+                  fill
+                  sizes="320px"
+                  className="object-cover"
+                />
               </div>
-            )}
+
+              {/* Structured Info Cards */}
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+                {/* Education */}
+                <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/40 p-8 backdrop-blur-sm">
+                  <p className="text-[0.65rem] font-black uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 mb-4">
+                    Education
+                  </p>
+                  <ul className="space-y-3 text-sm leading-snug text-slate-700 dark:text-slate-200">
+                    {education.map((item, idx) => (
+                      <li key={`${member.id}-edu-${idx}`} className="flex gap-2">
+                        <span className="text-primary dark:text-primary-light mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Practice Areas */}
+                {practiceAreas.length > 0 && (
+                  <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/40 p-8 backdrop-blur-sm">
+                    <p className="text-[0.65rem] font-black uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 mb-4">
+                      Expertise
+                    </p>
+                    <ul className="space-y-3 text-sm leading-snug text-slate-700 dark:text-slate-200">
+                      {practiceAreas.map((area, idx) => (
+                        <li key={`${member.id}-practice-${idx}`} className="flex gap-2">
+                          <span className="text-primary dark:text-primary-light mt-1">•</span>
+                          <span>{area}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Memberships */}
+                {memberships.length > 0 && (
+                  <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/40 p-8 backdrop-blur-sm">
+                    <p className="text-[0.65rem] font-black uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 mb-4">
+                      Affiliations
+                    </p>
+                    <ul className="space-y-3 text-sm leading-snug text-slate-700 dark:text-slate-200">
+                      {memberships.map((item, idx) => (
+                        <li key={`${member.id}-membership-${idx}`} className="flex gap-2">
+                          <span className="text-primary dark:text-primary-light mt-1">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Creative Focus */}
+                {creative && (
+                  <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/40 p-8 backdrop-blur-sm sm:col-span-2 lg:col-span-1">
+                    <p className="text-[0.65rem] font-black uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400 mb-4">
+                      Creative Focus
+                    </p>
+                    <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200 italic font-medium">
+                      "{creative}"
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>

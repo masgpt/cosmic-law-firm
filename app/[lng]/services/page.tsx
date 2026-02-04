@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Services from '../../pages/Services';
 import { SITE } from '../../lib/site';
+import { getInitialIsMobileFromHeaders } from '../../lib/get-initial-is-mobile';
 
 export async function generateMetadata({ params }: { params: Promise<{ lng: string }> }): Promise<Metadata> {
   const { lng } = await params;
@@ -37,5 +38,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lng: stri
 }
 
 export default async function Page() {
-  return <Services />;
+  const initialIsMobile = await getInitialIsMobileFromHeaders();
+  return <Services initialIsMobile={initialIsMobile} />;
 }

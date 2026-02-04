@@ -61,12 +61,12 @@ const Footer: React.FC = () => {
         <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex flex-col gap-12 lg:gap-16">
             {/* Header Section: Logo and Taglines in a stacked layout */}
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col items-center sm:items-start gap-8">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-2xl border border-white/15 bg-white/10 flex items-center justify-center overflow-hidden shrink-0">
                   <Image
                     src="/Cosmic_Logos-02.png"
-                    alt={`${SITE.name} logo`}
+                    alt={t('accessibility.aria.logoAlt', { name: t('common.companyName') })}
                     width={56}
                     height={56}
                     sizes="56px"
@@ -75,18 +75,18 @@ const Footer: React.FC = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-xl font-black tracking-tight text-white uppercase leading-none text-left">
-                    <span className="text-secondary">{SITE.name.split(' ')[0]}</span>{' '}
-                    <span>{SITE.name.split(' ').slice(1).join(' ')}</span>
+                  <p className="text-xl font-black tracking-tight text-white uppercase leading-none text-center sm:text-left">
+                    <span className="text-secondary">{t('common.companyNamePart1')}</span>{' '}
+                    <span>{t('common.companyNamePart2')}</span>
                   </p>
-                  <p className="text-[10px] font-bold text-white/90 uppercase tracking-[0.18em] mt-1.5 text-left">
+                  <p className="text-[10px] font-bold text-white/90 uppercase tracking-[0.18em] mt-1.5 text-center sm:text-left">
                     {t('common.companyNameSub')}
                   </p>
                 </div>
               </div>
 
               <div className="max-w-3xl">
-                <p className="text-sm md:text-base font-bold uppercase tracking-[0.2em] text-white/90 leading-relaxed">
+                <p className="text-sm md:text-base font-bold uppercase tracking-[0.2em] text-white/90 leading-relaxed text-center sm:text-left">
                   {t('footer.tagline')}
                 </p>
               </div>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
             {/* Links and Contact Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-10">
               <nav aria-label={t('accessibility.aria.footerQuickLinks')}>
-                <h4 className="text-sm font-bold uppercase tracking-widest text-secondary mb-6 text-left">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-secondary mb-6 text-center sm:text-left">
                   {t('footer.quickLinks')}
                 </h4>
                 <div className="grid gap-2.5">
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
                       href={quickLink.href}
                       tone="light"
                       size="sm"
-                      className="w-full justify-start gap-3 px-4 py-2.5 text-xs font-semibold text-left"
+                      className="w-full justify-center sm:justify-start gap-3 px-4 py-2.5 text-xs font-semibold text-center sm:text-left"
                     >
                       {quickLink.label}
                     </ButtonLink>
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
               </nav>
 
               <nav aria-label={t('accessibility.aria.footerPracticeAreas')}>
-                <h4 className="text-sm font-bold uppercase tracking-widest text-secondary mb-6 text-left">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-secondary mb-6 text-center sm:text-left">
                   {t('nav.practiceAreas')}
                 </h4>
                 <div className="grid gap-2.5">
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
                       href={`/services/${area.slug}`}
                       tone="light"
                       size="sm"
-                      className="w-full justify-start gap-3 px-4 py-2.5 text-xs font-semibold text-left"
+                      className="w-full justify-center sm:justify-start gap-3 px-4 py-2.5 text-xs font-semibold text-center sm:text-left"
                     >
                       {i18n.language?.startsWith('ko') 
                         ? area.shortTitleKo 
@@ -139,7 +139,7 @@ const Footer: React.FC = () => {
               </nav>
 
               <div className="space-y-6">
-                <h4 className="text-sm font-bold uppercase tracking-widest text-secondary mb-6 text-left">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-secondary mb-6 text-center sm:text-left">
                   {t('footer.contactInfo')}
                 </h4>
                 <div className="grid gap-3">
@@ -149,7 +149,7 @@ const Footer: React.FC = () => {
                       href={action.href}
                       tone="light"
                       size="md"
-                      className={`w-full justify-start gap-3 px-4 py-3 text-left ${action.className}`}
+                      className={`w-full justify-center sm:justify-start gap-3 px-4 py-3 text-center sm:text-left ${action.className}`}
                     >
                       <Icon name={action.icon} className="text-primary size-5 flex-shrink-0" />
                       <span className="whitespace-normal break-all">{action.label}</span>
@@ -160,13 +160,13 @@ const Footer: React.FC = () => {
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.addressQuery)}`}
                       tone="light"
                       size="md"
-                      className="w-full justify-start gap-3 px-4 py-3 text-left text-[11px] font-bold uppercase tracking-tight"
+                      className="w-full justify-center sm:justify-start gap-3 px-4 py-3 text-center sm:text-left text-[11px] font-bold uppercase tracking-tight"
                     >
                       <Icon name="location_on" className="text-primary size-5 flex-shrink-0" />
                       <span className="whitespace-normal">{SITE.addressShort}</span>
                     </ButtonLink>
                   ) : (
-                    <div className="w-full inline-flex items-center justify-start gap-3 px-4 py-3 rounded-lg bg-secondary text-primary shadow-sm border border-secondary/60 text-[11px] font-bold uppercase tracking-tight">
+                    <div className="w-full inline-flex items-center justify-center sm:justify-start gap-3 px-4 py-3 rounded-lg bg-secondary text-primary shadow-sm border border-secondary/60 text-[11px] font-bold uppercase tracking-tight">
                       <Icon name="location_on" className="text-primary size-5 flex-shrink-0" />
                       <span className="whitespace-normal">{SITE.addressShort}</span>
                     </div>
@@ -175,7 +175,7 @@ const Footer: React.FC = () => {
                     href="/contact"
                     tone="dark"
                     size="md"
-                    className="w-full justify-start gap-3 px-4 py-3 uppercase tracking-[0.2em] mt-2"
+                    className="w-full justify-center sm:justify-start gap-3 px-4 py-3 uppercase tracking-[0.2em] mt-2"
                   >
                     <Icon name="chat" className="size-[18px]" />
                     {t('nav.contact')}
@@ -185,21 +185,21 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="border-t border-white/10 mt-16 pt-8 flex flex-col gap-8 text-[11px] font-medium text-white/80 tracking-wider uppercase md:flex-row md:items-end md:justify-between">
-            <div className="space-y-6">
+          <div className="border-t border-white/10 mt-16 pt-8 flex flex-col items-center gap-8 text-[11px] font-medium text-white/80 tracking-wider uppercase md:flex-row md:items-end md:justify-between">
+            <div className="flex flex-col items-center md:items-start space-y-6">
               <nav
-                className="flex flex-wrap items-center justify-start gap-x-8 gap-y-4"
+                className="flex flex-wrap items-center justify-center md:justify-start gap-x-8 gap-y-4"
                 aria-label={t('accessibility.aria.footerLegalNav')}
               >
                 <Link to="/accessibility" className="text-white/90 hover:text-secondary">{t('footer.accessibility')}</Link>
                 <Link to="/privacy" className="text-white/90 hover:text-secondary">{t('footer.privacyPolicy')}</Link>
                 <Link to="/terms" className="text-white/90 hover:text-secondary">{t('footer.termsOfService')}</Link>
               </nav>
-              <p className="text-left">
+              <p className="text-center md:text-left">
                 © 2026 {t('common.companyName')}. {t('footer.rights')}
               </p>
             </div>
-            <div className="flex items-center justify-start">
+            <div className="flex items-center justify-center md:justify-start">
               <div className="overflow-hidden rounded-full">
                 <ThemeToggle />
               </div>

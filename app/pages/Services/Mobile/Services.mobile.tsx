@@ -9,16 +9,16 @@ import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 18 },
+  initial: { opacity: 0, y: 12 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.05 },
   transition: { duration: 0.5 },
 };
 
 const staggerContainer = {
   initial: {},
   whileInView: { transition: { staggerChildren: 0.06 } },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.05 },
 };
 
 const MotionButtonLink = motion(ButtonLink);
@@ -79,7 +79,7 @@ const ServicesMobile: React.FC = () => {
 
       <SectionWithStars id="practice-areas" className="w-full flex justify-center py-10 overflow-hidden" settings={{ density: 0.5 }}>
         <div className="relative z-10 w-full px-4">
-          <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" viewport={{ once: true }}>
+          <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" viewport={{ once: true, amount: 0.05 }}>
             <h2 className="text-[#0d141b] dark:text-white text-2xl font-black leading-tight uppercase">
               {t('servicesPage.specialties.title')}
             </h2>
@@ -92,7 +92,7 @@ const ServicesMobile: React.FC = () => {
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             className="grid grid-cols-1 gap-4 mt-8"
           >
             {practiceAreas.map((area) => (
@@ -142,7 +142,7 @@ const ServicesMobile: React.FC = () => {
             variants={fadeInUp}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             className="text-[#0d141b] dark:text-white text-2xl font-bold leading-tight tracking-tight mb-10 text-center"
           >
             {t('servicesPage.process.title')}
@@ -154,7 +154,7 @@ const ServicesMobile: React.FC = () => {
                 variants={fadeInUp}
                 initial="initial"
                 whileInView="whileInView"
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.05 }}
                 className="flex flex-col items-center text-center gap-4"
               >
                 <div className="size-10 rounded-full bg-primary text-white flex items-center justify-center text-lg font-bold shadow-lg">

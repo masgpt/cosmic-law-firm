@@ -71,7 +71,7 @@ const NavbarMobile: React.FC = () => {
               <div className="w-10 h-10 rounded-2xl border border-white/15 bg-white/10 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
                 <Image
                   src="/Cosmic_Logos-02.png"
-                  alt={`${SITE.name} logo`}
+                  alt={t('accessibility.aria.logoAlt', { name: t('common.companyName') })}
                   width={40}
                   height={40}
                   sizes="40px"
@@ -81,8 +81,8 @@ const NavbarMobile: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-black tracking-tight text-white leading-none uppercase">
-                  <span className="text-secondary">{SITE.name.split(' ')[0]}</span>{' '}
-                  <span>{SITE.name.split(' ').slice(1).join(' ')}</span>
+                  <span className="text-secondary">{t('common.companyNamePart1')}</span>{' '}
+                  <span>{t('common.companyNamePart2')}</span>
                 </span>
                 <span className="text-[8px] text-white/90 font-bold uppercase tracking-wider mt-0.5 leading-none">
                   {t('common.companyNameSub')}

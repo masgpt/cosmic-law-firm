@@ -8,16 +8,16 @@ import Icon from '@src/components/Icon';
 import ProcessedText from './ProcessedText';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 24 },
+  initial: { opacity: 0, y: 16 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 },
+  viewport: { once: true, amount: 0.05 },
+  transition: { duration: 0.5 },
 };
 
 const staggerContainer = {
   initial: {},
   whileInView: { transition: { staggerChildren: 0.1 } },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.05 },
 };
 
 interface InsightClientPageProps {
@@ -55,10 +55,9 @@ export default function InsightClientPage({
     <div className="py-4 lg:py-6 bg-slate-50 dark:bg-slate-900 min-h-viewport text-slate-900 dark:text-white">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 space-y-8">
         <motion.div 
-          variants={fadeInUp}
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="space-y-8"
         >
           <div className="text-sm uppercase tracking-[0.3em] text-primary dark:text-primary-light">
@@ -102,11 +101,14 @@ export default function InsightClientPage({
                 </motion.div>
               ) : (
                 <ul className={`space-y-2 ${section.type === 'list' ? (listType === 'disc' ? 'list-disc' : 'list-decimal') : ''} list-inside text-sm text-slate-600 dark:text-slate-300 font-medium`}>
-                  {(t(section.itemsKey, { returnObjects: true, defaultValue: [] }) as string[]).map((item, idx) => (
-                    <li key={idx}>
-                      <ProcessedText text={item} />
-                    </li>
-                  ))}
+                  {(t(section.itemsKey, { returnObjects: true, defaultValue: [] }) as Array<string | { body?: string }>).map((item, idx) => {
+                    const textValue = typeof item === 'string' ? item : (item?.body || '');
+                    return (
+                      <li key={idx}>
+                        <ProcessedText text={textValue} />
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </motion.section>
@@ -140,11 +142,14 @@ export default function InsightClientPage({
               >
                 <h3 className="text-xl font-black">{t('insights.common.actionItems')}</h3>
                 <ul className="space-y-2 list-disc list-inside text-sm text-slate-600 dark:text-slate-300 font-medium">
-                  {actionItems.map((item, idx) => (
-                    <li key={idx}>
-                      <ProcessedText text={item} />
-                    </li>
-                  ))}
+                  {(actionItems as Array<string | { body?: string }>).map((item, idx) => {
+                    const textValue = typeof item === 'string' ? item : (item?.body || '');
+                    return (
+                      <li key={idx}>
+                        <ProcessedText text={textValue} />
+                      </li>
+                    );
+                  })}
                 </ul>
               </motion.section>
             )}

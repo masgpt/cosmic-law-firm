@@ -315,7 +315,9 @@
     "doctorTitle": "엔터테인먼트 로펌",
     "close": "닫기",
     "practiceAreaLabel": "업무 분야",
-    "companyName": "Cosmic Law Firm",
+    "companyName": "Cosmic 법률사무소",
+    "companyNamePart1": "Cosmic",
+    "companyNamePart2": "법률사무소",
     "companyNameSub": "엔터테인먼트·미디어·개인상해법",
     "overview": "개요",
     "whatWeHandle": "주요 업무",
@@ -711,6 +713,7 @@
     "dismissNotification": "알림 닫기",
     "skipToContent": "본문 바로가기",
     "aria": {
+      "logoAlt": "{{name}} 로고",
       "heroIntro": "히어로 소개 섹션",
       "homeHeroBackground": "스튜디오에서 협업 중인 음악 프로듀서와 엔터테인먼트 변호사",
       "homeCtaSection": "문의 안내",

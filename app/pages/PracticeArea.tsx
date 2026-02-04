@@ -11,16 +11,16 @@ import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 24 },
+  initial: { opacity: 0, y: 16 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 },
+  viewport: { once: true, amount: 0.05 },
+  transition: { duration: 0.5 },
 };
 
 const staggerContainer = {
   initial: {},
   whileInView: { transition: { staggerChildren: 0.05 } },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.05 },
 };
 
 type PracticeAreaPageProps = {
@@ -87,10 +87,9 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
       <SectionWithStars className="hero-header-gap w-full bg-background-light dark:bg-background-dark border-b border-secondary/40 dark:border-white/10" settings={{ density: 0.47 }}>
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-10 py-12">
           <motion.div 
-            variants={fadeInUp}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="flex flex-col gap-4 max-w-3xl"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-xs font-black uppercase tracking-widest w-fit">
@@ -132,7 +131,7 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
               variants={fadeInUp}
               initial="initial"
               whileInView="whileInView"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.05 }}
               className="max-w-3xl"
             >
               <h2 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
@@ -150,7 +149,7 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
             variants={fadeInUp}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             className="flex flex-col gap-2 max-w-3xl mt-12"
           >
             <h2 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
@@ -165,7 +164,7 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8"
           >
             {services.map((service) => (
@@ -186,7 +185,7 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
             variants={fadeInUp}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             className="mt-12 rounded-2xl border border-secondary/40 dark:border-white/10 bg-secondary/25 dark:bg-white/5 p-6 sm:p-8"
           >
             <h3 className="text-lg font-black tracking-tight text-slate-900 dark:text-white">

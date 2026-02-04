@@ -10,16 +10,16 @@ import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 18 },
+  initial: { opacity: 0, y: 12 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.05 },
   transition: { duration: 0.5 },
 };
 
 const staggerContainer = {
   initial: {},
   whileInView: { transition: { staggerChildren: 0.1 } },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.05 },
 };
 
 const TeamMobile: React.FC = () => {
@@ -30,10 +30,9 @@ const TeamMobile: React.FC = () => {
       <SEO title={t('team.hero.title')} description={t('team.hero.description')} />
       <SectionWithStars className="hero-header-gap px-6 py-12 bg-background-light dark:bg-background-dark overflow-hidden" settings={{ density: 0.47 }}>
         <motion.div 
-          variants={fadeInUp}
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="relative z-10"
         >
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-[10px] font-black uppercase tracking-[0.3em] w-fit">
@@ -57,7 +56,7 @@ const TeamMobile: React.FC = () => {
           variants={staggerContainer}
           initial="initial"
           whileInView="whileInView"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.05 }}
           className="relative z-10 space-y-5"
         >
           {teamMembers.map((member) => (
@@ -101,7 +100,7 @@ const TeamMobile: React.FC = () => {
           variants={fadeInUp}
           initial="initial"
           whileInView="whileInView"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.05 }}
           className="relative z-10 space-y-3"
         >
           <h2 className="text-2xl font-black tracking-tight uppercase tracking-tight">{t('team.cta.title')}</h2>

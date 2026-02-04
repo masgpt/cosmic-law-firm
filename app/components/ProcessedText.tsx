@@ -12,7 +12,7 @@ interface ProcessedTextProps {
  * replacing them with styled superscript indicators.
  */
 export default function ProcessedText({ text, className }: ProcessedTextProps) {
-  if (!text) return null;
+  if (!text || typeof text !== 'string') return null;
 
   // Regex to find citation markers
   // These look like citeturnXsearchY...

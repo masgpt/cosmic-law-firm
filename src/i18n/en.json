@@ -369,6 +369,8 @@
     "close": "Close",
     "practiceAreaLabel": "Practice Area",
     "companyName": "Cosmic Law Firm",
+    "companyNamePart1": "Cosmic",
+    "companyNamePart2": "Law Firm",
     "companyNameSub": "Entertainment, Media & Personal Injury Law",
     "overview": "Overview",
     "whatWeHandle": "What we handle",
@@ -683,6 +685,7 @@
     "dismissNotification": "Dismiss notification",
     "skipToContent": "Skip to content",
     "aria": {
+      "logoAlt": "{{name}} logo",
       "heroIntro": "Hero introduction",
       "homeHeroBackground": "Music producer and entertainment lawyer collaborating inside a studio",
       "homeCtaSection": "Call to action",

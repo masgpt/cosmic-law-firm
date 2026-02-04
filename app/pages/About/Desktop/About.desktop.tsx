@@ -8,10 +8,10 @@ import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 24 },
+  initial: { opacity: 0, y: 16 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 },
+  viewport: { once: true, amount: 0.05 },
+  transition: { duration: 0.5 },
 };
 
 const AboutDesktop: React.FC = () => {
@@ -22,7 +22,12 @@ const AboutDesktop: React.FC = () => {
 
       <SectionWithStars className="w-full px-10 py-20 max-w-[1280px] mx-auto overflow-hidden" aria-labelledby="about-hero-title" settings={{ density: 0.5 }}>
         <div className="relative z-10 flex flex-col gap-16 lg:flex-row lg:items-center">
-          <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" className="flex flex-col gap-6 lg:w-1/2">
+          <motion.div 
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col gap-6 lg:w-1/2"
+          >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-xs font-black uppercase tracking-widest w-fit">
               <Icon name="verified" className="size-4" />
               {t('about.hero.badge')}
@@ -51,9 +56,9 @@ const AboutDesktop: React.FC = () => {
           </motion.div>
 
           <motion.div
-            variants={fadeInUp}
-            initial="initial"
-            whileInView="whileInView"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
             className="lg:w-1/2 flex justify-center"
           >
             <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">

@@ -368,13 +368,15 @@
     "doctorTitle": "娱乐法律事务所",
     "close": "关闭",
     "practiceAreaLabel": "专业领域",
-    "companyName": "Cosmic Law Firm",
-    "companyNameSub": "娱乐、media 与人身伤害法律",
+    "companyName": "Cosmic 律师事务所",
+    "companyNamePart1": "Cosmic",
+    "companyNamePart2": "律师事务所",
+    "companyNameSub": "娱乐、媒体与人身伤害法律",
     "overview": "概览",
     "whatWeHandle": "业务范围",
     "typicalMatters": "{{title}} 领域涵盖的典型事务。",
     "nextStep": "下一步",
-    "nextStepDescription": "告诉我们你正在推进的项目及其进度，我们会回复清晰的计划 and 后续行动建议。",
+    "nextStepDescription": "告诉我们你正在推进的项目及其进度，我们会回复清晰的计划与后续行动建议。",
     "contactCompany": "联系 {{name}}"
   },
   "about": {
@@ -685,6 +687,7 @@
     "dismissNotification": "关闭提示",
     "skipToContent": "跳到主要内容",
     "aria": {
+      "logoAlt": "{{name}} 标志",
       "heroIntro": "首页主视觉介绍",
       "homeHeroBackground": "音乐制作人与娱乐律师在录音棚合作",
       "homeCtaSection": "行动号召",

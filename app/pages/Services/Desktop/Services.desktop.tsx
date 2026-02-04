@@ -9,16 +9,16 @@ import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 24 },
+  initial: { opacity: 0, y: 16 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 },
+  viewport: { once: true, amount: 0.05 },
+  transition: { duration: 0.5 },
 };
 
 const staggerContainer = {
   initial: {},
   whileInView: { transition: { staggerChildren: 0.06 } },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.05 },
 };
 
 const MotionButtonLink = motion(ButtonLink);
@@ -82,7 +82,7 @@ const ServicesDesktop: React.FC = () => {
             variants={fadeInUp}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             className="max-w-3xl"
           >
             <h2 className="text-[#0d141b] dark:text-white text-4xl font-black leading-tight uppercase tracking-tight">
@@ -97,7 +97,7 @@ const ServicesDesktop: React.FC = () => {
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             className="grid grid-cols-3 gap-6 mt-12"
           >
             {practiceAreas.map((area) => (
@@ -138,7 +138,7 @@ const ServicesDesktop: React.FC = () => {
             variants={fadeInUp}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             className="text-[#0d141b] dark:text-white text-3xl font-bold leading-tight tracking-tight mb-12 text-center"
           >
             {t('servicesPage.process.title')}
@@ -147,7 +147,7 @@ const ServicesDesktop: React.FC = () => {
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             className="grid grid-cols-3 gap-8 relative"
           >
             <div className="absolute top-6 left-[16%] right-[16%] h-0.5 bg-slate-200 dark:bg-slate-700 -z-10"></div>
@@ -177,7 +177,7 @@ const ServicesDesktop: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.8 }}
             className="bg-secondary/35 dark:bg-white/5 rounded-2xl p-12 flex flex-row items-center justify-between gap-8 border border-secondary/40 dark:border-white/10"
           >

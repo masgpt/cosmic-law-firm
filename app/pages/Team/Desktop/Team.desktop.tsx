@@ -10,16 +10,16 @@ import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 24 },
+  initial: { opacity: 0, y: 16 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 },
+  viewport: { once: true, amount: 0.05 },
+  transition: { duration: 0.5 },
 };
 
 const staggerContainer = {
   initial: {},
   whileInView: { transition: { staggerChildren: 0.1 } },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.05 },
 };
 
 const TeamDesktop: React.FC = () => {
@@ -32,10 +32,9 @@ const TeamDesktop: React.FC = () => {
       <SectionWithStars className="w-full bg-background-light dark:bg-background-dark overflow-hidden" settings={{ density: 0.47 }}>
         <div className="relative z-10 max-w-[1280px] mx-auto px-10 py-20">
           <motion.div 
-            variants={fadeInUp}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="flex flex-col gap-6 max-w-3xl"
           >
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-[11px] font-black uppercase tracking-[0.3em] w-fit">
@@ -64,7 +63,7 @@ const TeamDesktop: React.FC = () => {
           variants={staggerContainer}
           initial="initial"
           whileInView="whileInView"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.05 }}
           className="relative z-10 max-w-[960px] mx-auto px-6 space-y-6"
         >
           {teamMembers.map((member) => (
@@ -108,7 +107,7 @@ const TeamDesktop: React.FC = () => {
           variants={fadeInUp}
           initial="initial"
           whileInView="whileInView"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.05 }}
           className="relative z-10 max-w-[960px] mx-auto px-10 text-center"
         >
           <h2 className="text-3xl font-black tracking-tight uppercase tracking-tight">{t('team.cta.title')}</h2>

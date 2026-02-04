@@ -60,7 +60,7 @@ const NavbarDesktop: React.FC = () => {
               <div className="w-12 h-12 rounded-2xl border border-white/15 bg-white/10 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
                 <Image
                   src="/Cosmic_Logos-02.png"
-                  alt={`${SITE.name} logo`}
+                  alt={t('accessibility.aria.logoAlt', { name: t('common.companyName') })}
                   width={48}
                   height={48}
                   sizes="48px"
@@ -70,8 +70,8 @@ const NavbarDesktop: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-lg font-black tracking-tighter leading-none uppercase text-white">
-                  <span className="text-secondary">{SITE.name.split(' ')[0]}</span>{' '}
-                  <span>{SITE.name.split(' ').slice(1).join(' ')}</span>
+                  <span className="text-secondary">{t('common.companyNamePart1')}</span>{' '}
+                  <span>{t('common.companyNamePart2')}</span>
                 </span>
                 <span className="text-[10px] text-white/90 font-bold uppercase tracking-[0.12em] mt-1 leading-none">
                   {t('common.companyNameSub')}

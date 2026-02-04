@@ -8,9 +8,9 @@ import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 18 },
+  initial: { opacity: 0, y: 12 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.05 },
   transition: { duration: 0.5 },
 };
 
@@ -20,7 +20,12 @@ const AboutMobile: React.FC = () => {
     <>
       <SEO title={t('about.hero.title')} description={t('about.hero.description')} />
       <SectionWithStars className="hero-header-gap px-6 py-12 max-w-[960px] mx-auto overflow-hidden" settings={{ density: 0.47 }}>
-        <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative z-10"
+        >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-[10px] font-black uppercase tracking-widest w-fit">
             <Icon name="verified" className="size-3.5" />
             {t('about.hero.badge')}

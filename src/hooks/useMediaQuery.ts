@@ -15,6 +15,10 @@ export const useMediaQuery = (query: string, initialValue = false) => {
     }
 
     const mediaQuery = window.matchMedia(query);
+    const legacyMediaQuery = mediaQuery as MediaQueryList & {
+      addListener?: (listener: (this: MediaQueryList, ev: MediaQueryListEvent) => void) => void;
+      removeListener?: (listener: (this: MediaQueryList, ev: MediaQueryListEvent) => void) => void;
+    };
 
     const updateMatch = () => {
       setMatches(mediaQuery.matches);
@@ -29,10 +33,14 @@ export const useMediaQuery = (query: string, initialValue = false) => {
       };
     }
 
-    mediaQuery.addListener(updateMatch);
-    return () => {
-      mediaQuery.removeListener(updateMatch);
-    };
+    if (legacyMediaQuery.addListener) {
+      legacyMediaQuery.addListener(updateMatch);
+      return () => {
+        legacyMediaQuery.removeListener?.(updateMatch);
+      };
+    }
+
+    return undefined;
   }, [query]);
 
   return matches;

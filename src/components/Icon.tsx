@@ -29,6 +29,7 @@ import {
   X,
   Film,
   Scale,
+  Copy,
 } from "lucide-react";
 
 export type IconName =
@@ -41,6 +42,7 @@ export type IconName =
   | "check_circle"
   | "chevron_right"
   | "close"
+  | "content_copy"
   | "dark_mode"
   | "desktop_windows"
   | "east"
@@ -74,6 +76,7 @@ const ICON_MAP: Record<IconName, ComponentType<LucideProps>> = {
   check_circle: CheckCircle,
   chevron_right: ChevronRight,
   close: X,
+  content_copy: Copy,
   dark_mode: Moon,
   desktop_windows: Monitor,
   error: AlertCircle,

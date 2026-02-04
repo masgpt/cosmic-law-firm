@@ -1,0 +1,469 @@
+{
+  "seo": {
+    "home": {
+      "title": "Entertainment Law | Cosmic Law Firm",
+      "description": "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes."
+    },
+    "insights": {
+    "hero": {
+      "badge": "Insides",
+      "title": "Make deals clearer. Protect rights earlier.",
+      "description": "Short briefs on contracts, IP, NIL, and AI developments so you can move quickly on what matters."
+    },
+    "topics": {
+      "contract-red-flags": {
+        "title": "Contract red flags",
+        "summary": "Spot hidden assignment, payment, and audit traps before you sign."
+      },
+      "chain-of-title": {
+        "title": "Chain of title",
+        "summary": "Keep the paper trail clean so financing, distribution, and licensing close on schedule."
+      },
+      "ai-in-entertainment": {
+        "title": "AI in entertainment",
+        "summary": "Where AI is already tugging at rights, safety, and production budgets."
+      },
+      "ai-contracts": {
+        "title": "AI contracts",
+        "summary": "Clauses for training data, liability, and disclosure."
+      },
+      "ai-law": {
+        "title": "AI regulation",
+        "summary": "The regulatory sprint shaping federal, state, and international guardrails."
+      },
+      "nil-basics": {
+        "title": "NIL basics",
+        "summary": "How recent settlements and caps change athlete activation."
+      },
+      "publicity-basics": {
+        "title": "Rights & publicity",
+        "summary": "Managing name, image, and likeness in the trades and the courtroom."
+      }
+    },
+    "cta": {
+      "title": "Want to go deeper?",
+      "description": "Tell us what you’re wrestling with and we’ll point you to the key issues.",
+      "button": "Contact the team",
+      "linkText": "Read inside"
+    }
+  }
+},
+  "home": {
+    "hero": {
+      "badge": "Entertainment counsel",
+      "title": "Entertainment law for modern creators",
+      "description": "We protect rights, move deals, and keep IP on track so studios and creators can build confidently.",
+      "ctaPrimary": "Book a consult",
+      "ctaSecondary": "Contact the team"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Counsel for film, music, media, and brand partners built on clarity and trust."
+    },
+    "cta": {
+      "title": "Need to talk?",
+      "description": "Share what you’re building and we’ll respond with next steps and a clear scope.",
+      "button": "Contact the team"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "practiceAreas": "Practice areas",
+    "about": "About",
+    "team": "Team",
+    "ourApproach": "Our philosophy",
+    "insights": "Insights",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "footer": {
+    "description": "Entertainment & media law for creators and companies—transactional counsel and litigation when it counts.",
+    "quickLinks": "Quick Links",
+    "about": "About",
+    "message": "Our Approach",
+    "techniques": "Practice Areas",
+    "contactInfo": "Contact Info",
+    "email": "Email",
+    "address": "Los Angeles, CA (by appointment)",
+    "rights": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "accessibility": "Accessibility",
+    "emailLabel": "Email"
+  },
+  "common": {
+    "location": "Los Angeles, CA",
+    "doctorTitle": "Entertainment Law Firm",
+    "close": "Close",
+    "companyName": "Cosmic Law Firm",
+    "companyNameSub": "Entertainment & Media Law (Transactional + Litigation)"
+  },
+  "about": {
+    "hero": {
+      "badge": "About the firm",
+      "title": "Full-spectrum entertainment counsel",
+      "description": "Transactional precision backed by real litigation experience—so deals are drafted with disputes in mind, and disputes are handled with business objectives front and center.",
+      "cta": "Contact the firm",
+      "imageLabel": "Portrait of an attorney (placeholder image)"
+    },
+    "sections": {
+      "experience": {
+        "title": "Our Experience",
+        "body": "We have extensive experience in both transactional and litigation matters, ranging from drafting, negotiating, and reviewing complex contracts and corporate documents, copyright and trademark registration and disputes, and litigating multimillion dollar jury trials. We strongly believe that the key to our success comes from this wide spectrum of experience. For example, because we have successfully litigated multiple breach of contract cases on both sides, we know what the key sticking points and traps are when drafting or reviewing contracts and advising clients, and vice-versa. This experience has proven invaluable and is a key trait that most transactional-only law firms cannot offer. Our clients also have the peace of mind that even for transactional matters, we have the litigation expertise to vigorously fight any disputes that may occur in the future both informally and in court."
+      },
+      "clientCentered": {
+        "title": "Client-Centered Practice",
+        "body": "We take pride in our deep commitment to our clients. Our successful results come not only from our experience, training, and education, but also from our ability to sustain meaningful and collaborative discourse with our clients regarding their cases. As a result, we prioritize regular and frequent communications with our clients from the initial consultation until the conclusion of the case, taking into great consideration our clients’ unique goals and ultimate objectives."
+      },
+      "services": {
+        "title": "Our Services",
+        "body": "Cosmic Law Firm offers a laser focus on the full spectrum of entertainment law services, encompassing all aspects from start to finish, including both transactional and litigation matters. This includes the legal, business, technological, and financial aspects of the entertainment industry. From intellectual property, licensing, right of publicity, corporate, labor and employment, immigration, torts, contracts, and international law, we offer a variety of practices and services to help our entertainment clients successfully achieve both their business and creative objectives. We are based in the entertainment capital of the world, Los Angeles, and are expanding to provide entertainment law services for clients in Korea and China as well."
+      }
+    },
+    "cta": {
+      "title": "Let’s protect the project",
+      "description": "Send a short summary or agreement. We’ll respond with timelines and next steps.",
+      "button": "Contact the firm"
+    }
+  },
+  "message": {
+    "badge": "Our philosophy",
+    "title": "Clarity, courage, and partnership",
+    "intro": "We treat every deal as a creative collaboration so you can focus on the story while we keep the legal guardrails in place.",
+    "pillars": {
+      "clarity": {
+        "title": "Set the story straight",
+        "description": "We align goals, timelines, and leverage before drafting so no important detail is assumed."
+      },
+      "draft": {
+        "title": "Draft with intention",
+        "description": "Documents mirror creative and business priorities while keeping deal momentum fast."
+      },
+      "protect": {
+        "title": "Shield the work",
+        "description": "We secure rights, approvals, and compliance early so you can focus on what moves audiences."
+      }
+    },
+    "cta": {
+      "title": "Ready for alignment?",
+      "description": "Share what you are building and we will respond with a clear scope and next steps.",
+      "button": "Contact the team"
+    }
+  },
+  "contact": {
+    "title": "Visit Our Office",
+    "description": "Conveniently located in the heart of Los Angeles, we offer expert care with a focus on Palmer Upper Cervical techniques. Free parking validation available.",
+    "labels": {
+      "address": "Address",
+      "call": "Call Us",
+      "email": "Email Us",
+      "hours": "Hours",
+      "directions": "Get Directions",
+      "phone": "Phone"
+    },
+    "hours": {
+      "weekdays": "Mon, Tue, Wed, Fri:",
+      "thursday": "Thursday:",
+      "saturday": "Saturday:",
+      "sunday": "Sunday:",
+      "closed": "Closed"
+    }
+  },
+  "techniques": {
+    "about": {
+      "title": "About Chiropractic",
+      "p1": "At Yonsei Chiropractic, we believe the human body has an amazing, innate ability to recover itself from illness or injury.",
+      "p2": "The chiropractic method is the best approach to health because it allows the body to work without the use of any drugs, whether prescribed or non-prescribed. Our practice is built on the philosophy that true healing comes from removing interference in the nervous system.",
+      "manual": {
+        "title": "A Pure Manual Technique",
+        "p1": "We strictly follow the principle that the application of medicine, surgery, physical therapy, acupressure massage, or acupuncture is never utilized for spinal correction.",
+        "p2": "Only the use of the doctor’s hands is employed to adjust the spine in order to target the stem of all illnesses caused by subluxation."
+      },
+      "p3": "When there is pressure on the nerves from dislocated vertebrae, the flows of nerve signals are not smooth, and the body's innate ability to heal is inhibited. This phenomenon is what we address through specific adjustments.",
+      "p4": "By treating subluxation, the body will recover on its own and restore its optimal health once again. Our staff can promise you a comfortable environment and experience conducive to your healing journey.",
+      "comprehensive": {
+        "title": "Comprehensive Care",
+        "p1": "On each visit, Dr. Hyeon Joo Park, D.C., M.S. seeks to regain and maintain the proper alignment of the spine, aiding each patient through the process of recovery and healing. Once the body and its organs are able to regain their mental impulse supply, then they are able to rebuild and perform their proper functions."
+      },
+      "cta": "Visit Us"
+    },
+    "upperCervical": {
+      "title": "About Upper Cervical Care",
+      "subtitle": "Palmer Upper Cervical Specific Chiropractic (H.I.O.)",
+      "p1": "Yonsei Chiropractic is the first Korean American chiropractic in the United States to specialize in the Palmer Upper Cervical Specific Technique, also known as the \"hole-in-one\" method (H.I.O).",
+      "p2": "The practice of the H.I.O. is a high degree chiropractic technique that uses only the hands to adjust the upper cervical bones. This specific region, known as the cervical vertebrae numbers 1 and 2, is adjusted to absolve the root of all illnesses by relieving the pressure on the nerves.",
+      "p3": "The application of medicine, surgery, physical therapy, acupressure massage, or acupuncture is never utilized. Only the use of the doctor’s hands is employed to adjust the upper cervical in order to target the stem of all illnesses caused by subluxation. By treating subluxation, the body will recover on its own and restore its optimal health once again.",
+      "legacy": {
+        "title": "The Legacy of Dr. B.J. Palmer",
+        "p1": "Dr. B.J. Palmer (1881-1961) invented this procedure in 1930 after discovering that many patients with incurable diseases recovered after receiving the miraculous procedure. This has been proven to be effective in his many writings and research findings.",
+        "p2": "Because of its technical difficulty and scarcity, very few doctors in the United States are able to perform the H.I.O technique today. As the first Korean chiropractor to utilize the technique, Dr. Hyeon Joo Park, D.C., M.S. practices H.I.O. on patients who suffer from severe pain and chronic diseases."
+      },
+      "diagnostics": {
+        "title": "Advanced Diagnostics",
+        "p1": "The treatment is not based solely on observing the symptoms of the illness. It begins with a deep clinical examination:",
+        "xrays": "Precision X-Rays: Detailed views of the cervical bone structure and the specific nature of the dislocation.",
+        "instruments": "Nervo-scope & Analagraph: Specialized instruments used to understand the exact state of the nerves and locate interference."
+      },
+      "quote": "\"The human body has the amazing ability to recover itself from illness or injury. However, if the flows of nerve signals are not smooth then that innate ability is inhibited. This phenomenon happens when there is pressure on the nerves from dislocated cervical bones. Therefore, with the adjustment of the cervical bones the body will find its ability to recover itself.\"",
+      "p4": "Patients have seen a remarkable difference in their health, with many visiting from the East Coast or Korea just to receive this treatment. Dr. Hyeon Joo Park, D.C., M.S. personally diagnoses and treats each and every patient, taking pride in finding, targeting, and connecting the root of illness.",
+      "cta": "Book Your Appointment"
+    },
+    "subluxation": {
+      "title": "Subluxation",
+      "p1": "Subluxation is when the spinal bones become slightly dislocated, developing on the nerves, resulting in a disruption of the natural flow of signals between the body and the brain.",
+      "p2": "One of the World Health Organization’s (WHO) main principle is that \"(h)ealth is a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity.\" This is very true in most cases. Just because a person does not feel pain or have any diagnoses of disease, it does not mean they are 100% in good condition.",
+      "silent": {
+        "title": "The Silent Progress of Illness",
+        "p1": "Our body is made up of neurons, in which 67% of them are efferent nerves. These nerves do not send immediate pain signals until significant amount of damage is present.",
+        "p2": "Therefore, even without pain there can be an organ disorder in progress."
+      },
+      "p3": "Without knowing it, your body may have high blood pressure, arthritis may be in progress, or cancer cells may be multiplying. If the flow of signals is blocked and nerves have pressure put on them, the result is failure in function, leading to illnesses. It is a misconception that illnesses happen immediately. However, it takes a while before most serious illnesses steadily display themselves.",
+      "p4": "The body’s nerves are put under pressure over a long period of time and in the end start to show symptoms of pain. We are always worried and focused on the individual organs in our body and trying to take away the pain immediately if there is a disturbance.",
+      "cause": {
+        "title": "Targeting the Cause",
+        "p1": "However, it is necessary to first target the cause. The real source lies within the alignment of the spine and the nerve signals that are being sent out."
+      },
+      "cta": "Get an Evaluation"
+    },
+    "innateIntelligence": {
+      "badge": "The Miracle of Life",
+      "title": "Innate Intelligence",
+      "p1": "Since the moment of your conception, a miracle began for you. This miracle called life has an \"innate (inborn) intelligence\" that caused two cells to multiply and differentiate into the trillions of cells that became you.",
+      "p2": "The innate intelligence knew exactly what you needed, and exactly when you needed it. All of this development happens naturally as long there is no interference. Otherwise, that flow of the intelligence cannot go through properly.",
+      "vital": {
+        "title": "A Vital System",
+        "p1": "As the number of cells grew, your innate intelligence needed a system to send and receive messages in order to control and coordinate all functions and parts of the body.",
+        "p2": "This vital system was the first to develop and began within 18 days of conception."
+      },
+      "p3": "It is so valuable and delicate that its primary parts are the only organs encased in bone. This system is your nervous system and the primary parts are the brain protected by the skull and the spinal cord protected by the spine.",
+      "consequence": {
+        "title": "The Consequence of Interference",
+        "p1": "What would happen if this intelligence, which flows through the nerves and is filled with vital life messages, could not reach the proper destination at the right time?",
+        "organs": {
+          "heart": "Heart",
+          "lungs": "Lungs",
+          "liver": "Liver",
+          "kidneys": "Kidneys",
+          "stomach": "Stomach"
+        },
+        "p2": "What if this interference blocked messages being sent to your vital organs? Do you think this would cause these organs and yourself not to live at your highest potential? Of course, it would."
+      },
+      "quote": "\"All diseases result from a disruption of the flow of intelligence.\"",
+      "cause": "Chiropractically speaking, \"The one cause of all disease is our inability to adapt.\"",
+      "p4": "Our goal at Yonsei Chiropractic is to remove the interference in your nervous system, allowing your innate intelligence to flow perfectly once again and restoring your body's natural ability to adapt and heal.",
+      "cta": "Unlock Your Highest Potential"
+    },
+    "tmj": {
+      "title": "TMJ / TMD Treatment",
+      "p1": "Specialized chiropractic care for Temporomandibular Joint Disorders and related jaw tension.",
+      "connection": {
+        "title": "The Upper Cervical Connection",
+        "p1": "Because the upper cervical spine (the top two vertebrae in the neck) sits so closely to the jaw joints, misalignment in the neck can often manifest as TMJ/TMD symptoms.",
+        "p2": "Head and neck misalignment can cause interference in the nervous system, leading to muscle tension in the jaw, clicking, popping, and pain."
+      },
+      "symptoms": {
+        "title": "Symptoms We Treat",
+        "pain": "Jaw pain and tenderness",
+        "chewing": "Difficulty chewing or opening wide",
+        "clicking": "Clicking or popping sounds in the jaw",
+        "ear": "Facial aching or ear pain"
+      },
+      "expertise": {
+        "title": "Dr. Hyeon Joo Park, D.C., M.S.'s Expertise",
+        "p1": "Dr. Hyeon Joo Park, D.C., M.S. is dedicated to using her professional expertise to help patients with TMJ/TMD. By restoring head/neck alignment and utilizing specialty extremity adjustments, we address the root cause of the jaw dysfunction.",
+        "p2": "Our approach is drug-free and seeks to re-activate the body's natural self-healing process."
+      },
+      "cta": "Relieve Your Jaw Pain Today"
+    },
+    "carAccident": {
+      "badge": "Immediate Attention Required",
+      "title": "Car Accidents & Whiplash",
+      "pain": {
+        "title": "Pain? No Pain?",
+        "p1": "The aftereffect symptoms of a car accident normally show 1~2 days, or even a few months after the accident. In fact, the absence of pain doesn’t necessarily mean there is no damage. Many of the symptoms caused by a car accident or trauma lay dormant until later.",
+        "p2": "If nerves are put under pressure after the accident, it will not only result in pain, but it will lead to more severe illness. Car accidents can cause damage in many parts of the body such as 7 possible locations in the upper cervical vertebrae and 32 joints and muscles throughout the body."
+      },
+      "symptoms": {
+        "title": "Common Symptoms After an Accident:",
+        "items": {
+          "dizziness": "Dizziness",
+          "nausea": "Nausea",
+          "vomiting": "Vomiting",
+          "rigidity": "Muscular Rigidity",
+          "tinnitus": "Tinnitus (Ear Ringing)",
+          "pain": "Chronic Pain"
+        }
+      },
+      "whiplash": {
+        "title": "The Nature of Whiplash",
+        "p1": "During a car accident, one’s head experiences an abrupt backward or forward jerking motion. This damages the upper cervical vertebrae. Such injury is hard to detect even with a CT scan or MRI.",
+        "p2": "Because of this characteristic, an aftereffect of a car accident can become chronic. If the upper cervical suffers due to excessive pressure, it will prevent normal movement of the body and will lead to further health problems."
+      },
+      "damage": {
+        "title": "Nerve Damage vs. Contusion",
+        "p1": "Sometimes people confuse nerve damage with simple contusion and try treating symptoms with physical therapy, acupuncture, and massages.",
+        "p2": "Those treatments cannot recover nerves under pressure and instead only temporarily eliminate pain. Not treating the nerves properly will worsen the condition and result in chronic pain."
+      },
+      "quote": "The aftereffects of a car accident require immediate attention and continuous care.",
+      "cta": "Book Your Post-Accident Exam"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Expertise",
+      "title": "Our Services",
+      "subtitle": "A laser focus on entertainment law—transactional and litigation—covering the legal, business, technological, and financial realities of the industry.",
+      "cta": "View practice areas"
+    },
+    "philosophy": {
+      "title": "Strategy that keeps deals moving",
+      "p1": "We combine deal-making precision with a deep understanding of entertainment pipelines."
+    },
+    "specialties": {
+      "title": "Expertise / Practice Areas",
+      "description": "Cosmic Law Firm offers a laser focus on the full spectrum of entertainment law services, encompassing all aspects from start to finish, including both transactional and litigation matters. This includes the legal, business, technological, and financial aspects of the entertainment industry. From intellectual property, licensing, right of publicity, corporate, labor and employment, immigration, torts, contracts, and international law, we offer a variety of practices and services to help our entertainment clients successfully achieve both their business and creative objectives. We are based in the entertainment capital of the world, Los Angeles, and are expanding to provide entertainment law services for clients in Korea and China as well."
+    },
+    "process": {
+      "title": "How we work",
+      "step1": {
+        "title": "Listen",
+        "desc": "We learn your goals, timeline, and leverage."
+      },
+      "step2": {
+        "title": "Draft & negotiate",
+        "desc": "We craft documents with clarity, rights protection, and business sense."
+      },
+      "step3": {
+        "title": "Secure & protect",
+        "desc": "We finalize approvals and keep you ahead on IP, compliance, and disputes."
+      }
+    },
+    "cta": {
+      "title": "Ready to talk?",
+      "description": "Share what you’re building. We’ll respond with next steps and a clear scope.",
+      "button": "Contact the team"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Get in Touch",
+      "description": "Tell us what you’re working on—deal, dispute, or registration. We’ll respond with next steps and a clear scope."
+    },
+    "details": {
+      "title": "Location & Contact",
+      "phone": {
+        "label": "Call or text for consultations"
+      },
+      "email": {
+        "label": "Email us anytime"
+      }
+    },
+    "hours": {
+      "title": "Hours of Operation"
+    },
+    "form": {
+      "title": "Request a Consultation",
+      "description": "Share a few details and we’ll follow up to schedule a consultation.",
+      "labels": {
+        "name": "Full Name",
+        "phone": "Phone Number",
+        "message": "How can we help?"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "phone": "(555) 000-0000",
+        "message": "Tell us what you’re building or what dispute you’re facing (no confidential details)."
+      },
+      "submit": "Send Request",
+      "success": {
+        "title": "Request Sent!",
+        "message": "Thanks for reaching out. We’ll get back to you shortly to coordinate next steps.",
+        "button": "Send another request"
+      }
+    }
+  },
+  "team": {
+    "hero": {
+      "badge": "Our Team",
+      "title": "Counsel built for entertainment",
+      "description": "Cosmic Law Firm supports creators and companies with practical, business-minded counsel across entertainment transactions, IP, and disputes.",
+      "cta": "Contact the team"
+    },
+    "members": {
+      "lara": {
+        "location": "Los Angeles, CA",
+        "title": "Partner · Film & Series",
+        "specialty": "Production contracts · chain of title · distribution",
+        "description": "Leads film and premium series deals, aligning financiers, creatives, and guilds around a clear delivery plan."
+      },
+      "noah": {
+        "location": "Seoul / Los Angeles",
+        "title": "Senior Associate · Music & New Media",
+        "specialty": "Music rights · digital media · licensing",
+        "description": "Guides music catalogs, influencer partnerships, and streaming launches with global compliance and monetization in mind."
+      },
+      "mina": {
+        "location": "Los Angeles, CA",
+        "title": "Counsel · Talent & IP",
+        "specialty": "Talent representation · brand safety · publicity",
+        "description": "Supports creators, agencies, and brands with talent deals, endorsements, and publicity rights clarity."
+      }
+    },
+    "cta": {
+      "title": "Need an extra set of eyes?",
+      "description": "Send a short summary, script, or deck. We’ll respond with the right strategy and attorney.",
+      "button": "Contact the team"
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, we couldn’t find that page. It may have moved or no longer exists.",
+    "cta": "Return home"
+  },
+  "accessibility": {
+    "navigatedTo": "Navigated to {{title}}",
+    "required": "(required)",
+    "opensInNewWindow": "(opens in a new window)",
+    "closeModal": "Close modal",
+    "dismissNotification": "Dismiss notification",
+    "skipToContent": "Skip to content"
+  },
+  "accessibilityPage": {
+    "title": "Accessibility Statement",
+    "intro": "Cosmic Law Firm is committed to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply relevant accessibility standards.",
+    "conformance": {
+      "title": "Conformance Status",
+      "body": "The Web Content Accessibility Guidelines (WCAG) define requirements for designers and developers to improve accessibility for people with disabilities. They define three levels of conformance: Level A, Level AA, and Level AAA. Cosmic Law Firm aims to conform with WCAG 2.1 level AA. Some parts of the content may not fully conform to the accessibility standard."
+    },
+    "feedback": {
+      "title": "Feedback",
+      "body": "We welcome your feedback on the accessibility of Cosmic Law Firm. Please let us know if you encounter accessibility barriers on our website:",
+      "phone": "Phone: (000) 000-0000",
+      "email": "Email: contact@cosmiclawfirm.com",
+      "address": "Visitor Address: Los Angeles, CA (by appointment)"
+    },
+    "technical": {
+      "title": "Technical Specifications",
+      "body": "Accessibility of Cosmic Law Firm relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:",
+      "items": {
+        "html": "HTML",
+        "aria": "WAI-ARIA",
+        "css": "CSS",
+        "js": "JavaScript"
+      }
+    },
+    "assessment": {
+      "title": "Assessment Approach",
+      "body": "Cosmic Law Firm assessed the accessibility of our website by the following approaches:",
+      "items": {
+        "self": "Self-evaluation",
+        "automated": "Automated testing using industry-standard tools"
+      }
+    },
+    "approval": {
+      "title": "Formal Approval of this Accessibility Statement",
+      "body": "This Accessibility Statement is approved by: Cosmic Law Firm",
+      "date": "Date: January 16, 2026"
+    }
+  }
+}

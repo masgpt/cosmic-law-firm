@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "badge": "Client Testimonials",
+    "title": "What clients say",
+    "description": "Stories about deal wins, rights protection, and calm negotiations."
+  },
+  "readAll": "Read All",
+  "cta": {
+    "title": "Ready to talk?",
+    "description": "Tell us about your project and we’ll match the right lead attorney.",
+    "book": "Contact the team",
+    "call": "View practice areas"
+  },
+  "items": {
+    "readMore": "Read More",
+    "showLess": "Show Less"
+  },
+  "review1": { "text": "“Fast turnaround and clear explanations. We understood the deal terms, the risks, and what to push for.”" },
+  "review2": { "text": "“They protected our IP and cleaned up definitions that would have caused problems later.”" },
+  "review3": { "text": "“Practical advice that respected both the creative and the business side of the project.”" },
+  "review4": { "text": "“Excellent redlines and strategy. We closed with better economics and clearer approvals.”" },
+  "review5": { "text": "“Helped us move quickly on a brand deal and handled exclusivity and usage with confidence.”" },
+  "review6": { "text": "“Straightforward, business-first negotiation. No wasted motion.”" },
+  "review7": { "text": "“Clear scope, clear timeline, and great communication throughout.”" },
+  "review8": { "text": "“We finally felt organized—chain of title, releases, and rights all in one place.”" },
+  "review9": { "text": "“Smart guidance on distribution terms and profit participation definitions.”" },
+  "review10": { "text": "“They helped us get comfortable with the risk and made the contract match our reality.”" },
+  "review11": { "text": "“Strong advocacy without turning the deal into a fight.”" },
+  "review12": { "text": "“Quickly spotted red flags in a management agreement and negotiated better terms.”" },
+  "review13": { "text": "“Trademark and copyright advice was clear and actionable.”" },
+  "review14": { "text": "“Helped us structure a clean operating agreement for our production company.”" },
+  "review15": { "text": "“Worth it. We avoided a costly mistake before signing.”" },
+  "review16": { "text": "“They kept us calm and focused when the other side escalated.”" },
+  "review17": { "text": "“Great counsel for NIL and right-of-publicity approvals.”" },
+  "review18": { "text": "“They made the negotiation efficient and protected our leverage.”" },
+  "review19": { "text": "“We felt protected—IP, brand safety, and deliverables were all covered.”" },
+  "review20": { "text": "“Clear, crisp drafting. The other side understood the terms immediately.”" },
+  "review21": { "text": "“They thought ahead to dispute prevention and built better definitions.”" },
+  "review22": { "text": "“Good judgment and fast edits when the timeline got tight.”" },
+  "review23": { "text": "“They understood the platform deal terms and what mattered most.”" },
+  "review24": { "text": "“We closed smoothly and felt confident moving forward.”" },
+  "review25": { "text": "“Professional, responsive, and extremely effective.”" }
+}

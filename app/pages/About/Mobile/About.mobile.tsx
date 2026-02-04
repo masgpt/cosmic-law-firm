@@ -1,0 +1,120 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import ButtonLink from '@/components/ui/ButtonLink';
+import Link from '@/components/ui/Link';
+import SEO from '@/components/SEO';
+import { useTranslation } from 'react-i18next';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 18 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5 },
+};
+
+const AboutMobile: React.FC = () => {
+  const { t } = useTranslation();
+  return (
+    <>
+      <SEO title={t('about.hero.title')} description={t('about.hero.description')} />
+      <section className="px-6 py-12 max-w-[960px] mx-auto">
+        <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" viewport={{ once: true }}>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary text-[10px] font-black uppercase tracking-widest w-fit">
+            <span className="material-symbols-outlined text-[14px]" aria-hidden="true">
+              verified
+            </span>
+            {t('about.hero.badge')}
+          </div>
+          <h1 className="mt-4 text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+            {t('about.hero.title')}
+          </h1>
+          <p className="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+            {t('about.hero.description')}
+          </p>
+          <div className="mt-6 flex flex-col gap-3">
+            <ButtonLink
+              href="/contact"
+              tone="dark"
+              className="h-12 rounded-xl uppercase tracking-widest text-sm focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
+            >
+              {t('about.hero.cta')}
+            </ButtonLink>
+            <Link
+              to="/services"
+              className="h-12 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold flex items-center justify-center"
+            >
+              Practice areas
+            </Link>
+          </div>
+        </motion.div>
+
+        <motion.div
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          className="mt-10 rounded-2xl overflow-hidden shadow-xl border border-slate-100 dark:border-slate-800"
+        >
+          <div
+            className="h-72 bg-center bg-cover bg-no-repeat bg-slate-200 dark:bg-slate-800"
+            style={{ backgroundImage: "url('/dr-park.png')" }}
+            role="img"
+            aria-label={t('about.hero.imageLabel')}
+          />
+          <div className="p-5 bg-white dark:bg-slate-900">
+            <p className="text-slate-900 dark:text-white font-black">{t('team.members.lara.title')}</p>
+            <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">{t('team.members.lara.location')}</p>
+          </div>
+        </motion.div>
+
+        <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="mt-12 space-y-10">
+          <div className="space-y-3">
+            <h2 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+              {t('about.sections.experience.title')}
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed whitespace-pre-line">
+              {t('about.sections.experience.body')}
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="text-xl font-black tracking-tight text-slate-900 dark:text-white">
+              {t('about.sections.clientCentered.title')}
+            </h3>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm whitespace-pre-line">
+              {t('about.sections.clientCentered.body')}
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="text-xl font-black tracking-tight text-slate-900 dark:text-white">
+              {t('about.sections.services.title')}
+            </h3>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm whitespace-pre-line">
+              {t('about.sections.services.body')}
+            </p>
+          </div>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          className="mt-12 rounded-3xl bg-primary text-white p-8 text-center space-y-4"
+        >
+          <h2 className="text-2xl font-black">{t('about.cta.title')}</h2>
+          <p className="text-sm text-white/90">{t('about.cta.description')}</p>
+          <ButtonLink
+            href="/contact"
+            tone="light"
+            className="inline-flex items-center justify-center gap-2 rounded-xl uppercase tracking-[0.3em] text-xs px-5 py-3 shadow-lg focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-primary"
+          >
+            {t('about.cta.button')}
+          </ButtonLink>
+        </motion.div>
+      </section>
+    </>
+  );
+};
+
+export default AboutMobile;

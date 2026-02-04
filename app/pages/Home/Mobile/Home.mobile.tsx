@@ -1,0 +1,172 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from '@/components/ui/Link';
+import SEO from '@/components/SEO';
+import { SITE } from '@/lib/site';
+import { practiceAreas } from '@/lib/practice-areas';
+import { useTranslation } from 'react-i18next';
+import ButtonLink from '@/components/ui/ButtonLink';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 18 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5 },
+};
+
+const HERO_BACKGROUND = '/NanoBanana/music-producer-lawyer-studio.png';
+
+const HomeMobile: React.FC = () => {
+  const { t, i18n } = useTranslation();
+  const isKo = i18n.language?.startsWith('ko');
+
+  return (
+    <>
+      <SEO
+        title={`${SITE.name} | ${SITE.nameSub}`}
+        description="Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes."
+      />
+
+      <section className="relative bg-slate-950 text-white overflow-hidden -mt-[68px] pt-0 sm:-mt-[96px] sm:pt-0" aria-label="Hero introduction">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url('${HERO_BACKGROUND}')` }}
+            role="img"
+            aria-label="Music producer and entertainment lawyer collaborating inside a studio"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/40 to-black/70 backdrop-blur-[1px]" />
+          <div className="absolute left-[10%] top-4 h-[260px] w-[260px] rounded-full bg-primary/30 blur-[160px]" aria-hidden="true" />
+          <div className="absolute right-4 bottom-[-40px] h-[220px] w-[220px] rounded-full bg-white/5 blur-[140px]" aria-hidden="true" />
+        </div>
+
+        <div className="relative z-10 px-6 pb-12 pt-12">
+          <div className="inline-flex items-center gap-2 uppercase tracking-[0.35em] text-[10px] text-white/90 mb-4">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-black/60 text-white font-black tracking-[0.35em]">
+              {t('home.hero.badge')}
+            </span>
+          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.7 }}
+            className="text-4xl font-black tracking-tight text-white leading-[1.05] mb-5 uppercase"
+          >
+            {t('home.hero.title')}
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            className="text-lg text-white/90 mb-8 leading-relaxed font-medium"
+          >
+            {t('home.hero.description')}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.45, duration: 0.7 }}
+            className="flex flex-col gap-4"
+          >
+            <ButtonLink
+              href="/services"
+              tone="dark"
+              className="min-h-[3.5rem] py-4 px-6 uppercase tracking-widest text-sm text-center focus:ring-offset-2 focus:ring-offset-slate-950"
+            >
+              {t('home.hero.ctaPrimary')}
+            </ButtonLink>
+            <ButtonLink
+              href="/contact"
+              tone="light"
+              className="min-h-[3.5rem] py-4 px-6 uppercase tracking-widest text-sm text-center border border-white/70 focus:ring-offset-2 focus:ring-offset-slate-950"
+            >
+              {t('home.hero.ctaSecondary')}
+            </ButtonLink>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-background-light dark:bg-background-dark" aria-labelledby="services-heading">
+        <div className="max-w-[1280px] mx-auto px-6">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView" className="max-w-2xl">
+            <span className="text-[0.65rem] font-black tracking-[0.45em] uppercase text-slate-500 dark:text-slate-400">
+              {t('home.hero.badge')}
+            </span>
+            <h2 id="services-heading" className="mt-2 text-2xl font-black uppercase tracking-tight text-slate-900 dark:text-white">
+              {t('home.services.title')}
+            </h2>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              {t('home.services.description')}
+            </p>
+          </motion.div>
+
+          <div className="mt-6 space-y-4">
+            {practiceAreas.slice(0, 6).map((area) => (
+              <motion.article
+                key={area.slug}
+                variants={fadeInUp}
+                initial="initial"
+                whileInView="whileInView"
+                viewport={{ once: true }}
+                className="flex flex-col gap-3 rounded-[28px] border border-secondary/40 dark:border-white/10 bg-white/70 dark:bg-white/5 shadow"
+              >
+                <div className="flex items-center gap-3 px-4 py-3">
+                  <div className="size-12 rounded-xl bg-secondary/60 shadow-lg shadow-black/5 flex items-center justify-center text-primary">
+                    <span className="material-symbols-outlined text-2xl font-light" aria-hidden="true">
+                      {area.icon}
+                    </span>
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tight">
+                      {isKo ? area.titleKo : area.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-[0.75rem] leading-relaxed font-medium mt-1">
+                      {isKo ? area.focusKo : area.focus}
+                    </p>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+
+          <div className="mt-6">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] hover:underline"
+            >
+              View all practice areas
+              <span className="material-symbols-outlined text-xs" aria-hidden="true">
+                east
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-background-light dark:bg-background-dark" aria-label="Call to action">
+        <div className="max-w-[1280px] mx-auto px-6">
+          <div className="rounded-2xl bg-secondary/35 dark:bg-white/5 border border-secondary/40 dark:border-white/10 p-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+            <div>
+              <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white uppercase">
+                {t('home.cta.title')}
+              </h2>
+              <p className="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">
+                {t('home.cta.description')}
+              </p>
+            </div>
+            <ButtonLink
+              href="/contact"
+              tone="dark"
+              className="h-12 px-8 rounded-xl uppercase tracking-widest text-sm focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
+            >
+              {t('home.cta.button')}
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default HomeMobile;

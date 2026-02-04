@@ -96,13 +96,14 @@ const ContactDesktop: React.FC = () => {
               <div className="text-text-main dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0 size-12 group-hover:bg-primary group-hover:text-white transition-colors">
                 <span className="material-symbols-outlined text-2xl" aria-hidden="true">mail</span>
               </div>
-              <div className="flex flex-1 flex-col justify-center overflow-hidden">
-                <p className="text-text-main dark:text-white text-base font-bold leading-normal group-hover:text-primary transition-colors truncate">
-                  {SITE.email}
-                </p>
-                <p className="text-text-secondary dark:text-slate-400 text-sm font-normal leading-normal">{t('contactPage.details.email.label')}</p>
-              </div>
-            </Link>
+            <div className="flex flex-1 flex-col justify-center overflow-hidden">
+              <p className="text-text-main dark:text-white text-base font-bold leading-normal group-hover:text-primary transition-colors truncate">
+                {SITE.email}
+              </p>
+              <p className="text-text-secondary dark:text-slate-400 text-sm font-normal leading-normal">{t('contactPage.details.email.label')}</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-normal">{t('contactPage.details.email.responseTime')}</p>
+            </div>
+          </Link>
           </div>
 
           {/* Hours */}

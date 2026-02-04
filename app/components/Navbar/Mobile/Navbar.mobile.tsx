@@ -1,12 +1,16 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import Link from '@/components/ui/Link';
+import ButtonLink from '@/components/ui/ButtonLink';
 import LanguageToggle from '@/components/LanguageToggle';
 import { useNavbarLogic } from '../Shared/navbar.hooks';
 import { useNavbarConstants } from '../Shared/navbar.constants';
 import { SITE } from '@/lib/site';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const NavbarMobile: React.FC = () => {
   const { t } = useTranslation();
@@ -14,7 +18,9 @@ const NavbarMobile: React.FC = () => {
   const { practiceAreaLinks, aboutLinks, lng } = useNavbarConstants();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMenu = () => setIsMobileMenuOpen((prev) => !prev);
+  const closeMenu = () => setIsMobileMenuOpen(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -23,6 +29,28 @@ const NavbarMobile: React.FC = () => {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
+
+  const handleNavigation = (path: string) => {
+    closeMenu();
+    router.push(path);
+  };
+
+  const getMobileNavButtonClass = (path: string, size: 'lg' | 'sm' = 'lg') => {
+    const isActivePath = isActive(path);
+    const baseStyles =
+      'w-full text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-primary';
+    const sizeStyles =
+      size === 'lg'
+        ? 'text-lg font-black px-4 py-3 rounded-2xl'
+        : 'text-sm font-bold px-3 py-2 rounded-xl';
+    const activeStyles =
+      size === 'lg'
+        ? 'text-secondary bg-white/20 border border-white/30'
+        : 'text-secondary bg-white/15 border border-white/20';
+    const inactiveStyles = 'text-white/90 bg-white/5 border border-white/10 hover:bg-white/15';
+
+    return `${baseStyles} ${sizeStyles} ${isActivePath ? activeStyles : inactiveStyles}`;
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-primary/95 backdrop-blur-md transition-colors duration-300 lg:hidden text-white">
@@ -80,35 +108,33 @@ const NavbarMobile: React.FC = () => {
           >
             <div className="p-6 overflow-y-auto max-h-[calc(100vh-64px)]">
               <nav className="flex flex-col space-y-6" aria-label="Mobile navigation">
-                <Link
-                  to={`/${lng}/`}
-                  onClick={toggleMenu}
-                  className={`text-lg font-black tracking-tight ${
-                    isActive(`/${lng}/`) ? 'text-secondary' : 'text-white'
-                  }`}
+                <button
+                  type="button"
+                  onClick={() => handleNavigation(`/${lng}/`)}
+                  className={getMobileNavButtonClass(`/${lng}/`, 'lg')}
                 >
                   {t('nav.home')}
-                </Link>
+                </button>
 
                 <div className="flex flex-col space-y-3">
                   <p className="text-xs font-black text-secondary uppercase tracking-[0.2em]">{t('nav.practiceAreas')}</p>
                   <div className="flex flex-col space-y-3 pl-4 border-l-2 border-white/15">
-                    <Link
-                      to={`/${lng}/services`}
-                      onClick={toggleMenu}
-                      className={`text-sm font-bold ${isActive(`/${lng}/services`) ? 'text-secondary' : 'text-white/90'}`}
+                    <button
+                      type="button"
+                      onClick={() => handleNavigation(`/${lng}/services`)}
+                      className={getMobileNavButtonClass(`/${lng}/services`, 'sm')}
                     >
-                      View all practice areas
-                    </Link>
+                      View all services
+                    </button>
                     {practiceAreaLinks.map((link) => (
-                      <Link
+                      <button
                         key={link.path}
-                        to={link.path}
-                        onClick={toggleMenu}
-                        className={`text-sm font-bold ${isActive(link.path) ? 'text-secondary' : 'text-white/90'}`}
+                        type="button"
+                        onClick={() => handleNavigation(link.path)}
+                        className={getMobileNavButtonClass(link.path, 'sm')}
                       >
                         {link.name}
-                      </Link>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -117,73 +143,71 @@ const NavbarMobile: React.FC = () => {
                   <p className="text-xs font-black text-secondary uppercase tracking-[0.2em]">{t('nav.about')}</p>
                   <div className="flex flex-col space-y-3 pl-4 border-l-2 border-white/15">
                     {aboutLinks.map((link) => (
-                      <Link
+                      <button
                         key={link.path}
-                        to={link.path}
-                        onClick={toggleMenu}
-                        className={`text-sm font-bold ${isActive(link.path) ? 'text-secondary' : 'text-white/90'}`}
+                        type="button"
+                        onClick={() => handleNavigation(link.path)}
+                        className={getMobileNavButtonClass(link.path, 'sm')}
                       >
                         {link.name}
-                      </Link>
+                      </button>
                     ))}
                   </div>
                 </div>
 
-                <Link
-                  to={`/${lng}/insights`}
-                  onClick={toggleMenu}
-                  className={`text-lg font-black tracking-tight ${
-                    isActive(`/${lng}/insights`) ? 'text-secondary' : 'text-white'
-                  }`}
+                <button
+                  type="button"
+                  onClick={() => handleNavigation(`/${lng}/insights`)}
+                  className={getMobileNavButtonClass(`/${lng}/insights`, 'lg')}
                 >
                   {t('nav.insights')}
-                </Link>
+                </button>
 
-                <Link
-                  to={`/${lng}/reviews`}
-                  onClick={toggleMenu}
-                  className={`text-lg font-black tracking-tight ${
-                    isActive(`/${lng}/reviews`) ? 'text-secondary' : 'text-white'
-                  }`}
+                <button
+                  type="button"
+                  onClick={() => handleNavigation(`/${lng}/reviews`)}
+                  className={getMobileNavButtonClass(`/${lng}/reviews`, 'lg')}
                 >
                   {t('nav.testimonials')}
-                </Link>
+                </button>
 
-                <div className="pt-6 border-t border-white/10 flex flex-col gap-4">
-                  <div className="flex flex-col gap-3">
-                    <Link
-                      href={`mailto:${SITE.email}`}
-                      onClick={toggleMenu}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-white/10 text-white font-bold text-sm"
-                    >
-                      <span className="material-symbols-outlined text-secondary" aria-hidden="true">
-                        mail
-                      </span>
-                      <span className="truncate">{SITE.email}</span>
-                    </Link>
-                    <Link
-                      href={`tel:${SITE.phoneTel}`}
-                      onClick={toggleMenu}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-white/10 text-white font-bold text-sm"
-                    >
-                      <span className="material-symbols-outlined text-secondary" aria-hidden="true">
-                        call
-                      </span>
-                      <span>{SITE.phoneDisplay}</span>
-                    </Link>
-                  </div>
+                  <div className="pt-6 border-t border-white/10 flex flex-col gap-4">
+                    <div className="flex flex-col gap-3">
+                      <Link
+                        href={`mailto:${SITE.email}`}
+                        onClick={toggleMenu}
+                        className="flex items-center gap-3 p-3 rounded-xl bg-white/10 text-white font-bold text-sm"
+                      >
+                        <span className="material-symbols-outlined text-secondary" aria-hidden="true">
+                          mail
+                        </span>
+                        <span className="truncate">{SITE.email}</span>
+                      </Link>
+                      <Link
+                        href={`tel:${SITE.phoneTel}`}
+                        onClick={toggleMenu}
+                        className="flex items-center gap-3 p-3 rounded-xl bg-white/10 text-white font-bold text-sm"
+                      >
+                        <span className="material-symbols-outlined text-secondary" aria-hidden="true">
+                          call
+                        </span>
+                        <span>{SITE.phoneDisplay}</span>
+                      </Link>
+                    </div>
 
-                    <Link
-                      to={`/${lng}/contact`}
-                      onClick={toggleMenu}
-                      className="flex items-center justify-center h-14 rounded-2xl bg-secondary hover:bg-secondary/90 text-white text-base font-bold shadow-xl shadow-black/10 active:scale-[0.98] transition-transform focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-primary"
+                    <ButtonLink
+                      href={`/${lng}/contact`}
+                      tone="light"
+                      size="lg"
+                      className="w-full rounded-2xl h-14 text-base capitalize tracking-tight shadow-xl shadow-black/10 active:scale-[0.98] transition-transform focus:ring-offset-2 focus:ring-offset-primary"
+                      onClick={closeMenu}
                     >
                       <span className="mr-2 material-symbols-outlined text-[20px]" aria-hidden="true">
                         mail
                       </span>
                       {t('nav.contact')}
-                    </Link>
-                </div>
+                    </ButtonLink>
+                  </div>
               </nav>
             </div>
           </motion.div>

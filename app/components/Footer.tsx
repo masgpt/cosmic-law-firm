@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   const { t } = useTranslation();
   const quickLinks = [
     { label: t('nav.home'), href: '/' },
-    { label: t('nav.practiceAreas'), href: '/services' },
+    { label: t('nav.servicesLabel'), href: '/services' },
     { label: t('nav.insights'), href: '/insights' },
     { label: t('nav.about'), href: '/about' },
     { label: t('nav.ourApproach'), href: '/message' },
@@ -78,9 +78,6 @@ const Footer: React.FC = () => {
               {t('footer.description')}
             </p>
 
-            <div className="mt-6 flex items-center gap-4">
-              <ThemeToggle />
-            </div>
           </div>
 
           <nav className="lg:col-span-3" aria-label="Footer quick links">
@@ -94,7 +91,7 @@ const Footer: React.FC = () => {
                   href={quickLink.href}
                   tone="light"
                   size="md"
-                  className="w-full justify-start gap-3 px-4 py-3 text-sm font-semibold text-left text-slate-900 dark:text-white/90"
+                  className="w-full justify-start gap-3 px-4 py-3 text-sm font-semibold text-left"
                 >
                   {quickLink.label}
                 </ButtonLink>
@@ -106,15 +103,19 @@ const Footer: React.FC = () => {
             <h4 className="text-sm font-bold uppercase tracking-widest text-secondary mb-5">
               {t('nav.practiceAreas')}
             </h4>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm font-medium">
+            <div className="grid gap-3 sm:grid-cols-2">
               {practiceAreas.map((area) => (
-                <li key={area.slug}>
-                  <Link to={`/services/${area.slug}`} className="text-white/90 hover:text-secondary">
-                    {area.title}
-                  </Link>
-                </li>
+                <ButtonLink
+                  key={area.slug}
+                  href={`/services/${area.slug}`}
+                  tone="light"
+                  size="md"
+                  className="w-full justify-start gap-3 px-4 py-3 text-sm font-semibold text-left"
+                >
+                  {area.title}
+                </ButtonLink>
               ))}
-            </ul>
+            </div>
           </nav>
 
           <div className="lg:col-span-2 space-y-3">
@@ -128,7 +129,7 @@ const Footer: React.FC = () => {
                   href={action.href}
                   tone="light"
                   size="md"
-                  className="w-full justify-start gap-3 px-4 py-3 text-sm font-semibold text-left text-slate-900 dark:text-white/90"
+                  className="w-full justify-start gap-3 px-4 py-3 text-sm font-semibold text-left"
                 >
                   <span
                     className="material-symbols-outlined text-secondary text-[20px]"
@@ -154,15 +155,18 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-medium text-white/80 tracking-wider uppercase">
+        <div className="border-t border-white/10 mt-10 pt-8 flex flex-col gap-6 text-[11px] font-medium text-white/80 tracking-wider uppercase md:flex-row md:items-center md:justify-between">
           <p className="text-center md:text-left">
             © 2026 {t('common.companyName')}. {t('footer.rights')}
           </p>
-          <nav className="flex items-center gap-6" aria-label="Legal">
-            <Link to="/accessibility" className="text-white/90 hover:text-secondary">{t('footer.accessibility')}</Link>
-            <Link to="/privacy" className="text-white/90 hover:text-secondary">{t('footer.privacyPolicy')}</Link>
-            <Link to="/terms" className="text-white/90 hover:text-secondary">{t('footer.termsOfService')}</Link>
-          </nav>
+          <div className="flex flex-col items-center gap-4 md:flex-row md:items-center">
+            <nav className="flex flex-wrap items-center justify-center gap-6" aria-label="Legal">
+              <Link to="/accessibility" className="text-white/90 hover:text-secondary">{t('footer.accessibility')}</Link>
+              <Link to="/privacy" className="text-white/90 hover:text-secondary">{t('footer.privacyPolicy')}</Link>
+              <Link to="/terms" className="text-white/90 hover:text-secondary">{t('footer.termsOfService')}</Link>
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </footer>

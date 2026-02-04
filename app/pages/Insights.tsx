@@ -23,7 +23,7 @@ const Insights: React.FC<{ lng: string }> = ({ lng }) => {
 
   return (
     <div className="pt-16 lg:pt-20">
-      <SEO title={isKo ? `인사이드 | ${SITE.name}` : `Insides | ${SITE.name}`} description={t('insights.hero.description')} />
+      <SEO title={isKo ? `인사이트 | ${SITE.name}` : `Insights | ${SITE.name}`} description={t('insights.hero.description')} />
 
       <section className="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
@@ -41,29 +41,35 @@ const Insights: React.FC<{ lng: string }> = ({ lng }) => {
 
       <section className="py-12 bg-white dark:bg-[#020712]">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {topics.map((topic) => (
-              <Link
-                key={topic.slug}
-                to={`/insights/${topic.slug}`}
-                className="group block rounded-3xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40 p-6 transition shadow-sm hover:shadow-lg focus-visible:ring-2 focus-visible:ring-primary/60"
-              >
-                <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-slate-400 mb-4">
-                  <span>{topic.tag}</span>
-                  <span className="font-black text-slate-500 dark:text-slate-300">{topic.status}</span>
-                </div>
-                <h2 className="text-2xl font-black text-slate-900 dark:text-white leading-tight">
-                  {t(`insights.topics.${topic.slug}.title`)}
-                </h2>
-                <p className="mt-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  {t(`insights.topics.${topic.slug}.summary`)}
-                </p>
-                <span className="mt-5 inline-flex items-center text-xs font-black tracking-[0.3em] text-slate-900 dark:text-primary uppercase">
-                  {t('insights.cta.linkText')}
-                  <span className="material-symbols-outlined text-base ml-2">east</span>
-                </span>
-              </Link>
-            ))}
+          <div className="rounded-3xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900/60 overflow-hidden">
+            <ol role="list" className="divide-y divide-slate-200 dark:divide-slate-800">
+              {topics.map((topic) => {
+                const title = t(`insights.topics.${topic.slug}.title`);
+                const summary = t(`insights.topics.${topic.slug}.summary`);
+                return (
+                  <li key={topic.slug}>
+                    <Link
+                      to={`/insights/${topic.slug}`}
+                      className="group block px-6 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900"
+                    >
+                      <div className="flex flex-wrap items-center gap-4 text-xs uppercase tracking-[0.3em] text-slate-400">
+                        <span>{topic.tag}</span>
+                        <span className="font-black text-slate-500 dark:text-slate-300">{topic.status}</span>
+                      </div>
+                      <div className="mt-3 flex items-center gap-3">
+                        <h2 className="text-2xl font-black text-slate-900 dark:text-white leading-tight">{title}</h2>
+                        <span className="material-symbols-outlined text-base text-slate-400 transition group-hover:text-primary" aria-hidden="true">east</span>
+                      </div>
+                      <p className="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{summary}</p>
+                      <span className="mt-4 inline-flex items-center gap-1 text-xs font-black uppercase tracking-[0.3em] text-slate-900 dark:text-primary">
+                        {t('insights.cta.linkText')}
+                        <span className="material-symbols-outlined text-base" aria-hidden="true">east</span>
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ol>
           </div>
         </div>
       </section>

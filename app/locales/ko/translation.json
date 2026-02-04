@@ -1,10 +1,10 @@
 {
-  "seo": {
-    "home": {
-      "title": "엔터테인먼트 법률 서비스 | Cosmic Law Firm",
-      "description": "크리에이터와 미디어 기업을 위한 엔터테인먼트 법률 서비스—계약, 지식재산권, 탤런트 딜, 배급, 분쟁."
-    },
-    "insights": {
+  "home": {
+    "hero": {
+      "badge": "현대 크리에이터를 위한 법률"
+    }
+  },
+  "insights": {
     "hero": {
       "badge": "인사이드",
       "title": "계약을 더 명확하게. 권리를 더 일찍 지키세요.",
@@ -47,109 +47,121 @@
       "linkText": "자세히 보기"
     }
   },
-  "home": {
-    "hero": {
-      "badge": "엔터테인먼트 법률",
-      "title": "현대 크리에이터를 위한 엔터테인먼트 법률",
-      "description": "계약, 권리, IP를 명확하게 지키며 창작에 집중할 수 있도록 돕습니다.",
-      "ctaPrimary": "상담 예약하기",
-      "ctaSecondary": "팀에게 문의하기"
-    },
-    "services": {
-      "title": "서비스",
-      "description": "영화, 음악, 미디어, 브랜드 파트너를 위한 신뢰할 수 있는 명확한 법률 자문."
-    },
-    "cta": {
-      "title": "이야기 나눠볼까요?",
-      "description": "현재 진행 중인 프로젝트를 알려주시면 다음 단계와 일정을 정리해 드립니다.",
-      "button": "팀에게 문의하기"
-    }
-  },
   "nav": {
     "home": "홈",
-    "practiceAreas": "주요 서비스",
+    "practiceAreas": "서비스",
+    "servicesLabel": "서비스",
     "about": "로펌 소개",
     "team": "팀",
-    "ourApproach": "우리의 철학",
+    "ourApproach": "철학",
     "insights": "인사이드",
     "testimonials": "추천",
     "contact": "문의"
   },
-  "about": {
-    "hero": {
-      "badge": "로펌 소개",
-      "title": "엔터테인먼트 전반을 아우르는 법률 파트너",
-      "description": "트랜잭션의 정밀함과 소송 경험을 함께 바탕으로, 계약은 분쟁을 염두에 두고 작성하고 분쟁은 비즈니스 목표를 중심으로 해결합니다.",
-      "cta": "로펌에 문의하기",
-      "imageLabel": "변호사 인물 사진 (플레이스홀더)"
-    },
-    "sections": {
-      "experience": {
-        "title": "경험",
-        "body": "저희는 트랜잭션과 소송을 모두 폭넓게 다뤄 왔습니다. 복잡한 계약 및 기업 문서의 작성·협상·검토, 저작권·상표 등록 및 분쟁, 수백만 달러 규모의 배심 재판 소송까지 수행해 왔습니다.\n\n저희는 이러한 폭넓은 경험이 곧 성과의 핵심이라고 믿습니다. 예를 들어 계약위반(채무불이행) 사건을 원고·피고 양측에서 모두 성공적으로 수행해 왔기 때문에, 계약을 작성하거나 검토하고 자문할 때 어떤 조항이 분쟁의 핵심 쟁점이 되는지, 어떤 함정이 있는지 실제 소송 관점에서 알고 있습니다.\n\n이러한 경험은 트랜잭션만을 수행하는 로펌이 제공하기 어려운 강점이며, 고객은 트랜잭션 단계에서도 향후 분쟁이 발생할 경우 비공식 협상부터 법원까지 강력하게 대응할 수 있는 소송 역량을 함께 확보하게 됩니다."
-      },
-      "clientCentered": {
-        "title": "고객 중심 업무",
-        "body": "저희는 고객에 대한 깊은 헌신을 자랑스럽게 생각합니다. 성과는 경험·훈련·교육뿐 아니라, 사건에 대해 고객과 의미 있고 협력적인 소통을 지속할 수 있는 역량에서 비롯됩니다.\n\n따라서 초기 상담부터 사건의 종결까지 정기적이고 빈번한 커뮤니케이션을 우선시하며, 고객의 고유한 목표와 최종 목적을 충분히 고려해 업무를 진행합니다."
+  "seo": {
+    "home": {
+      "hero": {
+        "badge": "엔터테인먼트 법률",
+        "title": "현대 크리에이터를 위한 엔터테인먼트 법률",
+        "description": "계약, 권리, IP를 명확하게 지키며 창작에 집중할 수 있도록 돕습니다.",
+        "ctaPrimary": "상담 예약하기",
+        "ctaSecondary": "팀에게 문의하기"
       },
       "services": {
         "title": "서비스",
-        "body": "Cosmic Law Firm은 엔터테인먼트 법률의 전 과정을 ‘처음부터 끝까지’ 집중적으로 제공합니다. 트랜잭션과 소송을 모두 포함하며, 엔터테인먼트 산업의 법률·비즈니스·기술·재무 측면을 아우릅니다.\n\n지식재산권, 라이선스, 퍼블리시티권, 기업·노무·고용, 이민, 불법행위, 계약, 국제법 등 다양한 분야에서 엔터테인먼트 고객이 비즈니스와 창작 목표를 성공적으로 달성하도록 돕습니다.\n\n저희는 세계 엔터테인먼트의 중심지인 로스앤젤레스에 기반하고 있으며, 한국과 중국 고객을 위한 엔터테인먼트 법률 서비스도 확장하고 있습니다."
+        "description": "영화, 음악, 미디어, 브랜드 파트너를 위한 신뢰할 수 있는 명확한 법률 자문."
+      },
+      "cta": {
+        "title": "이야기 나눠볼까요?",
+        "description": "현재 진행 중인 프로젝트를 알려주시면 다음 단계와 일정을 정리해 드립니다.",
+        "button": "팀에게 문의하기"
       }
     },
-    "whatWeDo": {
-      "title": "우리가 하는 일",
-      "description": "명확한 계약, 실무 협상, 분쟁 대비로 엔터테인먼트 프로젝트를 보호합니다.",
-      "items": {
-        "drafting": {
-          "title": "거래 중심 기획",
-          "description": "지렛대, 일정, 창작 의도를 반영한 계약."
+    "nav": {
+      "home": "홈",
+      "practiceAreas": "엔터테인먼트·미디어·개인상해법",
+      "about": "로펌 소개",
+      "team": "팀",
+      "ourApproach": "우리의 철학",
+      "insights": "인사이드",
+      "testimonials": "추천",
+      "contact": "문의"
+    },
+    "about": {
+      "hero": {
+        "badge": "로펌 소개",
+        "title": "엔터테인먼트 전반을 아우르는 법률 파트너",
+        "description": "트랜잭션의 정밀함과 소송 경험을 함께 바탕으로, 계약은 분쟁을 염두에 두고 작성하고 분쟁은 비즈니스 목표를 중심으로 해결합니다.",
+        "cta": "로펌에 문의하기",
+        "imageLabel": "변호사 인물 사진 (플레이스홀더)"
+      },
+      "sections": {
+        "experience": {
+          "title": "경험",
+          "body": "저희는 트랜잭션과 소송을 모두 폭넓게 다뤄 왔습니다. 복잡한 계약 및 기업 문서의 작성·협상·검토, 저작권·상표 등록 및 분쟁, 수백만 달러 규모의 배심 재판 소송까지 수행해 왔습니다.\n\n저희는 이러한 폭넓은 경험이 곧 성과의 핵심이라고 믿습니다. 예를 들어 계약위반(채무불이행) 사건을 원고·피고 양측에서 모두 성공적으로 수행해 왔기 때문에, 계약을 작성하거나 검토하고 자문할 때 어떤 조항이 분쟁의 핵심 쟁점이 되는지, 어떤 함정이 있는지 실제 소송 관점에서 알고 있습니다.\n\n이러한 경험은 트랜잭션만을 수행하는 로펌이 제공하기 어려운 강점이며, 고객은 트랜잭션 단계에서도 향후 분쟁이 발생할 경우 비공식 협상부터 법원까지 강력하게 대응할 수 있는 소송 역량을 함께 확보하게 됩니다."
         },
-        "ip": {
-          "title": "배급을 고려한 IP",
-          "description": "자금, 제작, 출시를 가능하게 하는 명확한 권리."
+        "clientCentered": {
+          "title": "고객 중심 업무",
+          "body": "저희는 고객에 대한 깊은 헌신을 자랑스럽게 생각합니다. 성과는 경험·훈련·교육뿐 아니라, 사건에 대해 고객과 의미 있고 협력적인 소통을 지속할 수 있는 역량에서 비롯됩니다.\n\n따라서 초기 상담부터 사건의 종결까지 정기적이고 빈번한 커뮤니케이션을 우선시하며, 고객의 고유한 목표와 최종 목적을 충분히 고려해 업무를 진행합니다."
         },
-        "alignment": {
-          "title": "창작 & 브랜드 조율",
-          "description": "창작 통제와 브랜드 세이프티, 비즈니스 목표의 균형."
-        },
-        "disputes": {
-          "title": "분쟁 대비 구조",
-          "description": "싸움 없이 빠른 해결을 위한 정의와 프로세스."
+        "services": {
+          "title": "서비스",
+          "body": "Cosmic Law Firm은 엔터테인먼트 법률의 전 과정을 ‘처음부터 끝까지’ 집중적으로 제공합니다. 트랜잭션과 소송을 모두 포함하며, 엔터테인먼트 산업의 법률·비즈니스·기술·재무 측면을 아우릅니다.\n\n지식재산권, 라이선스, 퍼블리시티권, 기업·노무·고용, 이민, 불법행위, 계약, 국제법 등 다양한 분야에서 엔터테인먼트 고객이 비즈니스와 창작 목표를 성공적으로 달성하도록 돕습니다.\n\n저희는 세계 엔터테인먼트의 중심지인 로스앤젤레스에 기반하고 있으며, 한국과 중국 고객을 위한 엔터테인먼트 법률 서비스도 확장하고 있습니다."
         }
+      },
+      "whatWeDo": {
+        "title": "우리가 하는 일",
+        "description": "명확한 계약, 실무 협상, 분쟁 대비로 엔터테인먼트 프로젝트를 보호합니다.",
+        "items": {
+          "drafting": {
+            "title": "거래 중심 기획",
+            "description": "지렛대, 일정, 창작 의도를 반영한 계약."
+          },
+          "ip": {
+            "title": "배급을 고려한 IP",
+            "description": "자금, 제작, 출시를 가능하게 하는 명확한 권리."
+          },
+          "alignment": {
+            "title": "창작 & 브랜드 조율",
+            "description": "창작 통제와 브랜드 세이프티, 비즈니스 목표의 균형."
+          },
+          "disputes": {
+            "title": "분쟁 대비 구조",
+            "description": "싸움 없이 빠른 해결을 위한 정의와 프로세스."
+          }
+        }
+      },
+      "cta": {
+        "title": "프로젝트를 지켜드립니다",
+        "description": "요약이나 계약서를 보내주세요. 일정과 다음 단계를 안내합니다.",
+        "button": "로펌에 문의하기"
       }
     },
-    "cta": {
-      "title": "프로젝트를 지켜드립니다",
-      "description": "요약이나 계약서를 보내주세요. 일정과 다음 단계를 안내합니다.",
-      "button": "로펌에 문의하기"
-    }
-  },
-  "message": {
-    "badge": "우리의 철학",
-    "title": "명확함, 용기, 협력",
-    "intro": "각 거래를 창작 협업처럼 다루며, 법적 기반을 우리가 챙기는 동안 당신은 이야기 앞에 집중할 수 있게 합니다.",
-    "pillars": {
-      "clarity": {
-        "title": "이야기를 정돈하다",
-        "description": "계약 전에 목표, 일정, 레버리지를 정리하고 중요한 세부 사항을 놓치지 않습니다."
+    "message": {
+      "badge": "우리의 철학",
+      "title": "명확함, 용기, 협력",
+      "intro": "각 거래를 창작 협업처럼 다루며, 법적 기반을 우리가 챙기는 동안 당신은 이야기 앞에 집중할 수 있게 합니다.",
+      "pillars": {
+        "clarity": {
+          "title": "이야기를 정돈하다",
+          "description": "계약 전에 목표, 일정, 레버리지를 정리하고 중요한 세부 사항을 놓치지 않습니다."
+        },
+        "draft": {
+          "title": "의도를 담아 작성",
+          "description": "창작과 비즈니스 우선순위를 반영하면서 거래 속도를 유지하는 문서를 만듭니다."
+        },
+        "protect": {
+          "title": "작업을 지키다",
+          "description": "권리, 승인, 컴플라이언스를 앞서 확보해 관객과 비즈니스에 집중할 시간을 드립니다."
+        }
       },
-      "draft": {
-        "title": "의도를 담아 작성",
-        "description": "창작과 비즈니스 우선순위를 반영하면서 거래 속도를 유지하는 문서를 만듭니다."
-      },
-      "protect": {
-        "title": "작업을 지키다",
-        "description": "권리, 승인, 컴플라이언스를 앞서 확보해 관객과 비즈니스에 집중할 시간을 드립니다."
+      "cta": {
+        "title": "준비되셨나요?",
+        "description": "진행 중인 프로젝트를 알려주시면 명확한 범위와 다음 단계를 알려드립니다.",
+        "button": "팀에 문의하기"
       }
     },
-    "cta": {
-      "title": "준비되셨나요?",
-      "description": "진행 중인 프로젝트를 알려주시면 명확한 범위와 다음 단계를 알려드립니다.",
-      "button": "팀에 문의하기"
-    }
-  },
-  "carAccident": {
+    "carAccident": {
       "badge": "즉각적인 주의 필요",
       "title": "교통사고 및 채찍질 손상 (Whiplash)",
       "pain": {
@@ -264,23 +276,108 @@
       "cta": "팀에 문의하기"
     },
     "members": {
-      "lara": {
-        "location": "캘리포니아 로스앤젤레스",
-        "title": "파트너 · 영화 & 시리즈",
-        "specialty": "제작 계약 · 타이틀 체인 · 배급",
-        "description": "금융, 창작자, 길드까지 연결하여 극장과 프리미엄 시리즈 딜을 명확하게 마무리합니다."
+      "jean": {
+        "location": "Los Angeles, CA",
+        "title": "Founder · Managing Partner",
+        "specialty": "Trials · entertainment production · multilingual counsel",
+        "description": "Jean Kwon is a trilingual trial attorney who has handled over 3,000 complex matters across commercial real estate, business, probate, family, labor, criminal, and civil litigation while also executive producing bold film projects such as \"Tigers From the Sun\"."
       },
-      "noah": {
-        "location": "서울 / 로스앤젤레스",
-        "title": "시니어 어소시에이트 · 음악 & 뉴미디어",
-        "specialty": "음악 권리 · 디지털 미디어 · 라이선싱",
-        "description": "음악 카탈로그, 인플루언서 캠페인, 스트리밍 런칭을 글로벌 규제 및 수익화 관점에서 이끕니다."
+      "katherine": {
+        "location": "Los Angeles, CA",
+        "title": "Associate · Entertainment Law",
+        "specialty": "Placeholder biography coming soon",
+        "description": "Katherine Jung is joining the team; her experience and practice details are being finalized and will be shared shortly."
       },
-      "mina": {
-        "location": "캘리포니아 로스앤젤레스",
-        "title": "카운슬 · 탤런트 & IP",
-        "specialty": "탤런트 대리 · 브랜드 세이프티 · 퍼블리시티",
-        "description": "크리에이터, 에이전시, 브랜드와 협업하며 계약과 광고, 퍼블리시티 권리를 명확히 정리합니다."
+      "john": {
+        "location": "Los Angeles, CA",
+        "title": "Senior Counsel · Criminal & Civil Litigation",
+        "specialty": "Federal/state criminal defense · professional liability · white-collar fraud",
+        "description": "Former Assistant United States Attorney and civil litigator with over 30 years of experience defending complex fraud, immigration, customs, malpractice, and racketeering matters in both state and federal courts."
+      },
+      "heath": {
+        "location": "Los Angeles, CA",
+        "title": "Counsel · Entertainment & IP",
+        "specialty": "Entertainment litigation · trademark & copyright defense · development counsel",
+        "description": "Entertainment and intellectual property attorney raised in Hollywood with a music industry background who now steers litigation and IP strategy while co-producing new stories like \"Tigers From the Sun\"."
+      }
+    },
+    "details": {
+      "jean": {
+        "tagline": "Founder · Multilingual trial lawyer",
+        "biography": [
+          "Jean Kwon, Esq. is an experienced trial lawyer with the rare skill of being trilingual in English, Spanish, and Korean. She has won many jury and court trials and has successfully prosecuted and defended over 3,000 complicated cases involving commercial and residential real estate, business, probate, family, labor, criminal, and civil litigation. Kwon has Juris Doctor Degree from San Fernando Valley College of Law in California, United States; Bachelor of Arts degree from Hankuk University of Foreign Language in Seoul, Korea; and High School degree from Colegio Hipolito Irigoyen, Buenos Aires, Argentina.",
+          "Prior to starting her own firm, Kwon worked for several law firms, drafting pleadings and discovery, and appearing in court for the Law Offices of Laurence B. Donoghue, Law Offices of Jiyoung Kym, Law Offices of Jane Chung, and Briskin, Latzanich & Pene LLP.",
+          "Kwon is a Member of State Bar of California since June 2008, Member of San Fernando Valley Bar Association; Member of Criminal Courts Bar Association in Los Angeles; Member of California Employment Lawyers Association; Member of Consumer Attorneys Association of Los Angeles, Board Member and Advisory Counsel for the 29th and 30th Korean American Federation of Los Angeles (\"KAFLA\"); Advisory Counsel for the 30th Election Committee of Korean American Federation of Los Angeles (\"KAFLA\"); and Legal Counsel for Korean American United Foundation (\"KAUF\").",
+          "Jean Kwon is someone you should meet if your interests lie in storytelling and \"filmed\" entertainment. Jean Kwon's top-notch boutique law practice in Los Angeles, Cosmic Law Firm, concentrates on the development and production of content for multi-platform use.",
+          "Ms. Kwon contemplates telling of her own fascinating and very personal past, from birth in South Korea, through her family's immigration to Argentina and then on to Los Angeles. But her own memoirs may have to wait as she seizes the opportunity to Executive Produce the original screenplay \"Tigers from the Sun\" written by C.J. Baker. Ms. Kwon has been a renowned legal practitioner for many years, but now aims to expand her repertoire as a lauded producer for bringing the amazing \"Tigers\" story to light."
+        ],
+        "memberships": [
+          "Member of State Bar of California since June 2008",
+          "Member of San Fernando Valley Bar Association",
+          "Member of Criminal Courts Bar Association in Los Angeles",
+          "Member of California Employment Lawyers Association",
+          "Member of Consumer Attorneys Association of Los Angeles",
+          "Board Member and Advisory Counsel for the 29th and 30th Korean American Federation of Los Angeles (KAFLA)",
+          "Advisory Counsel for the 30th Election Committee of KAFLA",
+          "Legal Counsel for Korean American United Foundation (KAUF)"
+        ],
+        "practiceAreas": [
+          "Commercial and residential real estate litigation",
+          "Business, probate, family, labor, criminal, and civil litigation",
+          "Entertainment production, film financing, and executive producing partnerships"
+        ],
+        "creative": "Jean continues to seize opportunities to bring the \"Tigers From the Sun\" story to life and to expand Cosmic Law Firm's footprint in filmed entertainment."
+      },
+      "katherine": {
+        "tagline": "Associate · Entertainment Law",
+        "biography": [
+          "Katherine Jung is joining the firm; her experience and practice details are being finalized and will be shared shortly."
+        ],
+        "memberships": [],
+        "practiceAreas": [
+          "Details about Katherine's practice focus will be shared soon."
+        ],
+        "creative": ""
+      },
+      "john": {
+        "tagline": "Senior Counsel · Criminal & Civil Litigation",
+        "biography": [
+          "John D. Robertson was admitted to the California Bar as a practicing attorney in 1976. Mr. Robertson served as a federal prosecutor (Assistant United States Attorney) for a number of years, as well as a civil litigator in a major law firm before entering private practice and forming his own firm in 1982. Mr. Robertson has over 30 years of experience in criminal defense as well as civil litigation in state and federal courts.",
+          "Mr. Robertson received his Juris Doctorate from the nationally ranked Boalt Hall School of Law at the University of California, Berkeley, and was Assistant Editor and an author of the California Law Review at Boalt. Prior to attending law school, Mr. Robertson completed his undergraduate studies at the University of California, Los Angeles, where he graduated with Departmental Highest Honors.",
+          "Mr. Robertson served as a Deputy City Attorney for Los Angeles, as well as an Assistant United States Attorney for the Central District of California in the Criminal Division of the United States Department of Justice.",
+          "After leaving government service, Mr. Robertson joined the civil litigation and insurance defense law firm of Lewis, D'Amato, Brisbois and Bisgaard in Los Angeles, California as a civil litigator where he specialized in defending lawyers in civil malpractice suits. Subsequent to his employment at the Lewis, D'Amato, Brisbois, and Bisgaard firm, Mr. Robertson started his own private practice in 1982, and has remained in private practice since.",
+          "Mr. Robertson continues a civil litigation practice, including representation in breach of contract cases, fraud cases, civil malpractice suits, and professional liability matters, among others. Mr. Robertson also practices in, among other areas, the area of white-collar criminal defense, both in state and federal courts, where his cases have included multi-million dollar frauds, organized crime and racketeering cases, criminal immigration cases, customs smuggling cases, criminal copyright cases and criminal trademark infringement cases, computer software counterfeiting cases, wire and mail fraud cases, money laundering cases, criminal tax cases, health care fraud cases, and real estate/fraud mortgage cases, among others.",
+          "Mr. Robertson has been active in several state bar associations, has served as Of Counsel and advisor to a number of attorney colleagues and law offices and was formerly a member of the Executive Committee of the Criminal Law Section of the State Bar of California, where he was Chairperson of the Federal Courts Subcommittee. Mr. Robertson also teaches courses on the law and analysis of contracts and contract issues for a program established by Federal District Court Judge to prepare lawyer candidates to pass the California Bar Exam."
+        ],
+        "memberships": [
+          "Active in several state bar associations and served as Of Counsel and advisor to numerous colleagues and law offices.",
+          "Former member of the Executive Committee of the Criminal Law Section of the State Bar of California.",
+          "Chairperson of the Federal Courts Subcommittee for that committee.",
+          "Instructor for contract and contract analysis courses created by a Federal District Court Judge to prepare bar candidates."
+        ],
+        "practiceAreas": [
+          "Federal and state criminal defense",
+          "Breach of contract, fraud, civil malpractice, and professional liability representation",
+          "White-collar defense covering frauds, racketeering, immigration, customs, intellectual property infringement, counterfeiting, wire and mail fraud, money laundering, tax, health care fraud, and real estate/mortgage fraud"
+        ],
+        "creative": ""
+      },
+      "heath": {
+        "tagline": "Counsel · Entertainment & Intellectual Property",
+        "biography": [
+          "John Heath is an attorney at Cosmic Law Firm with a specialty in entertainment and intellectual property.",
+          "After working in the record industry and attaining success in the music industry himself as a recording artist, Mr. Heath went on to attain a Masters Degree in Mass Communication at San Jose State and Juris Doctor at Whittier Law School, with a certificate in intellectual property. In addition to civil litigation, John D. Heath has a background in entertainment litigation, trademark and copyright pre-litigation, intellectual property, and entertainment transactional law.",
+          "Heath understands the entertainment business and content creation in a meaningful way. This is not surprising, as Heath was raised in the vortex of Hollywood. His father was a successful and prolific television writer and his mother is a premier entertainment attorney who represented virtually every major studio during her nearly forty year career. Additionally, his step-father is a well-respected Israeli-American director.",
+          "But Heath adds music and much more to the family tree, having obtained a recording deal with a prominent independent label almost straight out of college. Heath is currently in the process of developing other movies and television series, but none with more passion than his commitment to \"Tigers From the Sun.\"",
+          "Heath instantly was drawn to the fascinating story of \"Tigers From the Sun\" and its real life protagonist, Claire Lee Chennault, whose determination and unwillingness to accept the paradigms of the day made him a hero for the ages. Heath is thrilled with the idea of bringing the yet untold tale of Chennault to life as a feature film and eager to work with his colleague, the very talented Jean Kwon of Cosmic Law Firm, as a co-executive producer."
+        ],
+        "memberships": [],
+        "practiceAreas": [
+          "Entertainment and intellectual property litigation",
+          "Trademark and copyright pre-litigation and dispute prevention",
+          "Entertainment transactional counseling for development and production partners"
+        ],
+        "creative": "John Heath continues to co-executive produce \"Tigers From the Sun\" while leading IP and entertainment litigation for Cosmic Law Firm."
       }
     },
     "cta": {
@@ -304,21 +401,21 @@
   },
   "accessibilityPage": {
     "title": "웹 접근성 선언문",
-    "intro": "연세 카이로프랙틱 클리닉은 장애인이 디지털 환경에서 불편함 없이 이용할 수 있도록 웹 접근성을 보장하기 위해 최선을 다하고 있습니다. 우리는 모든 사용자의 경험을 지속적으로 개선하고 관련 접근성 표준을 적용하고 있습니다.",
+    "intro": "Cosmic Law Firm은 장애인이 디지털 환경에서 불편함 없이 이용할 수 있도록 웹 접근성을 보장하기 위해 최선을 다하고 있습니다. 우리는 모든 사용자의 경험을 지속적으로 개선하고 관련 접근성 표준을 적용하고 있습니다.",
     "conformance": {
       "title": "준수 상태",
-      "body": "웹 콘텐츠 접근성 지침(WCAG)은 디자이너와 개발자가 장애인의 접근성을 개선하기 위해 준수해야 할 요구 사항을 정의합니다. 여기에는 레벨 A, 레벨 AA, 레벨 AAA의 세 가지 준수 수준이 있습니다. 연세 카이로프랙틱 클리닉은 WCAG 2.1 레벨 AA를 부분적으로 준수하고 있습니다. 부분 준수는 콘텐츠의 일부가 접근성 표준을 완전히 준수하지 못할 수도 있음을 의미합니다."
+      "body": "웹 콘텐츠 접근성 지침(WCAG)은 디자이너와 개발자가 장애인의 접근성을 개선하기 위해 준수해야 할 요구 사항을 정의합니다. 여기에는 레벨 A, 레벨 AA, 레벨 AAA의 세 가지 준수 수준이 있습니다. Cosmic Law Firm은 WCAG 2.1 레벨 AA를 부분적으로 준수하고 있습니다. 부분 준수는 콘텐츠의 일부가 접근성 표준을 완전히 준수하지 못할 수도 있음을 의미합니다."
     },
     "feedback": {
       "title": "의견 및 피드백",
-      "body": "연세 카이로프랙틱 클리닉의 웹 접근성에 대한 여러분의 의견을 환영합니다. 웹사이트 이용 중 접근성 장벽을 발견하시면 아래로 연락 주시기 바랍니다:",
-      "phone": "전화: (213) 381-5500",
-      "email": "이메일: yonseichiropractic@gmail.com",
-      "address": "방문 주소: 3200 Wilshire Blvd Suite 302, Los Angeles, CA 90010"
+      "body": "Cosmic Law Firm의 웹 접근성에 대한 여러분의 의견을 환영합니다. 웹사이트 이용 중 접근성 장벽을 발견하시면 아래로 연락 주시기 바랍니다:",
+      "phone": "전화: (213) 480-0348",
+      "email": "이메일: ask.cosmiclaw@gmail.com",
+      "address": "방문 주소: 1021 S. Union Ave., Los Angeles, CA 90015"
     },
     "technical": {
       "title": "기술 사양",
-      "body": "연세 카이로프랙틱 클리닉의 웹 접근성은 사용자의 컴퓨터에 설치된 웹 브라우저와 보조 기술 또는 플러그인의 특정 조합과 함께 작동하도록 다음 기술에 의존합니다:",
+      "body": "Cosmic Law Firm의 웹 접근성은 사용자의 컴퓨터에 설치된 웹 브라우저와 보조 기술 또는 플러그인의 특정 조합과 함께 작동하도록 다음 기술에 의존합니다:",
       "items": {
         "html": "HTML",
         "aria": "WAI-ARIA",
@@ -328,7 +425,7 @@
     },
     "assessment": {
       "title": "평가 방식",
-      "body": "연세 카이로프랙틱 클리닉은 다음과 같은 방식을 통해 웹사이트의 접근성을 평가했습니다:",
+      "body": "Cosmic Law Firm은 다음과 같은 방식을 통해 웹사이트의 접근성을 평가했습니다:",
       "items": {
         "self": "자가 평가",
         "automated": "업계 표준 도구를 이용한 자동화 테스트"
@@ -336,8 +433,16 @@
     },
     "approval": {
       "title": "웹 접근성 선언문 공식 승인",
-      "body": "본 웹 접근성 선언문은 연세 카이로프랙틱 클리닉에 의해 승인되었습니다.",
+      "body": "본 웹 접근성 선언문은 Cosmic Law Firm에 의해 승인되었습니다.",
       "date": "날짜: 2026년 1월 16일"
+    }
+    ,
+    "contact": {
+      "heading": "Cosmic Law Firm에 연락하기",
+      "description": "접근성과 관련된 도움이 필요하시면 아래의 채널로 문의해 주세요.",
+      "phoneLabel": "전화",
+      "emailLabel": "이메일",
+      "addressLabel": "주소"
     }
   }
 }

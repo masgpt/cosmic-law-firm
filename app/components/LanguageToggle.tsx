@@ -28,15 +28,15 @@ const LanguageToggle: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center p-0.5 rounded-full bg-white/10 border border-white/15 w-fit">
+    <div className="flex items-center p-1 rounded-full bg-white/10 border border-white/15 w-fit">
       {languages.map((lang) => (
         <button
           key={lang.code}
           onClick={() => handleLanguageChange(lang.code)}
           className={`
-            px-2.5 py-1 rounded-full text-[9px] font-black tracking-widest transition-all duration-300 min-w-[50px] sm:min-w-[60px]
+            px-4 h-10 rounded-full text-[10px] font-black tracking-widest transition-all duration-300 min-w-[60px] sm:min-w-[70px]
             ${currentLanguage === lang.code 
-              ? 'bg-secondary text-white shadow-md shadow-black/10'
+              ? 'bg-secondary text-primary shadow-md shadow-black/10'
               : 'text-white/85 hover:text-white hover:bg-white/10'}
           `}
         >

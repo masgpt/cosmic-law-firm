@@ -133,7 +133,7 @@ const NavbarDesktop: React.FC = () => {
                         className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] hover:underline"
                         onClick={() => setIsServicesOpen(false)}
                       >
-                        View all practice areas
+                        View all services
                         <span className="material-symbols-outlined text-sm" aria-hidden="true">
                           east
                         </span>
@@ -210,7 +210,7 @@ const NavbarDesktop: React.FC = () => {
             <LanguageToggle />
             <Link
               to={`/${lng}/contact`}
-            className="flex items-center justify-center h-11 px-6 rounded-xl bg-secondary hover:bg-secondary/90 text-white text-sm font-bold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 active:translate-y-0 focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-primary"
+            className="flex items-center justify-center h-11 px-6 rounded-xl bg-secondary hover:bg-secondary/90 text-primary text-sm font-bold shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 active:translate-y-0 focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-primary"
             >
               <span className="mr-2 material-symbols-outlined text-[20px]" aria-hidden="true">
                 mail

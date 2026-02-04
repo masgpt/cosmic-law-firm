@@ -27,7 +27,7 @@ const HomeMobile: React.FC = () => {
         description="Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes."
       />
 
-      <section className="relative bg-slate-950 text-white overflow-hidden -mt-[68px] pt-0 sm:-mt-[96px] sm:pt-0" aria-label="Hero introduction">
+      <section className="relative bg-slate-950 text-white -mt-[68px] pt-0 sm:-mt-[96px] sm:pt-0" aria-label="Hero introduction">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -40,9 +40,9 @@ const HomeMobile: React.FC = () => {
           <div className="absolute right-4 bottom-[-40px] h-[220px] w-[220px] rounded-full bg-white/5 blur-[140px]" aria-hidden="true" />
         </div>
 
-        <div className="relative z-10 px-6 pb-12 pt-12">
-          <div className="inline-flex items-center gap-2 uppercase tracking-[0.35em] text-[10px] text-white/90 mb-4">
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-black/60 text-white font-black tracking-[0.35em]">
+        <div className="relative z-10 px-6 pb-12 pt-16 max-w-[1280px] mx-auto sm:px-8 sm:pt-20 md:pt-24">
+          <div className="inline-flex flex-wrap items-center gap-2 uppercase tracking-[0.35em] text-[10px] text-white/90 mb-4">
+            <span className="inline-flex flex-wrap justify-center px-3 py-1 rounded-full bg-black/60 text-white font-black tracking-[0.35em] whitespace-normal max-w-[85vw]">
               {t('home.hero.badge')}
             </span>
           </div>

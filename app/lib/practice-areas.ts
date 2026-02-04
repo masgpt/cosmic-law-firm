@@ -102,8 +102,35 @@ export const practiceAreas: PracticeArea[] = [
       'Online enforcement and takedown strategy',
     ],
   },
+  {
+    slug: 'personal-injury-law',
+    title: 'Personal Injury Law',
+    titleKo: '개인상해법',
+    focus: 'Recovery-focused counsel for victims of accidents, negligence, and unsafe conditions.',
+    focusKo: '사고, 과실, 위험한 환경으로 다친 고객을 위한 회복 중심의 자문',
+    summary:
+      'We represent individuals who suffered physical or emotional harm, securing compensation for medical care, lost income, and future needs after crashes, defective products, medical errors, and other preventable incidents.',
+    icon: 'medical_services',
+    overview: [
+      'Personal injury law covers a wide spectrum of accidents, from vehicle collisions and wrongful death matters to product defects, premises liability, and medical malpractice.',
+      'We build each claim around careful investigations, medical experts, and strategic negotiations so clients are not left managing insurance games while still recovering from trauma.',
+    ],
+    overviewKo: [
+      '개인상해법은 차량 충돌, 사망 사건, 제품 결함, 부동산 책임, 의료 과실 등 다양한 사고를 포괄합니다.',
+      '저희는 의료 전문가와 조사를 연계해 전략적으로 협상하며, 트라우마 회복에 집중할 수 있도록 보험 게임에 고객이 휘둘리지 않도록 조력합니다.',
+    ],
+    services: [
+      'Automobile and motorcycle accident litigation',
+      'Catastrophic injury claims (brain, spinal, burn, amputation)',
+      'Premises liability (slips, falls, negligent security, swimming pools)',
+      'Product liability and defective equipment recalls',
+      'Medical malpractice and delayed diagnosis cases',
+      'Workplace third-party claims and construction-site incidents',
+      'Wrongful death and family support settlements',
+      'Insurance bad-faith, underpayment, and settlement negotiation',
+    ],
+  },
 ];
 
 export const getPracticeAreaBySlug = (slug: string) =>
   practiceAreas.find((area) => area.slug === slug);
-

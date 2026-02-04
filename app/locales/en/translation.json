@@ -1,10 +1,5 @@
 {
-  "seo": {
-    "home": {
-      "title": "Entertainment Law | Cosmic Law Firm",
-      "description": "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes."
-    },
-    "insights": {
+  "insights": {
     "hero": {
       "badge": "Insides",
       "title": "Make deals clearer. Protect rights earlier.",
@@ -46,20 +41,25 @@
       "button": "Contact the team",
       "linkText": "Read inside"
     }
-  }
-},
-  "home": {
-    "hero": {
-      "badge": "Entertainment counsel",
-      "title": "Entertainment law for modern creators",
-      "description": "We protect rights, move deals, and keep IP on track so studios and creators can build confidently.",
-      "ctaPrimary": "Book a consult",
-      "ctaSecondary": "Contact the team"
-    },
-    "services": {
-      "title": "Services",
-      "description": "Counsel for film, music, media, and brand partners built on clarity and trust."
-    },
+  },
+  "seo": {
+    "home": {
+      "title": "Entertainment Law | Cosmic Law Firm",
+      "description": "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes."
+    }
+  },
+    "home": {
+      "hero": {
+      "badge": "Law from attorneys for modern creators",
+        "title": "Entertainment, Media & Personal Injury Law for modern creators",
+        "description": "We protect rights, move deals, and keep IP, media, and recovery on track so studios, creators, and injured individuals can build confidently.",
+        "ctaPrimary": "Book a consult",
+        "ctaSecondary": "Contact the team"
+      },
+      "services": {
+        "title": "Services",
+        "description": "Counsel for film, music, media, brand partners, and personal injury clients built on clarity and trust."
+      },
     "cta": {
       "title": "Need to talk?",
       "description": "Share what you’re building and we’ll respond with next steps and a clear scope.",
@@ -68,10 +68,11 @@
   },
   "nav": {
     "home": "Home",
-    "practiceAreas": "Practice areas",
+    "practiceAreas": "Services",
+    "servicesLabel": "Services",
     "about": "About",
     "team": "Team",
-    "ourApproach": "Our philosophy",
+    "ourApproach": "Philosophy",
     "insights": "Insights",
     "testimonials": "Testimonials",
     "contact": "Contact"
@@ -91,13 +92,13 @@
     "accessibility": "Accessibility",
     "emailLabel": "Email"
   },
-  "common": {
-    "location": "Los Angeles, CA",
-    "doctorTitle": "Entertainment Law Firm",
-    "close": "Close",
-    "companyName": "Cosmic Law Firm",
-    "companyNameSub": "Entertainment & Media Law (Transactional + Litigation)"
-  },
+    "common": {
+      "location": "Los Angeles, CA",
+      "doctorTitle": "Entertainment Law Firm",
+      "close": "Close",
+      "companyName": "Cosmic Law Firm",
+      "companyNameSub": "Entertainment, Media & Personal Injury Law"
+    },
   "about": {
     "hero": {
       "badge": "About the firm",
@@ -321,7 +322,7 @@
     },
     "specialties": {
       "title": "Expertise / Practice Areas",
-      "description": "Cosmic Law Firm offers a laser focus on the full spectrum of entertainment law services, encompassing all aspects from start to finish, including both transactional and litigation matters. This includes the legal, business, technological, and financial aspects of the entertainment industry. From intellectual property, licensing, right of publicity, corporate, labor and employment, immigration, torts, contracts, and international law, we offer a variety of practices and services to help our entertainment clients successfully achieve both their business and creative objectives. We are based in the entertainment capital of the world, Los Angeles, and are expanding to provide entertainment law services for clients in Korea and China as well."
+      "description": "Cosmic Law Firm offers a laser focus on the full spectrum of entertainment, media, and personal injury law services, encompassing all aspects from start to finish, including both transactional and litigation matters. This includes the legal, business, technological, and financial aspects of the entertainment industry as well as injury claim advocacy and recovery. From intellectual property, licensing, right of publicity, corporate, labor and employment, immigration, torts, contracts, and international law to negligence, premises liability, and insurance disputes, we offer a variety of practices and services to help our clients successfully achieve both their business and personal objectives. We are based in the entertainment capital of the world, Los Angeles, and are expanding to provide entertainment and personal injury law services for clients in Korea and China as well."
     },
     "process": {
       "title": "How we work",
@@ -355,7 +356,8 @@
         "label": "Call or text for consultations"
       },
       "email": {
-        "label": "Email us anytime"
+        "label": "Email us anytime",
+        "responseTime": "Expect an email reply within two to five business days."
       }
     },
     "hours": {
@@ -377,7 +379,7 @@
       "submit": "Send Request",
       "success": {
         "title": "Request Sent!",
-        "message": "Thanks for reaching out. We’ll get back to you shortly to coordinate next steps.",
+        "message": "Thanks for reaching out. We’ll respond within two to five business days to coordinate next steps.",
         "button": "Send another request"
       }
     }
@@ -385,33 +387,57 @@
   "team": {
     "hero": {
       "badge": "Our Team",
-      "title": "Counsel built for entertainment",
-      "description": "Cosmic Law Firm supports creators and companies with practical, business-minded counsel across entertainment transactions, IP, and disputes.",
+      "title": "Trial-tested counsel for creators",
+      "description": "Cosmic Law Firm pairs multilingual litigation experience with production know-how so storytellers can focus on story while we guard the legal path.",
       "cta": "Contact the team"
     },
     "members": {
-      "lara": {
+      "jean": {
         "location": "Los Angeles, CA",
-        "title": "Partner · Film & Series",
-        "specialty": "Production contracts · chain of title · distribution",
-        "description": "Leads film and premium series deals, aligning financiers, creatives, and guilds around a clear delivery plan."
+        "title": "Founder · Managing Partner",
+        "specialty": "Trials · entertainment production · multilingual counsel",
+        "description": "Jean Kwon is a trilingual trial attorney who has handled over 3,000 complex matters across commercial real estate, business, probate, family, labor, criminal, and civil litigation while also executive producing bold film projects such as \"Tigers From the Sun\".",
+        "education": [
+          "University of Southern California, Gould School of Law, Entertainment Law",
+          "University of Law Verne College of Law, J.D.",
+          "Hankuk University of Foreign Studies, B.A. in Spanish"
+        ],
+        "imageAlt": "Portrait of Jean Kwon, founder of Cosmic Law Firm"
       },
-      "noah": {
-        "location": "Seoul / Los Angeles",
-        "title": "Senior Associate · Music & New Media",
-        "specialty": "Music rights · digital media · licensing",
-        "description": "Guides music catalogs, influencer partnerships, and streaming launches with global compliance and monetization in mind."
-      },
-      "mina": {
+      "katherine": {
         "location": "Los Angeles, CA",
-        "title": "Counsel · Talent & IP",
-        "specialty": "Talent representation · brand safety · publicity",
-        "description": "Supports creators, agencies, and brands with talent deals, endorsements, and publicity rights clarity."
+        "title": "Associate · Entertainment Law",
+        "specialty": "Placeholder biography coming soon",
+        "description": "Katherine Jung is joining the team; her experience and practice details are being finalized and will be shared shortly.",
+        "education": ["Education details coming soon."],
+        "imageAlt": "Portrait of Katherine Jung"
+      },
+      "john": {
+        "location": "Los Angeles, CA",
+        "title": "Senior Counsel · Criminal & Civil Litigation",
+        "specialty": "Federal/state criminal defense · professional liability · white-collar fraud",
+        "description": "Former Assistant United States Attorney and civil litigator with over 30 years of experience defending complex fraud, immigration, customs, malpractice, and racketeering matters in both state and federal courts.",
+        "education": [
+          "University of California, Berkeley, J.D.",
+          "University of California, Los Angeles, B.A."
+        ],
+        "imageAlt": "Portrait of John D. Robertson"
+      },
+      "heath": {
+        "location": "Los Angeles, CA",
+        "title": "Counsel · Entertainment & IP",
+        "specialty": "Entertainment litigation · trademark & copyright defense · development counsel",
+        "description": "Entertainment and intellectual property attorney raised in Hollywood with a music industry background who now steers litigation and IP strategy while co-producing new stories like \"Tigers From the Sun\".",
+        "education": [
+          "Whittier Law School, J.D.",
+          "San Jose State University, M.D. in Mass Communication"
+        ],
+        "imageAlt": "Portrait of John Heath"
       }
     },
     "cta": {
-      "title": "Need an extra set of eyes?",
-      "description": "Send a short summary, script, or deck. We’ll respond with the right strategy and attorney.",
+      "title": "Need counsel with production and trial chops?",
+      "description": "Share a short summary, deck, or dispute outline; we will connect you with the right attorney and next steps.",
       "button": "Contact the team"
     }
   },
@@ -438,9 +464,9 @@
     "feedback": {
       "title": "Feedback",
       "body": "We welcome your feedback on the accessibility of Cosmic Law Firm. Please let us know if you encounter accessibility barriers on our website:",
-      "phone": "Phone: (000) 000-0000",
-      "email": "Email: contact@cosmiclawfirm.com",
-      "address": "Visitor Address: Los Angeles, CA (by appointment)"
+      "phone": "Phone: (213) 480-0348",
+      "email": "Email: ask.cosmiclaw@gmail.com",
+      "address": "Visitor Address: 1021 S. Union Ave., Los Angeles, CA 90015"
     },
     "technical": {
       "title": "Technical Specifications",
@@ -464,6 +490,15 @@
       "title": "Formal Approval of this Accessibility Statement",
       "body": "This Accessibility Statement is approved by: Cosmic Law Firm",
       "date": "Date: January 16, 2026"
+    }
+    ,
+    "contact": {
+      "heading": "Contact Cosmic Law Firm",
+      "description": "Need help with the site or have an accessibility concern? Reach us through any of the channels below.",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "addressLabel": "Address",
+      "responseTime": "We reply to accessibility requests within two to five business days."
     }
   }
 }

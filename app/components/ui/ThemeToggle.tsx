@@ -51,7 +51,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = "" }) => {
   return (
     <button
       onClick={toggleTheme}
-      className={`p-2 rounded-full bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary ${className}`}
+      className={`p-3 rounded-full bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-800 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary ${className}`}
       aria-label={`Toggle theme (currently ${theme})`}
     >
       {theme === 'system' && (
@@ -60,12 +60,12 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = "" }) => {
         </span>
       )}
       {theme === 'dark' && (
-        <span className="material-symbols-outlined text-primary text-[20px] block">
+        <span className="material-symbols-outlined text-slate-100 text-[20px] block">
           dark_mode
         </span>
       )}
       {theme === 'light' && (
-        <span className="material-symbols-outlined text-secondary text-[20px] block">
+        <span className="material-symbols-outlined text-slate-900 text-[20px] block">
           light_mode
         </span>
       )}

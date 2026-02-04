@@ -18,7 +18,7 @@ const baseStyles =
 const toneClasses: Record<ButtonTone, string> = {
   dark: 'bg-primary text-white hover:bg-primary/90 focus:ring-secondary/40 shadow-sm',
   light:
-    'bg-secondary text-slate-900 hover:bg-secondary/80 focus:ring-secondary/40 shadow-sm border border-secondary/60',
+  'bg-secondary text-primary hover:bg-secondary/80 focus:ring-secondary/40 shadow-sm border border-secondary/60',
 };
 
 const variants: Record<NonNullable<ButtonProps['variant']>, string> = {

@@ -1,10 +1,10 @@
 export const SITE = {
   name: 'Cosmic Law Firm',
-  nameSub: 'Entertainment & Media Law (Transactional + Litigation)',
+  nameSub: 'Entertainment, Media & Personal Injury Law',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://cosmiclawfirm.com',
-  email: 'contact@cosmiclawfirm.com',
-  phoneDisplay: '(000) 000-0000',
-  phoneTel: '0000000000',
-  addressShort: 'Los Angeles, CA (by appointment)',
-  addressQuery: 'Los Angeles, CA',
+  email: 'ask.cosmiclaw@gmail.com',
+  phoneDisplay: '(213) 480-0348',
+  phoneTel: '2134800348',
+  addressShort: '1021 S. Union Ave., Los Angeles, CA 90015',
+  addressQuery: '1021 S. Union Ave., Los Angeles, CA 90015',
 };

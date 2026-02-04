@@ -43,7 +43,7 @@ const AboutMobile: React.FC = () => {
               to="/services"
               className="h-12 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold flex items-center justify-center"
             >
-              Practice areas
+              {t('nav.practiceAreas')}
             </Link>
           </div>
         </motion.div>
@@ -57,13 +57,13 @@ const AboutMobile: React.FC = () => {
         >
           <div
             className="h-72 bg-center bg-cover bg-no-repeat bg-slate-200 dark:bg-slate-800"
-            style={{ backgroundImage: "url('/dr-park.png')" }}
+            style={{ backgroundImage: "url('/NanoBanana/korean-lawyer-artist-no-icon.png')" }}
             role="img"
             aria-label={t('about.hero.imageLabel')}
           />
           <div className="p-5 bg-white dark:bg-slate-900">
-            <p className="text-slate-900 dark:text-white font-black">{t('team.members.lara.title')}</p>
-            <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">{t('team.members.lara.location')}</p>
+            <p className="text-slate-900 dark:text-white font-black">{t('team.members.jean.title')}</p>
+            <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">{t('team.members.jean.location')}</p>
           </div>
         </motion.div>
 

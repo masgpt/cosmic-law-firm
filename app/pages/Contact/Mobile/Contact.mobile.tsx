@@ -162,6 +162,7 @@ const ContactMobile: React.FC = () => {
               <div className="flex flex-1 flex-col justify-center overflow-hidden">
                 <p className="text-text-main dark:text-white text-sm font-bold leading-normal truncate">{SITE.email}</p>
                 <p className="text-text-secondary dark:text-slate-400 text-xs font-normal leading-normal">{t('contactPage.details.email.label')}</p>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">{t('contactPage.details.email.responseTime')}</p>
               </div>
             </Link>
           </motion.div>

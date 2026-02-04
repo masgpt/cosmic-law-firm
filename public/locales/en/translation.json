@@ -72,7 +72,7 @@
     "techniques": "Techniques",
     "contactInfo": "Contact Info",
     "email": "Email",
-    "address": "3200 Wilshire Blvd, Suite 302, Los Angeles, CA 90010",
+    "address": "1021 S. Union Ave., Los Angeles, CA, 90015",
     "rights": "All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
@@ -435,21 +435,21 @@
   },
   "accessibilityPage": {
     "title": "Accessibility Statement",
-    "intro": "Yonsei Chiropractic is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.",
+    "intro": "Cosmic Law Firm is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.",
     "conformance": {
       "title": "Conformance Status",
-      "body": "The Web Content Accessibility Guidelines (WCAG) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. Yonsei Chiropractic is partially conformant with WCAG 2.1 level AA. Partially conformant means that some parts of the content do not fully conform to the accessibility standard."
+      "body": "The Web Content Accessibility Guidelines (WCAG) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. Cosmic Law Firm aims to conform with WCAG 2.1 level AA. Some parts of the content may not fully conform to the accessibility standard."
     },
     "feedback": {
       "title": "Feedback",
-      "body": "We welcome your feedback on the accessibility of Yonsei Chiropractic. Please let us know if you encounter accessibility barriers on our website:",
-      "phone": "Phone: (213) 381-5500",
-      "email": "Email: yonseichiropractic@gmail.com",
-      "address": "Visitor Address: 3200 Wilshire Blvd Suite 302, Los Angeles, CA 90010"
+      "body": "We welcome your feedback on the accessibility of Cosmic Law Firm. Please let us know if you encounter accessibility barriers on our website:",
+      "phone": "Phone: (213) 480-0348",
+      "email": "Email: ask.cosmiclaw@gmail.com",
+      "address": "Visitor Address: 1021 S. Union Ave., Los Angeles, CA 90015"
     },
     "technical": {
       "title": "Technical Specifications",
-      "body": "Accessibility of Yonsei Chiropractic relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:",
+      "body": "Accessibility of Cosmic Law Firm relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:",
       "items": {
         "html": "HTML",
         "aria": "WAI-ARIA",
@@ -459,7 +459,7 @@
     },
     "assessment": {
       "title": "Assessment Approach",
-      "body": "Yonsei Chiropractic assessed the accessibility of our website by the following approaches:",
+      "body": "Cosmic Law Firm assessed the accessibility of our website by the following approaches:",
       "items": {
         "self": "Self-evaluation",
         "automated": "Automated testing using industry-standard tools"
@@ -467,8 +467,16 @@
     },
     "approval": {
       "title": "Formal Approval of this Accessibility Statement",
-      "body": "This Accessibility Statement is approved by: Yonsei Chiropractic",
+      "body": "This Accessibility Statement is approved by: Cosmic Law Firm",
       "date": "Date: January 16, 2026"
+    }
+    ,
+    "contact": {
+      "heading": "Contact Cosmic Law Firm",
+      "description": "Need help with the site or have an accessibility concern? Reach us through any of the channels below.",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "addressLabel": "Address"
     }
   }
 }

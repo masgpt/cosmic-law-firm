@@ -96,34 +96,36 @@ const ServicesDesktop: React.FC = () => {
             className="grid grid-cols-3 gap-6 mt-12"
           >
             {practiceAreas.map((area) => (
-              <motion.div
+              <Link
                 key={area.slug}
-                variants={fadeInUp}
-                className="flex flex-col gap-5 rounded-[28px] border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 hover:shadow-2xl hover:border-primary/20 transition-all duration-500 group"
+                to={`/${lng}/services/${area.slug}`}
+                className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background-light dark:focus-visible:ring-offset-background-dark"
               >
-                <div className="size-14 rounded-2xl bg-primary/10 shadow-xl shadow-primary/5 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                  <span className="material-symbols-outlined text-3xl font-light" aria-hidden="true">
-                    {area.icon}
-                  </span>
-                </div>
-                <div className="flex flex-col gap-2 flex-1">
-                  <h3 className="text-[#0d141b] dark:text-white text-xl font-black leading-tight tracking-tight">
-                    {isKo ? area.titleKo : area.title}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-medium">
-                    {isKo ? area.focusKo : area.focus}
-                  </p>
-                </div>
-                <Link
-                  to={`/${lng}/services/${area.slug}`}
-                  className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] hover:underline mt-1"
+                <motion.div
+                  variants={fadeInUp}
+                  className="flex flex-col gap-5 rounded-[28px] border border-slate-100 bg-white/90 dark:border-slate-800 dark:bg-slate-900/70 p-8 hover:shadow-2xl hover:border-primary/20 transition-all duration-500 group cursor-pointer"
                 >
-                  View services
-                  <span className="material-symbols-outlined text-sm" aria-hidden="true">
-                    arrow_forward
-                  </span>
-                </Link>
-              </motion.div>
+                  <div className="size-14 rounded-2xl bg-white/5 shadow-xl shadow-primary/5 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300 dark:bg-white/10 dark:text-white">
+                    <span className="material-symbols-outlined text-3xl font-light" aria-hidden="true">
+                      {area.icon}
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-2 flex-1">
+                    <h3 className="text-[#0d141b] dark:text-white text-xl font-black leading-tight tracking-tight">
+                      {isKo ? area.titleKo : area.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-medium">
+                      {isKo ? area.focusKo : area.focus}
+                    </p>
+                  </div>
+                  <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.25em] text-primary transition-colors duration-200 group-hover:text-secondary dark:text-secondary">
+                    <span>View services</span>
+                    <span className="material-symbols-outlined text-sm" aria-hidden="true">
+                      arrow_forward
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
         </div>

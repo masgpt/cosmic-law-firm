@@ -4,6 +4,7 @@ import Link from '@/components/ui/Link';
 import SEO from '@/components/SEO';
 import { useTranslation } from 'react-i18next';
 import { teamMembers } from '../team.constants';
+import Image from 'next/image';
 
 const TeamDesktop: React.FC = () => {
   const { t } = useTranslation();
@@ -39,37 +40,39 @@ const TeamDesktop: React.FC = () => {
       </section>
 
       <section className="w-full bg-background-light dark:bg-background-dark py-20">
-        <div className="max-w-[1280px] mx-auto px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member) => (
-              <article
-                key={member.id}
-                className="rounded-[28px] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-8 shadow-sm flex flex-col gap-6"
-              >
-                <div className="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-slate-900 dark:text-primary text-xl font-black uppercase tracking-[0.2em]">
-                  {member.name
-                    .split(' ')
-                    .map((segment) => segment[0])
-                    .join('')}
-                </div>
-                <div>
-                  <p className="text-sm uppercase tracking-[0.5em] text-slate-400 dark:text-slate-300">
+        <div className="max-w-[960px] mx-auto px-6 space-y-6">
+          {teamMembers.map((member) => (
+            <Link
+              key={member.id}
+              href={`/about/team/${member.slug}`}
+              className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              aria-label={`${member.name} profile`}
+            >
+              <article className="flex flex-row flex-wrap items-start gap-6 rounded-[28px] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 sm:p-8 shadow-sm transition-shadow hover:shadow-xl">
+                <div className="flex-1 min-w-0 space-y-3">
+                  <p className="text-[0.6rem] uppercase tracking-[0.4em] text-slate-400 dark:text-slate-300">
                     {t(member.locationKey)}
                   </p>
-                  <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-2">{member.name}</h3>
-                  <p className="text-sm font-black text-slate-900 dark:text-primary uppercase tracking-[0.2em] mt-2">
+                  <h3 className="text-2xl font-black text-slate-900 dark:text-white">{member.name}</h3>
+                  <p className="text-sm font-black text-slate-900 dark:text-primary uppercase tracking-[0.3em]">
                     {t(member.titleKey)}
                   </p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    {t(member.specialtyKey)}
+                  </p>
                 </div>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  {t(member.descriptionKey)}
-                </p>
-                <p className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
-                  {t(member.specialtyKey)}
-                </p>
+                <div className="relative shrink-0 w-[150px] h-[260px] rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden">
+                  <Image
+                    src={member.imageSrc}
+                    alt={t(member.imageAltKey)}
+                    fill
+                    sizes="(max-width: 768px) 130px, 170px"
+                    className="object-cover"
+                  />
+                </div>
               </article>
-            ))}
-          </div>
+            </Link>
+          ))}
         </div>
       </section>
 

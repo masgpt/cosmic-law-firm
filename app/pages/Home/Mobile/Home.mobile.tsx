@@ -30,7 +30,7 @@ const HomeMobile: React.FC = () => {
       />
 
       <SectionWithStars
-        className="hero-header-gap relative bg-slate-950 text-white min-h-viewport flex flex-col justify-center"
+        className="hero-header-gap hero-header-gap-tight relative bg-slate-950 text-white min-h-viewport flex flex-col justify-start"
         aria-label={t('accessibility.aria.heroIntro')}
         settings={{ density: 0.5, scrollRange: 720 }}
       >
@@ -48,7 +48,7 @@ const HomeMobile: React.FC = () => {
           <div className="absolute right-4 bottom-[-40px] h-[220px] w-[220px] rounded-full bg-white/5 blur-[140px]" aria-hidden="true" />
         </div>
 
-        <div className="relative z-20 px-6 pb-12 pt-16 max-w-[1280px] mx-auto sm:px-8 sm:pt-20 md:pt-24">
+        <div className="relative z-20 px-6 pb-10 pt-12 max-w-[1280px] mx-auto sm:px-8 sm:pt-16 md:pt-20">
           <div className="inline-flex flex-wrap items-center gap-2 uppercase tracking-[0.35em] text-[10px] text-white/90 mb-4">
             <span className="inline-flex flex-wrap justify-center px-3 py-1 rounded-full bg-black/60 text-white font-black tracking-[0.35em] whitespace-normal max-w-[85vw]">
               {t('home.hero.badge')}

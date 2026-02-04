@@ -33,7 +33,7 @@ const ServicesMobile: React.FC = () => {
       <SectionWithStars className="hero-header-gap w-full bg-background-light dark:bg-background-dark flex justify-center overflow-hidden" settings={{ density: 0.44 }}>
         <div className="relative z-10 w-full px-0 py-0">
           <div
-            className="flex min-h-[400px] flex-col gap-6 items-center justify-center p-6 shadow-sm relative overflow-hidden bg-cover bg-center bg-no-repeat"
+            className="flex min-h-[260px] sm:min-h-[300px] flex-col gap-3 items-center justify-start p-4 pt-6 pb-6 sm:py-8 shadow-sm relative overflow-hidden bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage:
                 "linear-gradient(rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.8) 100%), url('/NanoBanana/Lawyer-contract-notes.png')",

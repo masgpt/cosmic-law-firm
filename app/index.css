@@ -84,6 +84,10 @@
     padding-top: calc(var(--header-height) + env(safe-area-inset-top));
   }
 
+  .hero-header-gap-tight {
+    padding-top: calc(var(--header-height) + env(safe-area-inset-top) - 18px);
+  }
+
   .non-hero-page-gap {
     padding-top: calc(var(--header-height) + env(safe-area-inset-top) + 2rem);
   }

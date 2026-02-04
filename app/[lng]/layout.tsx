@@ -105,6 +105,8 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Prevent iOS Safari from auto-linking phone numbers/emails and mutating the DOM pre-hydration. */}
+        <meta name="format-detection" content="telephone=no,date=no,address=no,email=no" />
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
             const saved = localStorage.getItem('theme') || 'system';

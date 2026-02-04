@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import ButtonLink from '@/components/ui/ButtonLink';
 import Link from '@/components/ui/Link';
 import SEO from '@/components/SEO';
@@ -8,8 +8,9 @@ import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 12 },
-  whileInView: { opacity: 1, y: 0 },
+  // iOS Safari can flicker when animating translated text during scroll.
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
   viewport: { once: true, amount: 0.05 },
   transition: { duration: 0.5 },
 };
@@ -17,12 +18,13 @@ const fadeInUp = {
 const AboutMobile: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <>
+    <MotionConfig reducedMotion="always">
+      <>
       <SEO title={t('about.hero.title')} description={t('about.hero.description')} />
       <SectionWithStars className="hero-header-gap px-6 py-12 max-w-[960px] mx-auto overflow-hidden" settings={{ density: 0.47 }}>
         <motion.div 
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           className="relative z-10"
         >
@@ -118,7 +120,8 @@ const AboutMobile: React.FC = () => {
           </ButtonLink>
         </motion.div>
       </SectionWithStars>
-    </>
+      </>
+    </MotionConfig>
   );
 };
 

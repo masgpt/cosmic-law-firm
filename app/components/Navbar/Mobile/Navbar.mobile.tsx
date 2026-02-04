@@ -10,7 +10,7 @@ import SectionWithStars from '@src/components/layout/SectionWithStars';
 import { useNavbarLogic } from '../Shared/navbar.hooks';
 import { useNavbarConstants } from '../Shared/navbar.constants';
 import { SITE } from '@/lib/site';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
 import { useRouter, usePathname } from 'next/navigation';
 import { useFocusTrap } from '@/lib/accessibility/useFocusManagement';
 import Icon from '@src/components/Icon';
@@ -63,11 +63,14 @@ const NavbarMobile: React.FC = () => {
   };
 
   return (
-    <SectionWithStars
-      className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-primary/95 backdrop-blur-md transition-colors duration-300 lg:hidden text-white pt-safe"
+    <MotionConfig reducedMotion="always">
+      <SectionWithStars
+      // iOS Safari + fixed + backdrop-filter tends to flicker/jank during scroll.
+      className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-primary/95 transition-colors duration-300 lg:hidden text-white pt-safe"
       aria-label={t('accessibility.aria.mobileNavSection')}
       overflow="visible"
-      settings={{ density: 0.5, scrollRange: 480 }}
+      // Keep the nav lightweight on mobile: no star layers or scroll motion.
+      settings={{ enabledLayers: [], density: 0, scrollRange: 0 }}
     >
       <div className="relative z-20">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
@@ -121,7 +124,7 @@ const NavbarMobile: React.FC = () => {
             transition={{ duration: 0.25, ease: 'easeInOut' }}
             className="relative z-20 border-t border-white/10 bg-primary overflow-hidden"
           >
-            <div className="p-6 overflow-y-auto max-h-[calc(100dvh-var(--header-height))] pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
+            <div className="p-6 overflow-y-auto max-h-[calc(100svh-var(--header-height))] pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
               <nav className="flex flex-col space-y-6" aria-label={t('accessibility.aria.mobileNavigation')}>
                 <div className="pb-2">
                   <LanguageToggle variant="segmented" className="w-full" />
@@ -208,7 +211,8 @@ const NavbarMobile: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </SectionWithStars>
+      </SectionWithStars>
+    </MotionConfig>
   );
 };
 

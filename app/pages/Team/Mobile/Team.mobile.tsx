@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import ButtonLink from '@/components/ui/ButtonLink';
 import Link from '@/components/ui/Link';
 import SEO from '@/components/SEO';
@@ -10,8 +10,9 @@ import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 12 },
-  whileInView: { opacity: 1, y: 0 },
+  // iOS Safari can flicker when animating translated text during scroll.
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
   viewport: { once: true, amount: 0.05 },
   transition: { duration: 0.5 },
 };
@@ -28,13 +29,14 @@ const TeamMobile: React.FC = () => {
   return (
     <>
       <SEO title={t('team.hero.title')} description={t('team.hero.description')} />
-      <SectionWithStars className="hero-header-gap px-6 py-12 bg-background-light dark:bg-background-dark overflow-hidden" settings={{ density: 0.47 }}>
-        <motion.div 
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="relative z-10"
-        >
+      <MotionConfig reducedMotion="always">
+        <SectionWithStars className="hero-header-gap px-6 py-12 bg-background-light dark:bg-background-dark overflow-hidden" settings={{ density: 0.47 }}>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="relative z-10"
+          >
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-[10px] font-black uppercase tracking-[0.3em] w-fit">
             {t('team.hero.badge')}
           </span>
@@ -51,7 +53,9 @@ const TeamMobile: React.FC = () => {
         </motion.div>
       </SectionWithStars>
 
-      <SectionWithStars className="px-4 py-10 bg-background-light dark:bg-background-dark overflow-hidden" settings={{ density: 0.5 }}>
+        </SectionWithStars>
+
+        <SectionWithStars className="px-4 py-10 bg-background-light dark:bg-background-dark overflow-hidden" settings={{ density: 0.5 }}>
         <motion.div 
           variants={staggerContainer}
           initial="initial"
@@ -95,14 +99,16 @@ const TeamMobile: React.FC = () => {
         </motion.div>
       </SectionWithStars>
 
-      <SectionWithStars className="px-6 py-12 bg-primary text-white text-center" settings={{ density: 0.47 }}>
-        <motion.div 
-          variants={fadeInUp}
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true, amount: 0.05 }}
-          className="relative z-10 space-y-3"
-        >
+        </SectionWithStars>
+
+        <SectionWithStars className="px-6 py-12 bg-primary text-white text-center" settings={{ density: 0.47 }}>
+          <motion.div 
+            variants={fadeInUp}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, amount: 0.05 }}
+            className="relative z-10 space-y-3"
+          >
           <h2 className="text-2xl font-black tracking-tight uppercase tracking-tight">{t('team.cta.title')}</h2>
           <p className="text-sm leading-relaxed text-white/90 font-medium">{t('team.cta.description')}</p>
           <ButtonLink
@@ -112,8 +118,9 @@ const TeamMobile: React.FC = () => {
           >
             {t('team.cta.button')}
           </ButtonLink>
-        </motion.div>
-      </SectionWithStars>
+          </motion.div>
+        </SectionWithStars>
+      </MotionConfig>
     </>
   );
 };

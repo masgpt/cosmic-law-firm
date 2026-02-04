@@ -1,13 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import SEO from '@/components/SEO';
 import ButtonLink from '@/components/ui/ButtonLink';
 import { useTranslation } from 'react-i18next';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 18 },
-  whileInView: { opacity: 1, y: 0 },
+  // iOS Safari can flicker when animating translated text during scroll.
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
   viewport: { once: true },
   transition: { duration: 0.5 },
 };
@@ -17,7 +18,8 @@ const OurPhilosophyMobile: React.FC = () => {
   const stepKeys = ['clarity', 'draft', 'protect'] as const;
 
   return (
-    <>
+    <MotionConfig reducedMotion="always">
+      <>
       <SEO title={t('message.title')} description={t('message.intro')} />
       <SectionWithStars className="hero-header-gap px-6 py-12 bg-background-light dark:bg-background-dark overflow-hidden" settings={{ density: 0.44 }}>
         <div className="relative z-10 space-y-8">
@@ -73,7 +75,8 @@ const OurPhilosophyMobile: React.FC = () => {
           </motion.div>
         </div>
       </SectionWithStars>
-    </>
+      </>
+    </MotionConfig>
   );
 };
 

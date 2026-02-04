@@ -4,26 +4,17 @@ import { useEffect, useState } from "react";
 
 const isClient = typeof window !== "undefined";
 
-const createMediaQueryList = (query: string) => (isClient ? window.matchMedia(query) : null);
-
-export const useMediaQuery = (query: string) => {
-  const [matches, setMatches] = useState(() => {
-    if (!isClient) {
-      return false;
-    }
-    const mediaQuery = window.matchMedia(query);
-    return mediaQuery.matches;
-  });
+export const useMediaQuery = (query: string, initialValue = false) => {
+  // Important: don't read `window.matchMedia` during initial render, otherwise
+  // SSR markup can differ from the first client render (hydration mismatch).
+  const [matches, setMatches] = useState<boolean>(initialValue);
 
   useEffect(() => {
     if (!isClient) {
       return;
     }
 
-    const mediaQuery = createMediaQueryList(query);
-    if (!mediaQuery) {
-      return;
-    }
+    const mediaQuery = window.matchMedia(query);
 
     const updateMatch = () => {
       setMatches(mediaQuery.matches);
@@ -47,4 +38,5 @@ export const useMediaQuery = (query: string) => {
   return matches;
 };
 
-export const useMinWidth = (width: number) => useMediaQuery(`(min-width: ${width}px)`);
+export const useMinWidth = (width: number, initialValue = false) =>
+  useMediaQuery(`(min-width: ${width}px)`, initialValue);

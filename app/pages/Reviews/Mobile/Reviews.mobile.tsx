@@ -2,13 +2,14 @@ import React from 'react';
 import Link from '@/components/ui/Link';
 import Modal from '@/components/ui/Modal';
 import { useReviewsLogic } from '../Shared/reviews.hooks';
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 18 },
-  whileInView: { opacity: 1, y: 0 },
+  // iOS Safari can flicker when animating translated text during scroll.
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
   viewport: { once: true },
   transition: { duration: 0.5 },
 };
@@ -23,11 +24,12 @@ const ReviewsMobile: React.FC = () => {
   const { t, reviews, selectedReview, openReview, closeReview } = useReviewsLogic();
 
   return (
-    <>
+    <MotionConfig reducedMotion="always">
+      <>
       <SectionWithStars className="hero-header-gap w-full bg-white dark:bg-slate-900 py-10 px-4 border-b border-slate-100 dark:border-slate-800 overflow-hidden" settings={{ density: 0.44 }}>
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           className="relative z-10 max-w-[960px] mx-auto text-center flex flex-col gap-3"
         >
@@ -152,14 +154,15 @@ const ReviewsMobile: React.FC = () => {
               <Link to="/contact" className="flex items-center justify-center rounded-lg bg-primary hover:bg-primary/80 transition-colors h-12 px-8 text-white text-base font-bold shadow-lg w-full uppercase tracking-widest">
                 {t('cta.book', { ns: 'reviews' })}
               </Link>
-              <Link to="/services" className="flex items-center justify-center rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 transition-colors h-12 px-8 text-white text-base font-bold backdrop-blur-sm w-full uppercase tracking-widest">
+              <Link to="/services" className="flex items-center justify-center rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 transition-colors h-12 px-8 text-white text-base font-bold w-full uppercase tracking-widest">
                 {t('cta.call', { ns: 'reviews' })}
               </Link>
             </div>
           </div>
         </div>
       </SectionWithStars>
-    </>
+      </>
+    </MotionConfig>
   );
 };
 

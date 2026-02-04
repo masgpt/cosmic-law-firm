@@ -57,12 +57,14 @@
   /* Utility for full screen height that accounts for mobile browser chrome */
   .h-viewport {
     height: 100vh;
-    height: 100dvh;
+    /* Prefer stable viewport units on mobile to reduce scroll-induced relayout/flicker. */
+    height: 100svh;
   }
 
   .min-h-viewport {
     min-height: 100vh;
-    min-height: 100dvh;
+    /* Prefer stable viewport units on mobile to reduce scroll-induced relayout/flicker. */
+    min-height: 100svh;
   }
 }
 

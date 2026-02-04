@@ -2,15 +2,16 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ButtonLink from '@/components/ui/ButtonLink';
 import Link from '@/components/ui/Link';
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import { practiceAreas } from '@/lib/practice-areas';
 import { SITE } from '@/lib/site';
 import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 12 },
-  whileInView: { opacity: 1, y: 0 },
+  // On iOS Safari, scroll + transformed text (translateY) can flicker. Prefer opacity-only on mobile.
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
   viewport: { once: true, amount: 0.05 },
   transition: { duration: 0.5 },
 };
@@ -29,7 +30,8 @@ const ServicesMobile: React.FC = () => {
   const processSteps = ['step1', 'step2', 'step3'] as const;
 
   return (
-    <>
+    <MotionConfig reducedMotion="always">
+      <>
       <SectionWithStars className="hero-header-gap w-full bg-background-light dark:bg-background-dark flex justify-center overflow-hidden" settings={{ density: 0.44 }}>
         <div className="relative z-10 w-full px-0 py-0">
           <div
@@ -47,16 +49,16 @@ const ServicesMobile: React.FC = () => {
               {t('servicesPage.hero.badge')}
             </div>
             <motion.h1
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.7 }}
               className="text-white text-3xl font-black leading-tight tracking-tight drop-shadow-md uppercase"
             >
               {t('servicesPage.hero.title')}
             </motion.h1>
             <motion.p
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ delay: 0.15, duration: 0.7 }}
                 className="text-slate-100 text-sm font-medium leading-relaxed mt-1 drop-shadow-sm"
               >
@@ -197,6 +199,7 @@ const ServicesMobile: React.FC = () => {
         </div>
       </SectionWithStars>
     </>
+    </MotionConfig>
   );
 };
 

@@ -4,7 +4,7 @@ import Button from '../../../components/ui/Button';
 import FormField from '../../../components/ui/FormField';
 import Link from '../../../components/ui/Link';
 import { useContactForm } from '../Shared/contact.hooks';
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import { SITE } from '../../../lib/site';
 import Icon from '@src/components/Icon';
 import Map from '@src/components/Map';
@@ -12,8 +12,9 @@ import { FEATURES } from '@src/config/features';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
+  // iOS Safari can flicker when animating translated text during scroll.
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
   viewport: { once: true },
   transition: { duration: 0.5 }
 };
@@ -24,12 +25,13 @@ const ContactMobile: React.FC = () => {
   const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.addressQuery)}`;
 
   return (
-    <SectionWithStars className="hero-header-gap flex-grow w-full" settings={{ density: 0.47 }}>
+    <MotionConfig reducedMotion="always">
+      <SectionWithStars className="hero-header-gap flex-grow w-full" settings={{ density: 0.47 }}>
       <div className="relative z-10 w-full px-4 py-8 overflow-hidden">
         {/* Page Heading */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-3 mb-8 text-center"
         >
@@ -46,7 +48,7 @@ const ContactMobile: React.FC = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="flex flex-col bg-white/70 dark:bg-white/5 rounded-xl shadow-sm border border-secondary/40 dark:border-white/10 overflow-hidden order-1 backdrop-blur"
+            className="flex flex-col bg-white/70 dark:bg-white/5 rounded-xl shadow-sm border border-secondary/40 dark:border-white/10 overflow-hidden order-1"
             aria-labelledby="form-title"
           >
             <div className="px-5 py-5 border-b border-slate-100 dark:border-slate-800">
@@ -207,7 +209,7 @@ const ContactMobile: React.FC = () => {
               initial="initial"
               whileInView="whileInView"
               viewport={{ once: true }}
-              className="flex flex-col bg-white/70 dark:bg-white/5 rounded-xl shadow-sm border border-secondary/40 dark:border-white/10 overflow-hidden backdrop-blur"
+              className="flex flex-col bg-white/70 dark:bg-white/5 rounded-xl shadow-sm border border-secondary/40 dark:border-white/10 overflow-hidden"
               aria-labelledby="hours-title"
             >
               <div className="px-5 py-4 border-b border-slate-100 dark:border-slate-800">
@@ -248,6 +250,7 @@ const ContactMobile: React.FC = () => {
         </div>
       </div>
     </SectionWithStars>
+    </MotionConfig>
   );
 };
 

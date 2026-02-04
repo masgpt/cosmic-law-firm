@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import Link from '@/components/ui/Link';
 import Image from 'next/image';
 import SEO from '@/components/SEO';
@@ -11,8 +11,9 @@ import SectionWithStars from '@src/components/layout/SectionWithStars';
 import Icon from '@src/components/Icon';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 18 },
-  whileInView: { opacity: 1, y: 0 },
+  // On iOS Safari, scroll + transformed text (translateY) can flicker. Prefer opacity-only on mobile.
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
   viewport: { once: true },
   transition: { duration: 0.5 },
 };
@@ -23,7 +24,8 @@ const HomeMobile: React.FC = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <>
+    <MotionConfig reducedMotion="always">
+      <>
       <SEO
         title={t('seo.home.title', { defaultValue: `${SITE.name} | ${t('common.companyNameSub')}` })}
         description={t('seo.home.description')}
@@ -43,9 +45,9 @@ const HomeMobile: React.FC = () => {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/40 to-black/70 backdrop-blur-[1px]" />
-          <div className="absolute left-[10%] top-4 h-[260px] w-[260px] rounded-full bg-primary/30 blur-[160px]" aria-hidden="true" />
-          <div className="absolute right-4 bottom-[-40px] h-[220px] w-[220px] rounded-full bg-white/5 blur-[140px]" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/40 to-black/70" />
+          <div className="absolute left-[10%] top-4 h-[180px] w-[180px] rounded-full bg-primary/25 blur-[90px]" aria-hidden="true" />
+          <div className="absolute right-4 bottom-[-40px] h-[160px] w-[160px] rounded-full bg-white/5 blur-[80px]" aria-hidden="true" />
         </div>
 
         <div className="relative z-20 px-6 pb-10 pt-12 max-w-[1280px] mx-auto sm:px-8 sm:pt-16 md:pt-20">
@@ -55,16 +57,16 @@ const HomeMobile: React.FC = () => {
             </span>
           </div>
           <motion.h1
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.15, duration: 0.7 }}
             className="text-4xl font-black tracking-tight text-white leading-[1.05] mb-5 uppercase"
           >
             {t('home.hero.title')}
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-lg text-white/90 mb-8 leading-relaxed font-medium"
           >
@@ -72,8 +74,8 @@ const HomeMobile: React.FC = () => {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.45, duration: 0.7 }}
             className="flex flex-col gap-4"
           >
@@ -192,8 +194,9 @@ const HomeMobile: React.FC = () => {
             </ButtonLink>
           </div>
         </motion.div>
-      </SectionWithStars>
-    </>
+        </SectionWithStars>
+      </>
+    </MotionConfig>
   );
 };
 

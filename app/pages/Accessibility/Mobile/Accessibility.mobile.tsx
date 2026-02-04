@@ -1,13 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, MotionConfig } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import SEO from '../../../components/SEO';
 import { SITE } from '../../../lib/site';
 import { FEATURES } from '@src/config/features';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 18 },
-  whileInView: { opacity: 1, y: 0 },
+  // iOS Safari can flicker when animating translated text during scroll.
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
   viewport: { once: true },
   transition: { duration: 0.5 },
 };
@@ -35,7 +36,8 @@ const AccessibilityMobile: React.FC = () => {
   ];
 
   return (
-    <div className="non-hero-page-gap bg-white dark:bg-[#0f172a] px-6 pb-12 min-h-viewport">
+    <MotionConfig reducedMotion="always">
+      <div className="non-hero-page-gap bg-white dark:bg-[#0f172a] px-6 pb-12 min-h-viewport">
       <SEO 
         title={t('footer.accessibility')}
         description={t('accessibilityPage.intro')}
@@ -130,6 +132,7 @@ const AccessibilityMobile: React.FC = () => {
         </div>
       </motion.div>
     </div>
+    </MotionConfig>
   );
 };
 

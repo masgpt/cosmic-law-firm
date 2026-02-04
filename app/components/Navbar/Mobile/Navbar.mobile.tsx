@@ -7,6 +7,7 @@ import Link from '@/components/ui/Link';
 import ButtonLink from '@/components/ui/ButtonLink';
 import LanguageToggle from '@/components/LanguageToggle';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
+import EmailLink from '@/components/EmailLink';
 import { useNavbarLogic } from '../Shared/navbar.hooks';
 import { useNavbarConstants } from '../Shared/navbar.constants';
 import { SITE } from '@/lib/site';
@@ -177,14 +178,14 @@ const NavbarMobile: React.FC = () => {
 
                 <div className="pt-6 border-t border-white/10 flex flex-col gap-4">
                   <div className="flex flex-col gap-3">
-                      <Link
-                        href={`mailto:${SITE.email}`}
+                      <EmailLink
+                        email={SITE.email}
                         onClick={toggleMenu}
                         className="flex items-center gap-3 p-3 rounded-xl bg-white/10 text-white font-bold text-sm"
                       >
                         <Icon name="mail" className="text-secondary size-5" />
                         <span className="truncate">{SITE.email}</span>
-                      </Link>
+                      </EmailLink>
                       <Link
                         href={`tel:${SITE.phoneTel}`}
                         onClick={toggleMenu}

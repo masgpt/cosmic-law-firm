@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '@/components/SEO';
 import { SITE } from '@/lib/site';
+import EmailLink from '@/components/EmailLink';
 import { useTranslation } from 'react-i18next';
 import { useViewport } from '../hooks/useViewport';
 
@@ -60,12 +61,20 @@ const Privacy: React.FC = () => {
             </p>
             <p>
               {t('legal.contact.emailLabel')}{' '}
-              <a href={`mailto:${SITE.email}`} className="text-primary dark:text-primary-light hover:underline">
+              <EmailLink email={SITE.email} className="text-primary dark:text-primary-light hover:underline">
                 {SITE.email}
-              </a>
+              </EmailLink>
             </p>
             <p>
-              {t('legal.contact.addressLabel')} {SITE.addressShort}
+              {t('legal.contact.addressLabel')}{' '}
+              <a 
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.addressQuery)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary dark:text-primary-light hover:underline"
+              >
+                {SITE.addressShort}
+              </a>
             </p>
           </div>
         </section>

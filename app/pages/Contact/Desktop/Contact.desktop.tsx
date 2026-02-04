@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Button from '../../../components/ui/Button';
 import FormField from '../../../components/ui/FormField';
 import Link from '../../../components/ui/Link';
+import EmailLink from '../../../components/EmailLink';
 import { useContactForm } from '../Shared/contact.hooks';
 import { SITE } from '../../../lib/site';
 import Icon from '@src/components/Icon';
@@ -58,29 +59,18 @@ const ContactDesktop: React.FC = () => {
                 <h2 className="text-text-main dark:text-white text-[22px] font-black leading-tight tracking-tight uppercase">{t('contactPage.details.title')}</h2>
               </div>
               {/* Address Item */}
-              {FEATURES.googleMaps ? (
-                <Link 
-                  href={mapHref}
-                  external
-                  className="flex gap-4 px-6 py-5 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
-                >
-                  <div className="text-text-main dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0 size-12 group-hover:bg-primary group-hover:text-white transition-colors">
-                    <Icon name="location_on" className="size-6" />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-center">
-                    <p className="text-text-main dark:text-white text-base font-bold leading-normal group-hover:text-primary transition-colors">{t('footer.address')}</p>
-                  </div>
-                </Link>
-              ) : (
-                <div className="flex gap-4 px-6 py-5 border-b border-slate-100 dark:border-slate-800 transition-colors">
-                  <div className="text-text-main dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0 size-12">
-                    <Icon name="location_on" className="size-6" />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-center">
-                    <p className="text-text-main dark:text-white text-base font-bold leading-normal">{t('footer.address')}</p>
-                  </div>
+              <Link 
+                href={mapHref}
+                external
+                className="flex gap-4 px-6 py-5 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+              >
+                <div className="text-text-main dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0 size-12 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Icon name="location_on" className="size-6" />
                 </div>
-              )}
+                <div className="flex flex-1 flex-col justify-center">
+                  <p className="text-text-main dark:text-white text-base font-bold leading-normal group-hover:text-primary transition-colors">{t('footer.address')}</p>
+                </div>
+              </Link>
               {/* Phone Item */}
               <Link 
                 href={`tel:${SITE.phoneTel}`}
@@ -97,8 +87,8 @@ const ContactDesktop: React.FC = () => {
                 </div>
               </Link>
               {/* Email Item */}
-              <Link 
-                href={`mailto:${SITE.email}`}
+              <EmailLink 
+                email={SITE.email}
                 className="flex gap-4 px-6 py-5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
               >
                 <div className="text-text-main dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0 size-12 group-hover:bg-primary group-hover:text-white transition-colors">
@@ -111,7 +101,7 @@ const ContactDesktop: React.FC = () => {
                 <p className="text-text-secondary dark:text-slate-400 text-sm font-medium leading-normal">{t('contactPage.details.email.label')}</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-normal font-medium">{t('contactPage.details.email.responseTime')}</p>
               </div>
-            </Link>
+            </EmailLink>
             </div>
 
             {/* Hours */}

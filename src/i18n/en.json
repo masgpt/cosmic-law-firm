@@ -337,7 +337,7 @@
     "techniques": "Practice Areas",
     "contactInfo": "Contact Info",
     "email": "Email",
-    "address": "Los Angeles, CA (by appointment)",
+    "address": "1021 S. Union Ave., Los Angeles, CA 90015",
     "rights": "All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
@@ -667,6 +667,16 @@
       "description": "Share a short summary, deck, or dispute outline; we will connect you with the right attorney and next steps.",
       "button": "Contact the team"
     }
+  },
+  "emailPicker": {
+    "title": "Contact us via email",
+    "description": "Choose how you would like to send your email:",
+    "defaultClient": "Default Email App",
+    "defaultClientNote": "Outlook, Apple Mail, etc.",
+    "gmail": "Gmail (Web)",
+    "gmailNote": "Open in browser",
+    "copy": "Copy Email Address",
+    "copyNote": "Save to clipboard"
   },
   "notFound": {
     "title": "Page Not Found",

@@ -24,7 +24,7 @@ export const FEATURES: FeatureFlags = Object.freeze({
     : envBool(process.env.NEXT_PUBLIC_ENABLE_GOOGLE_ANALYTICS ?? process.env.ENABLE_GOOGLE_ANALYTICS, false),
   googleMaps: IS_CHINA_BUILD
     ? false
-    : envBool(process.env.NEXT_PUBLIC_ENABLE_GOOGLE_MAPS ?? process.env.ENABLE_GOOGLE_MAPS, false),
+    : envBool(process.env.NEXT_PUBLIC_ENABLE_GOOGLE_MAPS ?? process.env.ENABLE_GOOGLE_MAPS, true),
   videoEmbeds: IS_CHINA_BUILD
     ? false
     : envBool(process.env.NEXT_PUBLIC_ENABLE_VIDEO_EMBEDS ?? process.env.ENABLE_VIDEO_EMBEDS, false),

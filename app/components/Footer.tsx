@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Link from './ui/Link';
+import EmailLink from './EmailLink';
 import ButtonLink from './ui/ButtonLink';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 import ThemeToggle from './ui/ThemeToggle';
@@ -150,18 +151,32 @@ const Footer: React.FC = () => {
                   {t('footer.contactInfo')}
                 </h4>
                 <div className="grid gap-3">
-                  {contactActions.map((action) => (
-                    <ButtonLink
-                      key={action.label}
-                      href={action.href}
-                      tone="light"
-                      size="md"
-                      className={`w-full justify-center sm:justify-start gap-3 px-4 py-3 text-center sm:text-left ${action.className}`}
-                    >
-                      <Icon name={action.icon} className="text-primary size-5 flex-shrink-0" />
-                      <span className="whitespace-normal break-all">{action.label}</span>
-                    </ButtonLink>
-                  ))}
+                  {contactActions.map((action) => {
+                    if (action.href.startsWith('mailto:')) {
+                      return (
+                        <EmailLink
+                          key={action.label}
+                          email={SITE.email}
+                          className={`w-full inline-flex items-center justify-center sm:justify-start gap-3 px-4 py-3 rounded-lg bg-secondary text-primary shadow-sm border border-secondary/60 transition-all hover:bg-secondary/80 text-center sm:text-left ${action.className}`}
+                        >
+                          <Icon name={action.icon} className="text-primary size-5 flex-shrink-0" />
+                          <span className="whitespace-normal break-all">{action.label}</span>
+                        </EmailLink>
+                      );
+                    }
+                    return (
+                      <ButtonLink
+                        key={action.label}
+                        href={action.href}
+                        tone="light"
+                        size="md"
+                        className={`w-full justify-center sm:justify-start gap-3 px-4 py-3 text-center sm:text-left ${action.className}`}
+                      >
+                        <Icon name={action.icon} className="text-primary size-5 flex-shrink-0" />
+                        <span className="whitespace-normal break-all">{action.label}</span>
+                      </ButtonLink>
+                    );
+                  })}
                   {FEATURES.googleMaps ? (
                     <ButtonLink
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.addressQuery)}`}

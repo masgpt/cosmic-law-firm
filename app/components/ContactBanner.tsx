@@ -4,6 +4,7 @@ import React from 'react';
 import Link from './ui/Link';
 import LanguageToggle from './LanguageToggle';
 import { SITE } from '../lib/site';
+import EmailLink from './EmailLink';
 import Icon from '@src/components/Icon';
 
 interface ContactBannerProps {
@@ -29,13 +30,13 @@ const ContactBanner: React.FC<ContactBannerProps> = ({ lng }) => {
           </div>
         </div>
         <div className="flex items-center gap-4 sm:gap-6 shrink-0">
-          <Link 
-            href={`mailto:${SITE.email}`}
+          <EmailLink 
+            email={SITE.email}
             className="hidden sm:flex items-center gap-2 hover:text-primary-light transition-colors focus:ring-1 focus:ring-primary/20 rounded group"
           >
             <Icon name="mail" className="text-secondary size-[15px] group-hover:scale-110 transition-transform" />
             <span>{SITE.email}</span>
-          </Link>
+          </EmailLink>
           <div className="hidden sm:block h-3 w-px bg-white/10" aria-hidden="true" />
           <LanguageToggle className="w-fit" />
         </div>

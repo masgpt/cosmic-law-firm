@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Button from '../../../components/ui/Button';
 import FormField from '../../../components/ui/FormField';
 import Link from '../../../components/ui/Link';
+import EmailLink from '../../../components/EmailLink';
 import { useContactForm } from '../Shared/contact.hooks';
 import { motion, MotionConfig } from 'framer-motion';
 import { SITE } from '../../../lib/site';
@@ -152,29 +153,18 @@ const ContactMobile: React.FC = () => {
               <div className="px-5 py-4 border-b border-slate-100 dark:border-slate-800">
                 <h2 className="text-text-main dark:text-white text-xl font-black leading-tight tracking-tight uppercase">{t('contactPage.details.title')}</h2>
               </div>
-              {FEATURES.googleMaps ? (
-                <Link 
-                  href={mapHref}
-                  external
-                  className="flex gap-4 px-5 py-4 border-b border-slate-100 dark:border-slate-800 transition-colors"
-                >
-                  <div className="text-text-main dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0 size-10">
-                    <Icon name="location_on" className="size-5" />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-center">
-                    <p className="text-text-main dark:text-white text-sm font-bold leading-normal">{t('footer.address')}</p>
-                  </div>
-                </Link>
-              ) : (
-                <div className="flex gap-4 px-5 py-4 border-b border-slate-100 dark:border-slate-800 transition-colors">
-                  <div className="text-text-main dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0 size-10">
-                    <Icon name="location_on" className="size-5" />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-center">
-                    <p className="text-text-main dark:text-white text-sm font-bold leading-normal">{t('footer.address')}</p>
-                  </div>
-                </div>
-              )}
+            <Link 
+              href={mapHref}
+              external
+              className="flex gap-4 px-5 py-4 border-b border-slate-100 dark:border-slate-800 transition-colors"
+            >
+              <div className="text-text-main dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0 size-10">
+                <Icon name="location_on" className="size-5" />
+              </div>
+              <div className="flex flex-1 flex-col justify-center">
+                <p className="text-text-main dark:text-white text-sm font-bold leading-normal">{t('footer.address')}</p>
+              </div>
+            </Link>
               <Link 
                 href={`tel:${SITE.phoneTel}`}
                 className="flex gap-4 px-5 py-4 border-b border-slate-100 dark:border-slate-800 transition-colors"
@@ -187,8 +177,8 @@ const ContactMobile: React.FC = () => {
                   <p className="text-text-secondary dark:text-slate-400 text-xs font-medium leading-normal">{t('contactPage.details.phone.label')}</p>
                 </div>
               </Link>
-              <Link 
-                href={`mailto:${SITE.email}`}
+              <EmailLink 
+                email={SITE.email}
                 className="flex gap-4 px-5 py-4 transition-colors"
               >
                 <div className="text-text-main dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0 size-10">
@@ -199,7 +189,7 @@ const ContactMobile: React.FC = () => {
                   <p className="text-text-secondary dark:text-slate-400 text-xs font-medium leading-normal">{t('contactPage.details.email.label')}</p>
                   <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 font-medium">{t('contactPage.details.email.responseTime')}</p>
                 </div>
-              </Link>
+              </EmailLink>
             </motion.div>
 
             {/* Hours Card */}

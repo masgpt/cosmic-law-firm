@@ -7,6 +7,7 @@ import Link from '@/components/ui/Link';
 import SEO from '@/components/SEO';
 import { getPracticeAreaBySlug } from '@/lib/practice-areas';
 import { SITE } from '@/lib/site';
+import EmailLink from '@/components/EmailLink';
 import Icon from '@src/components/Icon';
 import SectionWithStars from '@src/components/layout/SectionWithStars';
 import { useViewport } from '../hooks/useViewport';
@@ -215,12 +216,13 @@ const PracticeAreaPage: React.FC<PracticeAreaPageProps> = ({ lng, slug }) => {
               >
                 {t('common.contactCompany', { name: SITE.name.split(' ')[0] })}
               </Link>
-              <a
-                href={`mailto:${SITE.email}?subject=${encodeURIComponent(t('practiceArea.emailSubject', { title }))}`}
+              <EmailLink
+                email={SITE.email}
+                subject={t('practiceArea.emailSubject', { title })}
                 className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
               >
                 {t('contact.labels.email')}
-              </a>
+              </EmailLink>
             </div>
           </motion.div>
         </div>

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import SEO from '../../../components/SEO';
 import { SITE } from '../../../lib/site';
 import { FEATURES } from '@src/config/features';
+import EmailLink from '@/components/EmailLink';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
@@ -101,8 +102,24 @@ const AccessibilityDesktop: React.FC = () => {
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">{t('accessibilityPage.contact.responseTime')}</p>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
-              {contactDetails.map((detail) =>
-                detail.href ? (
+              {contactDetails.map((detail) => {
+                if (detail.href?.startsWith('mailto:')) {
+                  return (
+                    <EmailLink
+                      key={detail.label}
+                      email={SITE.email}
+                      className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-white/5 px-4 py-3 flex flex-col gap-1 hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary dark:hover:border-primary transition-colors"
+                    >
+                      <span className="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                        {detail.label}
+                      </span>
+                      <span className="text-base font-bold text-slate-900 dark:text-white break-words">
+                        {detail.value}
+                      </span>
+                    </EmailLink>
+                  );
+                }
+                return detail.href ? (
                   <a
                     key={detail.label}
                     href={detail.href}
@@ -127,8 +144,8 @@ const AccessibilityDesktop: React.FC = () => {
                       {detail.value}
                     </span>
                   </div>
-                ),
-              )}
+                );
+              })}
             </div>
           </section>
         </div>

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import SEO from '../../../components/SEO';
 import { SITE } from '../../../lib/site';
 import { FEATURES } from '@src/config/features';
+import EmailLink from '@/components/EmailLink';
 
 const fadeInUp = {
   initial: { opacity: 1 },
@@ -102,8 +103,22 @@ const AccessibilityMobile: React.FC = () => {
               <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 font-medium">{t('accessibilityPage.contact.responseTime')}</p>
             </div>
             <div className="space-y-2">
-              {contactDetails.map((detail) =>
-                detail.href ? (
+              {contactDetails.map((detail) => {
+                if (detail.href?.startsWith('mailto:')) {
+                  return (
+                    <EmailLink
+                      key={detail.label}
+                      email={SITE.email}
+                      className="flex flex-col rounded-2xl border border-slate-100 dark:border-slate-800 bg-white/50 dark:bg-white/5 px-3 py-3 text-xs font-semibold leading-tight tracking-wide text-slate-900 dark:text-white hover:border-primary transition-colors"
+                    >
+                      <span className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">
+                        {detail.label}
+                      </span>
+                      <span className="mt-1 text-sm font-bold">{detail.value}</span>
+                    </EmailLink>
+                  );
+                }
+                return detail.href ? (
                   <a
                     key={detail.label}
                     href={detail.href}
@@ -124,8 +139,8 @@ const AccessibilityMobile: React.FC = () => {
                     </span>
                     <span className="mt-1 text-sm font-bold">{detail.value}</span>
                   </div>
-                ),
-              )}
+                );
+              })}
             </div>
           </section>
         </div>

@@ -37,22 +37,20 @@ const TeamMobile: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="relative z-10"
           >
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-[10px] font-black uppercase tracking-[0.3em] w-fit">
-            {t('team.hero.badge')}
-          </span>
-          <h1 className="mt-4 text-3xl font-black leading-tight text-slate-900 dark:text-white uppercase tracking-tight">{t('team.hero.title')}</h1>
-          <p className="mt-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium">{t('team.hero.description')}</p>
-          <ButtonLink
-            href="/contact"
-            tone="dark"
-            className="mt-6 inline-flex items-center gap-2 rounded-xl uppercase tracking-widest text-xs px-5 py-3 shadow-lg focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark font-black"
-          >
-            {t('team.hero.cta')}
-            <Icon name="mail" className="size-4" />
-          </ButtonLink>
-        </motion.div>
-      </SectionWithStars>
-
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-slate-900 dark:text-primary-light text-[10px] font-black uppercase tracking-[0.3em] w-fit">
+              {t('team.hero.badge')}
+            </span>
+            <h1 className="mt-4 text-3xl font-black leading-tight text-slate-900 dark:text-white uppercase tracking-tight">{t('team.hero.title')}</h1>
+            <p className="mt-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium">{t('team.hero.description')}</p>
+            <ButtonLink
+              href="/contact"
+              tone="dark"
+              className="mt-6 inline-flex items-center gap-2 rounded-xl uppercase tracking-widest text-xs px-5 py-3 shadow-lg focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark font-black"
+            >
+              {t('team.hero.cta')}
+              <Icon name="mail" className="size-4" />
+            </ButtonLink>
+          </motion.div>
         </SectionWithStars>
 
         <SectionWithStars className="px-4 py-10 bg-background-light dark:bg-background-dark overflow-hidden" settings={{ density: 0.5 }}>
@@ -98,8 +96,6 @@ const TeamMobile: React.FC = () => {
           ))}
         </motion.div>
       </SectionWithStars>
-
-        </SectionWithStars>
 
         <SectionWithStars className="px-6 py-12 bg-primary text-white text-center" settings={{ density: 0.47 }}>
           <motion.div 

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import SEO from '@/components/SEO';
 import { useTranslation } from 'react-i18next';
 import { useViewport } from '../hooks/useViewport';
+import { SITE } from '@/lib/site';
 import EmailLink from '@/components/EmailLink';
 
 const fadeInUp = {

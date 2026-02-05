@@ -15,6 +15,8 @@ const clampDensity = (value?: number) => {
   return Math.min(1, Math.max(0, value));
 };
 
+const isDepthLayer = (value: string): value is DepthLayer => LAYER_ORDER.includes(value as DepthLayer);
+
 interface ParallaxStarsProps {
   sectionRef: RefObject<HTMLElement>;
   settings: SectionStarsSettings;
@@ -45,7 +47,7 @@ const ParallaxStars = ({ sectionRef, settings, reducedMotion, className = "", tr
   const enabledLayers = useMemo(() => {
     const layers = preferredLayersKey ? preferredLayersKey.split(',') : [];
     const unique = Array.from(new Set(layers));
-    return unique.filter((layer) => LAYER_ORDER.includes(layer));
+    return unique.filter(isDepthLayer);
   }, [preferredLayersKey]);
 
   const layerStars = useMemo(() => {

@@ -82,7 +82,7 @@ const ReviewsDesktop: React.FC = () => {
                     </div>
 
                     <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed italic whitespace-pre-line line-clamp-6 mb-6 font-medium">
-                      "{review.text}"
+                      &ldquo;{review.text}&rdquo;
                     </p>
                   </div>
 
@@ -151,7 +151,7 @@ const ReviewsDesktop: React.FC = () => {
             </div>
 
             <p className="text-lg text-slate-700 dark:text-slate-300 italic font-medium leading-relaxed">
-              "{selectedReview.text}"
+              &ldquo;{selectedReview.text}&rdquo;
             </p>
 
             <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex justify-end">

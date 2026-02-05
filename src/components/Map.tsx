@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { FEATURES } from '@src/config/features';
 
@@ -42,10 +43,12 @@ export default function Map({ addressQuery, addressText, className }: MapProps) 
 
   const renderPlaceholder = () => (
     <div className="relative w-full h-full">
-      <img
+      <Image
         src="/images/static-map.svg"
         alt={alt}
-        className="w-full h-full object-cover"
+        className="object-cover"
+        fill
+        sizes="100vw"
         loading="lazy"
       />
       {addressText ? (

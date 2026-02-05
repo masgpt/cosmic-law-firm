@@ -29,7 +29,7 @@ export const useViewport = (initialIsMobile?: boolean) => {
 
     // Cleanup
     return () => window.removeEventListener('resize', checkViewport);
-  }, []);
+  }, [initialIsMobile]);
 
   return { isMobile };
 };

@@ -20,10 +20,11 @@ const NavbarDesktop: React.FC = () => {
 
   const servicesRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
-  const [bodyElement, setBodyElement] = useState<HTMLElement | null>(null);
+  const [bodyElement] = useState<HTMLElement | null>(() =>
+    typeof document !== 'undefined' ? document.body : null,
+  );
 
   useEffect(() => {
-    setBodyElement(document.body);
     const handleClickOutside = (event: MouseEvent) => {
       if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);

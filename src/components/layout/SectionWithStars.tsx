@@ -26,22 +26,19 @@ const SectionWithStars = ({ settings, className = "", overflow = "hidden", child
   const verticalOffsetTop = settings?.verticalOffset?.top;
   const verticalOffsetBottom = settings?.verticalOffset?.bottom;
 
-  const mergedSettings = useMemo<SectionStarsSettings>(() => {
-    const enabledLayers =
-      settings?.enabledLayers ?? DEFAULT_SECTION_STARS_SETTINGS.enabledLayers;
-    const verticalOffset = {
-      ...DEFAULT_SECTION_STARS_SETTINGS.verticalOffset,
-      ...settings?.verticalOffset,
-    };
-
-    return {
-      ...DEFAULT_SECTION_STARS_SETTINGS,
-      ...settings,
-      enabledLayers,
-      density: settings?.density ?? DEFAULT_SECTION_STARS_SETTINGS.density,
-      verticalOffset,
-    };
-  }, [enabledLayersKey, density, scrollRange, verticalOffsetTop, verticalOffsetBottom]);
+  const enabledLayers =
+    settings?.enabledLayers ?? DEFAULT_SECTION_STARS_SETTINGS.enabledLayers;
+  const verticalOffset = {
+    ...DEFAULT_SECTION_STARS_SETTINGS.verticalOffset,
+    ...settings?.verticalOffset,
+  };
+  const mergedSettings: SectionStarsSettings = {
+    ...DEFAULT_SECTION_STARS_SETTINGS,
+    ...settings,
+    enabledLayers,
+    density: settings?.density ?? DEFAULT_SECTION_STARS_SETTINGS.density,
+    verticalOffset,
+  };
 
   const overflowClass = overflow === "visible" ? "overflow-visible" : "overflow-hidden";
   const isPositioned = /relative|absolute|fixed|sticky/.test(className);

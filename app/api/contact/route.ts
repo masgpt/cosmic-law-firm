@@ -33,7 +33,6 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true }, { status: 201 });
   } catch (error) {
-    console.error('contact API error', error);
     return NextResponse.json(
       { error: 'We could not submit your message right now. Please try again.' },
       { status: 500 }

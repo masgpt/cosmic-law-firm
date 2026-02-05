@@ -74,7 +74,7 @@ const ReviewsMobile: React.FC = () => {
                 </div>
 
                 <p className="mt-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed italic line-clamp-4 font-medium">
-                  "{review.text}"
+                  &ldquo;{review.text}&rdquo;
                 </p>
 
                 <div className="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800/50 flex items-center justify-between gap-4">
@@ -128,7 +128,7 @@ const ReviewsMobile: React.FC = () => {
             )}
 
             <p className="text-base text-slate-700 dark:text-slate-300 italic font-medium leading-relaxed">
-              "{selectedReview.text}"
+              &ldquo;{selectedReview.text}&rdquo;
             </p>
 
             <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex justify-end">

@@ -39,13 +39,14 @@ const ParallaxStars = ({ sectionRef, settings, reducedMotion, className = "", tr
   const shouldAnimate = !reducedMotion;
 
   const density = clampDensity(settings.density);
-  const settingsEnabledLayersKey = (settings.enabledLayers ?? DEFAULT_SECTION_STARS_SETTINGS.enabledLayers ?? LAYER_ORDER)
-    .join(',');
+  const preferredLayers =
+    settings.enabledLayers ?? DEFAULT_SECTION_STARS_SETTINGS.enabledLayers ?? LAYER_ORDER;
+  const preferredLayersKey = preferredLayers.join(',');
   const enabledLayers = useMemo(() => {
-    const preferred = settings.enabledLayers ?? DEFAULT_SECTION_STARS_SETTINGS.enabledLayers ?? LAYER_ORDER;
-    const unique = Array.from(new Set(preferred));
+    const layers = preferredLayersKey ? preferredLayersKey.split(',') : [];
+    const unique = Array.from(new Set(layers));
     return unique.filter((layer) => LAYER_ORDER.includes(layer));
-  }, [settingsEnabledLayersKey]);
+  }, [preferredLayersKey]);
 
   const layerStars = useMemo(() => {
     return enabledLayers
@@ -115,7 +116,7 @@ const ParallaxStars = ({ sectionRef, settings, reducedMotion, className = "", tr
         observer.disconnect();
       }
     };
-  }, [shouldAnimate, sectionRef, layerStars, settings.scrollRange]);
+  }, [shouldAnimate, sectionRef, layerStars, settings.scrollRange, trigger]);
 
   const containerStyle = {
     top: toPx(settings.verticalOffset?.top) ?? "0px",

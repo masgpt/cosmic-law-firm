@@ -247,7 +247,7 @@ const TeamMemberDetail: React.FC<TeamMemberDetailProps> = ({ member, lng }) => {
                       {t('team.detail.creativeFocusHeading')}
                     </p>
                     <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200 italic font-medium">
-                      "{creative}"
+                      &ldquo;{creative}&rdquo;
                     </p>
                   </motion.div>
                 )}

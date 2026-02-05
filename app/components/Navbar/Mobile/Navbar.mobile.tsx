@@ -15,6 +15,7 @@ import { usePathname } from 'next/navigation';
 import { useFocusTrap } from '@/lib/accessibility/useFocusManagement';
 import Icon from '@src/components/Icon';
 import type { SectionStarsSettings } from '@src/config/parallaxStars.config';
+import { useIsIosSafari } from '@/hooks/useIsIosSafari';
 
 const MOBILE_NAV_SECTION_SETTINGS: SectionStarsSettings = {
   enabledLayers: [],
@@ -26,6 +27,7 @@ const NavbarMobile: React.FC = () => {
   const { t } = useTranslation();
   const { isActive } = useNavbarLogic();
   const { practiceAreaLinks, aboutLinks, lng } = useNavbarConstants();
+  const isIosSafari = useIsIosSafari();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMenu = () => setIsMobileMenuOpen((prev) => !prev);
@@ -104,15 +106,10 @@ const NavbarMobile: React.FC = () => {
     return `${baseStyles} ${sizeStyles} ${isActivePath ? activeStyles : inactiveStyles}`;
   };
 
-  return (
-    <SectionWithStars
-      // iOS Safari + fixed + backdrop-filter tends to flicker/jank during scroll.
-      className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-primary/95 transition-colors duration-300 lg:hidden text-white pt-safe"
-      aria-label={t('accessibility.aria.mobileNavSection')}
-      overflow="visible"
-      // Keep the nav lightweight on mobile: no star layers or scroll motion.
-      settings={MOBILE_NAV_SECTION_SETTINGS}
-    >
+  const baseNavClass =
+      'fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-primary/95 transition-colors duration-300 lg:hidden text-white pt-safe';
+  const navContent = (
+    <>
       <div className="relative z-20">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
           <div className="flex h-16 items-center justify-between gap-4">
@@ -168,12 +165,7 @@ const NavbarMobile: React.FC = () => {
                 <LanguageToggle variant="segmented" className="w-full" />
               </div>
 
-              <Link
-                to={`/${lng}/`}
-                onClick={closeMenu}
-                prefetch={false}
-                className={getMobileNavButtonClass(`/${lng}/`, 'lg')}
-              >
+              <Link to={`/${lng}/`} onClick={closeMenu} prefetch={false} className={getMobileNavButtonClass(`/${lng}/`, 'lg')}>
                 {t('nav.home')}
               </Link>
 
@@ -254,6 +246,27 @@ const NavbarMobile: React.FC = () => {
           </div>
         </div>
       )}
+    </>
+  );
+
+  if (isIosSafari) {
+    return (
+      <div className={baseNavClass} aria-label={t('accessibility.aria.mobileNavSection')}>
+        {navContent}
+      </div>
+    );
+  }
+
+  return (
+    <SectionWithStars
+      // iOS Safari + fixed + backdrop-filter tends to flicker/jank during scroll.
+      className={baseNavClass}
+      aria-label={t('accessibility.aria.mobileNavSection')}
+      overflow="visible"
+      // Keep the nav lightweight on mobile: no star layers or scroll motion.
+      settings={MOBILE_NAV_SECTION_SETTINGS}
+    >
+      {navContent}
     </SectionWithStars>
   );
 };

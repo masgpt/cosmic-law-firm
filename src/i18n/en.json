@@ -61,6 +61,7 @@
         "badge": "Insights · AI Contracts",
         "title": "AI Contract Checklist",
         "description": "AI vendors blur data rights, indemnity, and compliance, so the contracts need explicit clauses for training materials, discovery, and human oversight before you deploy the output.",
+        "date": "February 7, 2026",
         "items": [
           {
             "title": "Data sourcing & training rights",
@@ -91,6 +92,7 @@
         "badge": "Insights · AI",
         "title": "AI in Entertainment",
         "description": "AI is already reshaping production, publicity, and talent rights. Here is a quick look at where the technology is live, how regulators and unions are responding, and what you should lock into your process.",
+        "date": "February 7, 2026",
         "snapshots": [
           {
             "title": "Digital replica consent is now non-negotiable",
@@ -125,6 +127,7 @@
         "badge": "Insights · AI Law",
         "title": "What’s in AI Law",
         "description": "Stay on top of the executive orders, state bills, and EU directives that are redefining accountability, transparency, and takedowns for AI-driven creative work.",
+        "date": "February 7, 2026",
         "timeline": [
           {
             "title": "Federal AI blueprint",
@@ -155,6 +158,7 @@
         "badge": "Insights · Chain of Title",
         "title": "Chain of Title Digest",
         "description": "Financiers, insurers, and distributors won’t underwrite a deal until they see a clean chain of title from creator to release. Use this digest to keep the paperwork straight and avoid last-minute surprises.",
+        "date": "February 7, 2026",
         "highlights": [
           {
             "title": "Why chain of title matters",
@@ -182,6 +186,7 @@
         "badge": "Insights · Contracts",
         "title": "Contract Red Flags",
         "description": "A single clause can lock away royalties, rights, or future leverage. Use the snapshots below to flag the terms that need fixing before you sign.",
+        "date": "February 7, 2026",
         "redFlags": [
           {
             "title": "Perpetual, worldwide grants",
@@ -215,6 +220,7 @@
         "badge": "Insights · NIL",
         "title": "NIL Basics",
         "description": "The House settlement, NCAA policy tweaks, and the new clearinghouse are rewriting how deals are filed, disclosed, and taxed.",
+        "date": "February 7, 2026",
         "updates": [
           {
             "title": "House settlement clears the clouds",
@@ -239,6 +245,7 @@
         "badge": "Insights · Rights & Publicity",
         "title": "Rights & Publicity Basics",
         "description": "Name, image, and likeness rights are under greater scrutiny as AI can reproduce likenesses instantly. Keep this short guide handy when drafting releases and NIL deals.",
+        "date": "February 7, 2026",
         "definitions": [
           {
             "title": "Rights of publicity 101",

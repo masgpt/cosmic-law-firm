@@ -52,7 +52,7 @@ const HomeDesktop: React.FC = () => {
 
         <div className="relative z-20 max-w-[1140px] mx-auto px-6 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 1, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="grid gap-6 max-w-3xl lg:max-w-[960px]"

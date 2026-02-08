@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import dynamic from 'next/dynamic';
+import { usePathname } from 'next/navigation';
 import { useViewport } from '../hooks/useViewport';
 
 const PageTransitionMotion = dynamic(() => import('./PageTransition.motion'));
@@ -14,7 +15,19 @@ export default function PageTransition({
   initialIsMobile?: boolean;
 }) {
   const { isMobile } = useViewport(initialIsMobile);
+  const pathname = usePathname();
   const [hasMounted, setHasMounted] = useState(false);
+  const prevPathname = useRef<string | null>(null);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    if (prevPathname.current && prevPathname.current !== pathname) {
+      setShouldAnimate(true);
+    } else {
+      setShouldAnimate(false);
+    }
+    prevPathname.current = pathname;
+  }, [pathname]);
 
   useEffect(() => {
     setHasMounted(true);
@@ -24,11 +37,13 @@ export default function PageTransition({
     return <div className="flex flex-col flex-grow w-full">{children}</div>;
   }
 
-  // Avoid rendering the motion wrapper until after mount to prevent hydration inconsistencies.
   if (!hasMounted) {
     return <div className="flex flex-col flex-grow w-full">{children}</div>;
   }
 
-  return <PageTransitionMotion>{children}</PageTransitionMotion>;
+  return (
+    <PageTransitionMotion pathname={pathname} shouldAnimate={shouldAnimate}>
+      {children}
+    </PageTransitionMotion>
+  );
 }
-

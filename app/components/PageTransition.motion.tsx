@@ -1,11 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
-export default function PageTransitionMotion({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
+export default function PageTransitionMotion({
+  children,
+  pathname,
+  shouldAnimate,
+}: {
+  children: React.ReactNode;
+  pathname: string;
+  shouldAnimate: boolean;
+}) {
   const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
@@ -15,13 +21,16 @@ export default function PageTransitionMotion({ children }: { children: React.Rea
   return (
     <motion.div
       key={pathname}
-      initial={hasHydrated ? { opacity: 0 } : false}
+      initial={shouldAnimate ? { opacity: 0 } : false}
       animate={{ opacity: 1 }}
-      transition={hasHydrated ? { duration: 0.3, ease: 'easeInOut' } : { duration: 0 }}
+      transition={
+        shouldAnimate
+          ? { duration: 0.3, ease: 'easeInOut' }
+          : { duration: 0 }
+      }
       className="flex flex-col flex-grow w-full"
     >
       {children}
     </motion.div>
   );
 }
-

@@ -854,6 +854,7 @@
     "emailLabel": "이메일",
     "privacyProtected": "개인정보 보호",
     "privacyBannerDesc": "필수 쿠키만 활성화되어 있습니다. 분석 및 위치 쿠키는 기본적으로 비활성화되어 있습니다.",
+    "allowTrackingCopy": "필수 쿠키가 켜져 있습니다. 메타/구글 픽셀과 선택적 스크립트는 귀하가 허용할 때까지 꺼져 있습니다.",
     "whatWeTrack": "익명으로 추적되는 항목",
     "pageViews": "페이지 조회수",
     "pageViewsDesc": "방문한 페이지 (개인 정보 없음)",
@@ -879,7 +880,7 @@
     "cancel": "취소",
     "acceptAll": "모두 허용",
     "confirm": "확인",
-    "reject": "거부"
+    "reject": "모든 선택적 쿠키 거부"
   },
   "contact": {
     "title": "사무실 방문",

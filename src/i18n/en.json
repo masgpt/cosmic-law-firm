@@ -381,6 +381,7 @@
     "emailLabel": "Email",
     "privacyProtected": "Privacy Protected",
     "privacyBannerDesc": "Essential cookies active. Analytics & location are disabled by default.",
+    "allowTrackingCopy": "Essential cookies are on. Meta/Google pixels and optional scripts stay off until you allow them.",
     "whatWeTrack": "What We Track Anonymously",
     "pageViews": "Page Views",
     "pageViewsDesc": "Which pages are visited (no personal info)",
@@ -406,7 +407,7 @@
     "cancel": "Cancel",
     "acceptAll": "Accept All",
     "confirm": "Confirm",
-    "reject": "Reject"
+    "reject": "Reject All Optional Cookies"
   },
   "legal": {
     "contact": {

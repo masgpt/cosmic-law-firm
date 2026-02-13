@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lng: stri
   const baseUrl = SITE.url;
 
   const subNames: Record<string, string> = {
-    en: 'Entertainment, Media & Personal Injury Law',
-    ko: '엔터테인먼트, 미디어 & 개인상해법',
+    en: 'International Business, Entertainment & Personal Injury Law',
+    ko: '국제 비즈니스, 엔터테인먼트, 개인상해법',
   };
   const nameSub = subNames[lng] || subNames.en;
 
@@ -35,19 +35,19 @@ export async function generateMetadata({ params }: { params: Promise<{ lng: stri
       template: `%s | ${SITE.name}`,
       default: `${SITE.name} | ${nameSub}`,
     },
-    description: "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes.",
+    description: "International business law, entertainment counsel, and personal injury advocacy for investors and companies operating across borders.",
     metadataBase: new URL(baseUrl),
     openGraph: {
       type: "website",
       url: `${baseUrl}/${lng}`,
       title: `${SITE.name} | ${nameSub}`,
-      description: "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes.",
+      description: "International business law, entertainment counsel, and personal injury advocacy for investors and companies operating across borders.",
       images: ["/Cosmic_Logos-02.png"],
     },
     twitter: {
       card: "summary_large_image",
       title: `${SITE.name} | ${nameSub}`,
-      description: "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes.",
+      description: "International business law, entertainment counsel, and personal injury advocacy for investors and companies operating across borders.",
       images: ["/Cosmic_Logos-02.png"],
     },
     icons: {
@@ -80,8 +80,8 @@ export default async function RootLayout({
     "image": `${SITE.url}/Cosmic_Logos-02.png`,
     "description":
       lng === 'ko'
-        ? "크리에이터와 미디어 기업을 위한 엔터테인먼트 로펌—계약, 지식재산권, 탤런트 딜, 배급, 분쟁."
-        : "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes.",
+        ? "국제 비즈니스, 엔터테인먼트, 개인상해 문제를 아우르는 글로벌 투자·거래 법률 서비스."
+        : "International business law, entertainment counsel, and personal injury advocacy for investors and companies operating across borders.",
     "telephone": SITE.phoneTel ? `+1-${SITE.phoneTel}` : undefined,
     "email": SITE.email,
     "address": {

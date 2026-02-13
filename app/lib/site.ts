@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'Cosmic Law Firm',
-  nameSub: 'Entertainment, Media & Personal Injury Law',
+  nameSub: 'International Business, Entertainment & Personal Injury Law',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://cosmiclawfirm.com',
   email: 'ask@cosmiclawfirm.com',
   phoneDisplay: '(213) 480-0348',

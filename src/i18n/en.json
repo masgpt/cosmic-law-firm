@@ -304,8 +304,8 @@
   },
   "seo": {
     "home": {
-      "title": "Entertainment Law | Cosmic Law Firm",
-      "description": "Entertainment law for creators, studios, and media companies—contracts, IP, talent deals, distribution, and disputes."
+      "title": "International Business Law | Cosmic Law Firm",
+      "description": "International business law, entertainment counsel, and personal injury advocacy for investors and companies operating across borders."
     },
     "terms": {
       "title": "Terms of Service | {{siteName}}",
@@ -326,20 +326,20 @@
   },
   "home": {
     "hero": {
-      "badge": "Modern legal representation",
-      "title": "Law for Creative Work",
-      "description": "From entertainment and media to personal injury recovery, we protect rights and outcomes when it matters most.",
-      "subtext": "Creative, media, and personal-injury clients trust us for decisive clarity and fast-moving counsel.",
+      "badge": "Global business counsel",
+      "title": "International business law and investment guidance",
+      "description": "We shepherd cross-border expansions, entertainment transactions, and personal injury responses with clarity, keeping international business at the lead.",
+      "subtext": "International business is our priority, followed by entertainment law and personal injury advocacy to keep every client focused on what matters most.",
       "ctaPrimary": "Book a consult",
       "ctaSecondary": "Contact the team"
     },
     "services": {
       "title": "Services",
-      "description": "Counsel for film, music, media, brand partners, and personal injury clients built on clarity and trust."
+      "description": "Cross-border business law, entertainment counsel, and personal injury advocacy—arranged with international business first, then entertainment law, then injury recovery."
     },
     "cta": {
       "title": "Need to talk?",
-      "description": "Share what you’re building and we’ll respond with next steps and a clear scope.",
+      "description": "Describe your international expansion, entertainment deal, or injury claim and we’ll scope the global counsel you need.",
       "button": "Contact the team"
     }
   },
@@ -360,8 +360,8 @@
     "menuClose": "Close menu"
   },
   "footer": {
-    "tagline": "Entertainment and media law for creators. Transactional counsel and litigation where it counts.",
-    "description": "Entertainment & media law for creators and companies—transactional counsel and litigation when it counts.",
+    "tagline": "International business, entertainment, and personal injury law for global operators.",
+    "description": "Cross-border business law for investors, plus entertainment and personal injury counsel with transactional and litigation experience.",
     "quickLinks": "Quick Links",
     "about": "About",
     "message": "Our Approach",
@@ -594,7 +594,7 @@
     "companyName": "Cosmic Law Firm",
     "companyNamePart1": "Cosmic",
     "companyNamePart2": "Law Firm",
-    "companyNameSub": "Entertainment, Media & Personal Injury Law",
+    "companyNameSub": "International Business, Entertainment & Personal Injury Law",
     "overview": "Overview",
     "whatWeHandle": "What we handle",
     "typicalMatters": "Typical matters within {{title}}.",

@@ -40,7 +40,7 @@ export const practiceAreas: PracticeArea[] = [
     summaryKo:
       '국제 합작투자, 투자, 해외 사업 연결을 정교하게 설계하고 문서화하며 분쟁 대응 준비까지 함께 갖추는 국경 간 법률 자문입니다.',
     summaryZh: '我们设计、记录并保护国际合资、投资及境外业务纠葛，在交易精准与争议准备之间架起桥梁。',
-    icon: 'public',
+    icon: 'gavel',
     overview: [
       'Cosmic Law Firm helps global investors, fund sponsors, and operating companies navigate jurisdictional risk, compliance, and governance as they enter new territories.',
       'We align investors, regulators, and local partners with clear frameworks for capital, licensing, and joint ventures so foreign entanglements stay productive instead of becoming litigation triggers.',

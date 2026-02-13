@@ -28,7 +28,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'john',
-    name: 'John D. Robertson',
+    name: 'John D. Robertson, Esq.',
     slug: 'john-robertson',
     titleKey: 'team.members.john.title',
     specialtyKey: 'team.members.john.specialty',

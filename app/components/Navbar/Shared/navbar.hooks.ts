@@ -20,7 +20,7 @@ export const useNavbarLogic = () => {
   };
 
   const navLinkClass = (path: string) => 
-    `text-sm font-bold tracking-tight transition-all duration-200 px-3 py-1.5 rounded-lg ${
+    `text-base sm:text-lg font-bold tracking-tight transition-all duration-200 px-3 py-1.5 rounded-lg ${
       isActive(path) 
         ? 'text-white bg-white/15' 
         : 'text-white/85 hover:text-white hover:bg-white/10'

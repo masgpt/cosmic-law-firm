@@ -132,7 +132,7 @@ const NavbarMobile: React.FC = () => {
                   <span className="text-secondary">{t('common.companyNamePart1')}</span>{' '}
                   <span>{t('common.companyNamePart2')}</span>
                 </span>
-                <span className="text-[8px] text-white/90 font-bold uppercase tracking-wider mt-0.5 leading-none">
+                <span className="text-[10px] sm:text-[11px] text-white/90 font-bold uppercase tracking-wider mt-0.5 leading-none">
                   {t('common.companyNameSub')}
                 </span>
               </div>

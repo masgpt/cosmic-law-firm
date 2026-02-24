@@ -77,7 +77,7 @@ const NavbarDesktop: React.FC = () => {
                   <span className="text-secondary">{t('common.companyNamePart1')}</span>{' '}
                   <span>{t('common.companyNamePart2')}</span>
                 </span>
-                <span className="text-[10px] text-white/90 font-bold uppercase tracking-[0.12em] mt-1 leading-none">
+                <span className="text-[12px] sm:text-[13px] text-white/90 font-bold uppercase tracking-[0.12em] mt-1 leading-none">
                   {t('common.companyNameSub')}
                 </span>
               </div>
@@ -96,7 +96,7 @@ const NavbarDesktop: React.FC = () => {
                   }}
                   aria-haspopup="true"
                   aria-expanded={isServicesOpen}
-                  className={`flex items-center gap-1 text-sm font-bold tracking-tight transition-all duration-200 px-3 py-1.5 rounded-lg ${
+                  className={`flex items-center gap-1 text-base sm:text-lg font-bold tracking-tight transition-all duration-200 px-3 py-1.5 rounded-lg ${
                     isServicesOpen || isActive(`/${lng}/services`)
                       ? 'text-white bg-white/15'
                       : 'text-white/85 hover:text-white hover:bg-white/10'
@@ -156,7 +156,7 @@ const NavbarDesktop: React.FC = () => {
                   }}
                   aria-haspopup="true"
                   aria-expanded={isAboutOpen}
-                  className={`flex items-center gap-1 text-sm font-bold tracking-tight transition-all duration-200 px-3 py-1.5 rounded-lg ${
+                  className={`flex items-center gap-1 text-base sm:text-lg font-bold tracking-tight transition-all duration-200 px-3 py-1.5 rounded-lg ${
                     isAboutOpen || isActive(`/${lng}/about`) || isActive(`/${lng}/message`)
                       ? 'text-white bg-white/15'
                       : 'text-white/85 hover:text-white hover:bg-white/10'

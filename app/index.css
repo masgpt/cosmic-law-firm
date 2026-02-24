@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    /* Dark purple + lavender palette (HSL components only) */
-    --color-primary: 250 55% 30%;
-    --color-primary-light: 250 70% 75%;
-    --color-secondary: 250 32.43% 85.49%;
-    --color-accent: 250 55% 55%;
-    --color-bg-light: 250 55% 97%;
-    --color-bg-dark: 250 30% 10%;
+    /* Soft pastel purple palette (HSL components only) */
+    --color-primary: 270 60% 78%;
+    --color-primary-light: 270 60% 92%;
+    --color-secondary: 270 45% 94%;
+    --color-accent: 275 65% 72%;
+    --color-bg-light: 270 45% 98%;
+    --color-bg-dark: 270 35% 18%;
 
     /* Nav heights */
     --header-height: 68px;

@@ -73,7 +73,7 @@ const NavbarDesktop: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-black tracking-tighter leading-none uppercase text-white">
+                <span className="text-3xl sm:text-4xl font-black tracking-tighter leading-none uppercase text-white">
                   <span className="text-secondary">{t('common.companyNamePart1')}</span>{' '}
                   <span>{t('common.companyNamePart2')}</span>
                 </span>

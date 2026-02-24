@@ -128,7 +128,7 @@ const NavbarMobile: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-black tracking-tight text-white leading-none uppercase">
+                <span className="text-lg sm:text-xl font-black tracking-tight uppercase text-white leading-none">
                   <span className="text-secondary">{t('common.companyNamePart1')}</span>{' '}
                   <span>{t('common.companyNamePart2')}</span>
                 </span>

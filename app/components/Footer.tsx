@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-xl font-black tracking-tight text-white uppercase leading-none text-left">
+                  <p className="text-xl font-black tracking-tight uppercase leading-none text-left text-white">
                     <span className="text-secondary">{t('common.companyNamePart1')}</span>{' '}
                     <span>{t('common.companyNamePart2')}</span>
                   </p>

@@ -110,13 +110,13 @@ const ContactDesktop: React.FC = () => {
               </div>
               <div className="px-6 py-2">
                 <div className="flex flex-col">
-                  {[
+                  {([
                     { label: t('contact.hours.monday'), value: '8:30 AM - 5:00 PM' },
                     { label: t('contact.hours.tuesday'), value: '8:30 AM - 5:00 PM' },
                     { label: t('contact.hours.wednesday'), value: '8:30 AM - 5:00 PM' },
                     { label: t('contact.hours.thursday'), value: '8:30 AM - 5:00 PM' },
                     { label: t('contact.hours.friday'), value: '8:30 AM - 5:00 PM' },
-                  ].map((item, idx) => (
+                  ] as { label: string; value: string; highlight?: boolean }[]).map((item, idx) => (
                     <div key={idx} className="flex justify-between border-b border-slate-100 dark:border-slate-800 py-4 last:border-0">
                       <p className="text-text-secondary dark:text-slate-400 text-sm font-medium leading-normal">{item.label}</p>
                       <p className={`text-sm font-bold leading-normal ${item.highlight ? 'text-red-500' : 'text-text-main dark:text-white'}`}>{item.value}</p>

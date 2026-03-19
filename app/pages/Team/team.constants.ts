@@ -22,9 +22,8 @@ export const teamMembers: TeamMember[] = [
     descriptionKey: 'team.members.jean.description',
     locationKey: 'team.members.jean.location',
     educationKey: 'team.members.jean.education',
-    imageSrc: '/team/team_JeanKwon.png',
-    // Literal alt text: avoids depending on missing i18n keys.
-    imageAltKey: 'Headshot of Jean Kwon, Esq.',
+    imageSrc: '/team/team_JeanKwon.jpg',
+    imageAltKey: 'team.members.jean.imageAlt',
     detailKey: 'team.details.jean',
   },
   {

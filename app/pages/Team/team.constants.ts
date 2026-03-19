@@ -48,7 +48,7 @@ export const teamMembers: TeamMember[] = [
     descriptionKey: 'team.members.scott.description',
     locationKey: 'team.members.scott.location',
     educationKey: 'team.members.scott.education',
-    imageSrc: '/team/team_ScottHoutz.png',
+    imageSrc: '/team/team_ScottHoutz.jpg',
     imageAltKey: 'team.members.scott.imageAlt',
     detailKey: 'team.details.scott',
   },
